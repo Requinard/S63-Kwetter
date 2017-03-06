@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.wouterv.tweeter</groupId>
+  <artifactId>tweeter</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>tweeter Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+
+    <!--<dependency>-->
+      <!--<groupId>org.jboss.resteasy</groupId>-->
+      <!--<artifactId>resteasy-jaxrs</artifactId>-->
+      <!--&lt;!&ndash;<version>2.2.1.GA</version>&ndash;&gt;-->
+      <!--<version>LATEST</version>-->
+    <!--</dependency>-->
+
+
+
+    <!--<dependency>-->
+      <!--<groupId>org.hibernate.javax.persistence</groupId>-->
+      <!--<artifactId>hibernate-jpa-2.1-api</artifactId>-->
+      <!--<version>RELEASE</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.hibernate</groupId>-->
+      <!--<artifactId>hibernate-entitymanager</artifactId>-->
+      <!--<version>RELEASE</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.hibernate</groupId>-->
+      <!--<artifactId>hibernate-validator</artifactId>-->
+      <!--<version>RELEASE</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.hibernate</groupId>-->
+      <!--<artifactId>hibernate-search</artifactId>-->
+      <!--<version>RELEASE</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+    <!--<groupId>javax.enterprise</groupId>-->
+    <!--<artifactId>javax-api</artifactId>-->
+    <!--<version>RELEASE</version>-->
+    <!--</dependency>-->
+    <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+    <!--<dependency>-->
+    <!--<groupId>javax</groupId>-->
+    <!--<artifactId>javaee-api</artifactId>-->
+    <!--<version>7.0</version>-->
+    <!--</dependency>-->
+
+
+    <!--<dependency>-->
+      <!--<groupId>org.eclipse.persistence</groupId>-->
+      <!--<artifactId>eclipselink</artifactId>-->
+      <!--<version>2.5.0-SNAPSHOT</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.eclipse.persistence</groupId>-->
+      <!--<artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>-->
+      <!--<version>2.5.0-SNAPSHOT</version>-->
+      <!--<scope>provided</scope>-->
+    <!--</dependency>-->
+
+    <dependency>
+      <groupId>postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.1-901-1.jdbc4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>eclipselink</artifactId>
+      <version>2.5.2</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+      <version>2.5.2</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-web-api</artifactId>
+      <version>7.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+  <build>
+    <finalName>tweeter</finalName>
+  </build>
+</project>
