@@ -4,49 +4,68 @@ package Controllers;
  * Created by Wouter Vanmulken on 22-2-2017.
  */
 
-import Models.User;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.ws.rs.*;
+import Models.Account;
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+import javax.persistence.*;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
-import java.util.ArrayList;
 import java.util.List;
 
 
-//@Path("/message")
 
+//@Stateless
+//@Named
+@Path("/test")
 public class TestController {
 
-//    @PersistenceContext(name = "TweeterPU")
-//    EntityManager em;
+    @PersistenceContext(name = "TweeterPU")
+    EntityManager em;
+//    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("TweeterPU");
 
     @GET
-    @Path("test3")
+    @Path("test")
     @Produces("application/json")
-    public Response printMessage2() {
-        return Response.status(200).entity("result mofo").build();
+    public String printMessage2() {
+
+        return "result";
     }
+
+
+    //    @GET
+//    @GET
+//    @Path("test3")
+//    @Produces("application/json")
+//    public Response printMessage2() {
+//        return Response.status(200).entity("result mofo").build();
+//    }
 //
 //
 //
 //    @GET
-//    @Path("test/{param}")
-//    public Response printMessage(@PathParam("param") String msg) {
+//    @Path("test2")
+//    @Produces("application/json")
+//
+//    public Response printMessage() {
+//        System.out.println("Hello motherfucking world");
+//        EntityManager em = entityManagerFactory.createEntityManager();
 //        em.getTransaction().begin();
-//        User test = new User("first_test","last_test");
+//        Account test = new Account("first_test", "last_test");
 //        em.persist(test);
 //        em.getTransaction().commit();
-//        String result = "Restful example : " + msg;
+//        String result = "Restful example : ";
 //
-//        Query q = em.createQuery("SELECT u FROM User u");
-//        List<User> userList = q.getResultList();
-//        for(User user : userList){result += user;}
-//
+//        Query q = em.createQuery("SELECT u FROM Account u");
+//        List<Account> userList = q.getResultList();
+//        for (Account user : userList) {
+//            result += user;
+//        }
 //        return Response.status(200).entity(result).build();
+////        return Response.status(200).entity(null).build();
 //
 //    }
-//    @GET
 //    @Path("/user/{param}")
 //    public Response getUsers(@PathParam("param") String msg) {
 //        List<User> users = new ArrayList(5);
