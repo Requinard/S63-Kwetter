@@ -4,33 +4,30 @@ package Controllers;
  * Created by Wouter Vanmulken on 22-2-2017.
  */
 
-import Models.Account;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.persistence.*;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Response;
 import java.util.List;
 
-
-
-//@Stateless
-//@Named
-@Path("/test")
+@Stateless
+//@Path("/test")
 public class TestController {
 
-    @PersistenceContext(name = "TweeterPU")
-    EntityManager em;
+    @Inject
+    ITestDingetje testDingetje;
+
+//    @PersistenceContext(name = "TweeterPU")
+//    EntityManager em;
 //    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("TweeterPU");
 
     @GET
     @Path("test")
     @Produces("application/json")
     public String printMessage2() {
-
-        return "result";
+        return  testDingetje.getStuff();
+//        return "result";
     }
 
 
@@ -50,7 +47,7 @@ public class TestController {
 //
 //    public Response printMessage() {
 //        System.out.println("Hello motherfucking world");
-//        EntityManager em = entityManagerFactory.createEntityManager();
+////        EntityManager em = entityManagerFactory.createEntityManager();
 //        em.getTransaction().begin();
 //        Account test = new Account("first_test", "last_test");
 //        em.persist(test);
