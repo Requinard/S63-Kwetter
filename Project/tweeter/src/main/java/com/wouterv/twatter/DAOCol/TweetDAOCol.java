@@ -8,6 +8,7 @@ import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.persistence.EntityManager;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
@@ -50,7 +51,17 @@ public class TweetDAOCol implements ITweetDAO{
 
     @Override
     public Tweet findById(Object id) {
-        throw new NotImplementedException();
-//        return null;//Todo : make getAll
+        if (!(id instanceof Integer)) return null;
+        for (Tweet t :tweets) {
+            if(t.getId() == (int)id){
+                return t;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public List<Tweet> getPersonalTweets() {
+        return tweets; //Todo : maybe a better implementation of this
     }
 }

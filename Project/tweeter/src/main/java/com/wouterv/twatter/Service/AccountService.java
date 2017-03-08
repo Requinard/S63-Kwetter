@@ -1,7 +1,6 @@
 package com.wouterv.twatter.Service;
 
 import com.wouterv.twatter.Annotations.JPA;
-import com.wouterv.twatter.Controllers.ITestDingetje;
 import com.wouterv.twatter.DAO.IAccountDAO;
 import com.wouterv.twatter.Models.Account;
 

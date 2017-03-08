@@ -2,6 +2,7 @@ package com.wouterv.twatter.Models;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,14 +14,16 @@ import java.util.List;
 @XmlRootElement
 public class Tweet extends TweeterModel {
 
-
     private String content;
+    private Date Date;
+
     @OneToOne
     private Account postAccount;
     @OneToMany
     private List<Account> hearted;
 
-    public Tweet() {}
+    public Tweet() {
+    }
 
     public Tweet(String content, Account postAccount) {
         this.content = content;
@@ -35,6 +38,12 @@ public class Tweet extends TweeterModel {
         this.content = content;
     }
 
+    public java.util.Date getDate() {return Date;}
+
+    public void setDate(java.util.Date date) {
+        Date = date;
+    }
+
     public Account getPostAccount() {
         return postAccount;
     }
@@ -42,14 +51,6 @@ public class Tweet extends TweeterModel {
     public void setPostAccount(Account postAccount) {
         this.postAccount = postAccount;
     }
-
-//    public List<Tag> getTags() {
-//        return Tags;
-//    }
-//
-//    public void setTags(List<Tag> tags) {
-//        Tags = tags;
-//    }
 
     public List<Account> getHearted() {
         return hearted;

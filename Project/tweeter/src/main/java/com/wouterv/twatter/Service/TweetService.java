@@ -46,4 +46,11 @@ public class TweetService {
         tweetDAO.create(tweet);
         return tweet;
     }
+    @GET
+    @Path("/tweets")
+    @Produces("application/json")
+    public List<Tweet> getPersonalTweets() {
+        List<Tweet> tweets = tweetDAO.getPersonalTweets();
+        return tweets;
+    }
 }

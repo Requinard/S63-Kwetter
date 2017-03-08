@@ -8,6 +8,10 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: postgresql:postgresql:9.1-901-1.jdbc4" />
+          <element id="library" level="project" name="Maven: org.mockito:mockito-core:2.7.14" />
+          <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.6.9" />
+          <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy-agent:1.6.9" />
+          <element id="library" level="project" name="Maven: org.objenesis:objenesis:2.5" />
         </element>
       </element>
       <element id="directory" name="META-INF">
