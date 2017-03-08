@@ -24,7 +24,7 @@ public class TestDingetje implements ITestDingetje{
 //        em.getTransaction().commit();
         String test2 = "stuff - not null";
 
-        Query q = em.createQuery("SELECT u FROM Account u");
+        Query q = em.createQuery("SELECT a FROM Account a");
         List<Account> userList = q.getResultList();
         for (Account user : userList) {
             test2 += user.toString();

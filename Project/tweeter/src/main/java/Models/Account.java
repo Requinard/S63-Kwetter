@@ -3,7 +3,6 @@ package Models;
 //import javax.persistence.Entity;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -11,77 +10,61 @@ import java.util.List;
  */
 @Entity
 @XmlRootElement
-public class Account implements Serializable{
+public class Account extends TweeterModel{
 
-    @Id
-//    @GeneratedValue(generator="ACCOUNT_SEQ",strategy=GenerationType.SEQUENCE)
-//    @GeneratedValue
-//    @SequenceGenerator(name="ACCOUNT_seq_gen", sequenceName="ACCOUNT_SEQ,",allocationSize=1)
-//    @GeneratedValue(strategy=GenerationType.AUTO, generator="ACCOUNT_seq_gen")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private String firstName;
 
-    private String FirstName;
-
-    private String LastName;
+    private String lastName;
 
     @OneToMany
-    private List<Tweet> Tweets;
+    private List<Tweet> tweets;
 
     @OneToMany
-    private List<Account> Following;
+    private List<Account> following;
 
     public Account() {
     }
 
     public Account(String firstName, String lastName) {
-        FirstName = firstName;
-        LastName = lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-//    @javax.persistence.Id
-    public int getId() {
-        return Id;
-    }
-
-    public void setId(int id) {
-        Id = id;
-    }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public List<Tweet> getTweets() {
-        return Tweets;
+        return tweets;
     }
 
     public void setTweets(List<Tweet> tweets) {
-        Tweets = tweets;
+        this.tweets = tweets;
     }
 
     public List<Account> getFollowing() {
-        return Following;
+        return following;
     }
 
     public void setFollowing(List<Account> following) {
-        Following = following;
+        this.following = following;
     }
 
     @Override
     public String toString() {
-        return this.FirstName + " " + this.LastName;
+        return this.firstName + " " + this.lastName;
     }
 }

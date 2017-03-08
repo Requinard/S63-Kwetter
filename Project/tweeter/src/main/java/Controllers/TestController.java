@@ -23,7 +23,7 @@ public class TestController {
 //    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("TweeterPU");
 
     @GET
-    @Path("test")
+    @Path("/test")
     @Produces("application/json")
     public String printMessage2() {
         return  testDingetje.getStuff();
