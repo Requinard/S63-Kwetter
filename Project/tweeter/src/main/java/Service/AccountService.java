@@ -7,19 +7,18 @@ import Models.Account;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
+import java.util.List;
 
 /**
  * Created by Wouter Vanmulken on 6-3-2017.
  */
 @Stateless
-@Path("/accountservice")
+@Path("/accounts")
 public class AccountService {
 
-    @Inject @JPA
+    @Inject
+    @JPA
     IAccountDAO accountDAO;
 
     @Inject
@@ -28,10 +27,10 @@ public class AccountService {
     @GET
     @Path("/test")
     public String getTest() {
-        String test = "not null";
-        if(TestDingetje == null){
+        String test;
+        if (TestDingetje == null) {
             test = "null";
-        }else{
+        } else {
             test = TestDingetje.getStuff();
         }
         return test;
@@ -40,16 +39,32 @@ public class AccountService {
     @GET
     @Path("/account/{userId}")
     @Produces("application/json")
-    public Account getAccount(@QueryParam("userId")int userId) {
+    public Account getAccount(@PathParam("userId") int userId) {
         Account account = accountDAO.findById(userId);
         return account;
     }
+
     @GET
     @Path("/account/user/{userName}")
     @Produces("application/json")
-    public Account getAccount(@QueryParam("userName")String userName) {
-        Account account = accountDAO.findByName(userName);
+    public Account getAccountByUsername(@PathParam("userName") String userName) {
+        Account account = accountDAO.findByUserName(userName);
         return account;
     }
+
+    @GET
+    @Path("/account/search/{userName}")
+    @Produces("application/json")
+    public List<Account> search(@PathParam("userName") String userName) {
+        List<Account> accounts = accountDAO.search(userName);
+        return accounts;
+    }
+
+//    @GET
+//    @Path("account")
+//    @Produces("application/json")
+//    public String test(){
+//
+//    }
 
 }

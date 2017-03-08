@@ -5,12 +5,14 @@
         <!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
         <jta-data-source>Twatter_JNDI</jta-data-source>
         <class>Models.Account</class>
-        <class>Models.Tag</class>
+        <!--<class>Models.Tag</class>-->
         <class>Models.Tweet</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
-            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
-            <property name="eclipselink.deploy-on-startup" value="true" />
+            <property name="eclipselink.ddl-generation" value="create-or-update-tables"/>
+            <!--<property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>-->
+            <!--<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>-->
+            <!--<property name="eclipselink.deploy-on-startup" value="true" />-->
         </properties>
     </persistence-unit>
 </persistence>

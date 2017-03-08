@@ -10,6 +10,7 @@ import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.persistence.EntityManager;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 
@@ -57,16 +58,6 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
         return null;
     }
 
-    public Account findByName(String name) {
-
-        for (Account account : accounts) {
-            if ((account.getFirstName()+account.getLastName()).contains(name)) {
-                return account;
-            }
-        }
-        return null;
-    }
-
 
     @PostConstruct
     public void init(){
@@ -78,6 +69,26 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
         super(Account.class);
     }
 
+    @Override
+    public Account findByUserName(String name) {
+        for (Account account : accounts) {
+            if ((account.getFirstName()+account.getLastName()).contains(name)) {
+                return account;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public List<Account> search(String name) {
+        ArrayList acc = new ArrayList();
+        for (Account account : accounts) {
+            if ((account.getFirstName()+account.getLastName()).contains(name)) {
+                acc.add(account);
+            }
+        }
+        return acc;
+    }
 }
 
 

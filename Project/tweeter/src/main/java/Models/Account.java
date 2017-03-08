@@ -12,8 +12,9 @@ import java.util.List;
 @XmlRootElement
 public class Account extends TweeterModel{
 
+    @Column(unique = true)
+    private String userName;
     private String firstName;
-
     private String lastName;
 
     @OneToMany
@@ -30,6 +31,13 @@ public class Account extends TweeterModel{
         this.lastName = lastName;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public String getFirstName() {
         return firstName;

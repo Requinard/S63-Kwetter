@@ -8,6 +8,8 @@ import Models.Account;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.List;
 
 /**
  * Created by Wouter Vanmulken on 8-3-2017.
@@ -24,8 +26,18 @@ public class AccountDAOJPA extends DaoFacade<Account> implements IAccountDAO {
     }
 
     @Override
-    public Account findByName(String name) {
-        return null;
+    public Account findByUserName(String userName) {
+        Query q = em.createQuery("SELECT a FROM Account a where a.userName = :userName");
+        q.setParameter("userName", userName);
+        return (Account) q.getSingleResult();
+    }
+
+    @Override
+    public List<Account> search(String name) {
+        Query q = em.createQuery("SELECT a FROM Account a where a.firstName like :name or a.lastName like :name");
+        q.setParameter("name", "%"+name+"%");
+        List<Account> userList = q.getResultList();
+        return userList;
     }
 
     @Override
