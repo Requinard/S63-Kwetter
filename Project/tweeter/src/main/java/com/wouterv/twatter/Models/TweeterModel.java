@@ -1,7 +1,6 @@
-package Models;
+package com.wouterv.twatter.Models;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 /**

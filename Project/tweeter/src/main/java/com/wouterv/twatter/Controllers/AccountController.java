@@ -1,6 +1,6 @@
-package Controllers;
+package com.wouterv.twatter.Controllers;
 
-import Models.Account;
+import com.wouterv.twatter.Models.Account;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

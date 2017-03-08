@@ -1,4 +1,4 @@
-package Controllers;
+package com.wouterv.twatter.Controllers;
 
 /**
  * Created by Wouter Vanmulken on 22-2-2017.
@@ -9,7 +9,6 @@ import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import java.util.List;
 
 @Stateless
 @Path("/test")

@@ -1,9 +1,8 @@
-package DAOCol;
+package com.wouterv.twatter.DAOCol;
 
-import DAO.DaoFacade;
-import DAO.IAccountDAO;
-import Models.Account;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import com.wouterv.twatter.DAO.DaoFacade;
+import com.wouterv.twatter.DAO.IAccountDAO;
+import com.wouterv.twatter.Models.Account;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
@@ -31,8 +30,7 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
     }
 
     @Override
-    public void create(Account account) {
-        accounts.add(account);
+    public void create(Account account) {accounts.add(account);
     }
 
     @Override

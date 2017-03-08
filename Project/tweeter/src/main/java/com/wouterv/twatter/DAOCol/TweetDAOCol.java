@@ -1,10 +1,9 @@
-package DAOCol;
+package com.wouterv.twatter.DAOCol;
 
-import DAO.ITweetDAO;
-import Models.Tweet;
+import com.wouterv.twatter.DAO.ITweetDAO;
+import com.wouterv.twatter.Models.Tweet;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.persistence.EntityManager;

@@ -1,9 +1,6 @@
-package DAO;
-
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+package com.wouterv.twatter.DAO;
 
 import javax.persistence.EntityManager;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

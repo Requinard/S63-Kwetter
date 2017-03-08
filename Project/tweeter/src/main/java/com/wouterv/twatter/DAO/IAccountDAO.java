@@ -1,8 +1,7 @@
-package DAO;
+package com.wouterv.twatter.DAO;
 
-import Models.Account;
+import com.wouterv.twatter.Models.Account;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package Annotations;
+package com.wouterv.twatter.Annotations;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Retention;

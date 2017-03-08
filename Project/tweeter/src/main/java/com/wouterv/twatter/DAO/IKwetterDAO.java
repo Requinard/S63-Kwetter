@@ -1,4 +1,4 @@
-package DAO;
+package com.wouterv.twatter.DAO;
 
 import javax.persistence.EntityManager;
 import java.util.List;
@@ -8,9 +8,9 @@ import java.util.List;
  */
 public interface IKwetterDAO<T> {
     EntityManager getEntityManager();
-    void create(T entity);
-    void remove(T entity);
-    void edit(T entity);
     List<T> getAll();
     T findById(Object id);
+    void create(T entity);
+    void edit(T entity);
+    void remove(T entity);
 }

@@ -1,9 +1,9 @@
-package Service;
+package com.wouterv.twatter.Service;
 
-import Annotations.JPA;
-import Controllers.ITestDingetje;
-import DAO.IAccountDAO;
-import Models.Account;
+import com.wouterv.twatter.Annotations.JPA;
+import com.wouterv.twatter.Controllers.ITestDingetje;
+import com.wouterv.twatter.DAO.IAccountDAO;
+import com.wouterv.twatter.Models.Account;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -14,7 +14,7 @@ import java.util.List;
  * Created by Wouter Vanmulken on 6-3-2017.
  */
 @Stateless
-@Path("/accounts")
+@Path("/accountsservice")
 public class AccountService {
 
     @Inject

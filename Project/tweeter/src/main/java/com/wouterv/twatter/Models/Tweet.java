@@ -1,4 +1,4 @@
-package Models;
+package com.wouterv.twatter.Models;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -13,27 +13,19 @@ import java.util.List;
 @XmlRootElement
 public class Tweet extends TweeterModel {
 
-//    @Id
-////    @GeneratedValue(generator="TWEET_SEQ",strategy=GenerationType.SEQUENCE)
-////    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @GeneratedValue(strategy=GenerationType.IDENTITY)
-//    private int Id;
 
     private String content;
     @OneToOne
     private Account postAccount;
-//    @OneToMany
-//    private List<Tag> Tags;
     @OneToMany
     private List<Account> hearted;
 
-//    public int getId() {
-//        return Id;
-//    }
-//
-//    public void setId(int id) {
-//        Id = id;
-//    }
+    public Tweet() {}
+
+    public Tweet(String content, Account postAccount) {
+        this.content = content;
+        this.postAccount = postAccount;
+    }
 
     public String getContent() {
         return content;

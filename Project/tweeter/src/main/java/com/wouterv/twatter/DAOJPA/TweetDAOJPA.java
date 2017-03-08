@@ -1,11 +1,11 @@
-package DAOJPA;
+package com.wouterv.twatter.DAOJPA;
 
-import Annotations.JPA;
-import DAO.DaoFacade;
-import DAO.IAccountDAO;
-import DAO.ITweetDAO;
-import Models.Account;
-import Models.Tweet;
+import com.wouterv.twatter.Annotations.JPA;
+import com.wouterv.twatter.DAO.DaoFacade;
+import com.wouterv.twatter.DAO.IAccountDAO;
+import com.wouterv.twatter.DAO.ITweetDAO;
+import com.wouterv.twatter.Models.Account;
+import com.wouterv.twatter.Models.Tweet;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

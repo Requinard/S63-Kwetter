@@ -1,4 +1,4 @@
-package Models;
+package com.wouterv.twatter.Models;
 
 //import javax.persistence.Entity;
 import javax.persistence.*;
