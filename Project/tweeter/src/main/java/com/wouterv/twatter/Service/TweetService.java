@@ -16,7 +16,6 @@ import java.util.List;
  */
 
 @Stateless
-@Path("/tweetsservice")
 public class TweetService {
 
     @Inject
@@ -27,30 +26,17 @@ public class TweetService {
     @JPA
     IAccountDAO accountDAO;
 
-    @GET
-    @Path("/tweets")
-    @Produces("application/json")
-    public List<Tweet> getTweets() {
-        List<Tweet> tweets = tweetDAO.getAll();
-        return tweets;
+    public List<Tweet> getAllTweets() {
+        return tweetDAO.getAll();
     }
-    @POST
-//    @Path("/tweet/{userId}/{content}")
-    @Path("/tweet")
-    @Consumes("application/x-www-form-urlencoded")
-    @Produces("application/json")
     public Tweet postTweets(@FormParam("content") String content,
-                            @FormParam("userId") int userId) {
+                            @FormParam("userId") int userId) {//TODO : remove the userId and use JAAS
         Account account = accountDAO.findById(userId);
         Tweet tweet = new Tweet(content,account);
         tweetDAO.create(tweet);
         return tweet;
     }
-    @GET
-    @Path("/tweets")
-    @Produces("application/json")
     public List<Tweet> getPersonalTweets() {
-        List<Tweet> tweets = tweetDAO.getPersonalTweets();
-        return tweets;
+        return tweetDAO.getPersonalTweets();
     }
 }
