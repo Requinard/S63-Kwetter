@@ -1,42 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="TweeterPU" transaction-type="JTA">
-        <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
-        <!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
         <jta-data-source>Twatter_JNDI</jta-data-source>
         <class>com.wouterv.twatter.Models.Account</class>
-        <!--<class>com.wouterv.twatter.Models.Tag</class>-->
         <class>com.wouterv.twatter.Models.Tweet</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
-            <property name="eclipselink.ddl-generation" value="create-or-update-tables"/>
-            <!--<property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>-->
-            <!--<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>-->
-            <!--<property name="eclipselink.deploy-on-startup" value="true" />-->
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
         </properties>
     </persistence-unit>
 </persistence>
-
-
-<!--<?xml version="1.0" encoding="UTF-8"?>-->
-<!--<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"-->
-             <!--xmlns="http://java.sun.com/xml/ns/persistence"-->
-             <!--xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">-->
-    <!--<persistence-unit name="TweeterPU" transaction-type="JTA">-->
-        <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
-        <!--<class>com.wouterv.twatter.Models.User</class>-->
-
-        <!--<shared-cache-mode>NONE</shared-cache-mode>-->
-        <!--<properties>-->
-            <!--<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/Tweeter"/>-->
-            <!--<property name="javax.persistence.jdbc.user" value="postgres"/>-->
-            <!--<property name="javax.persistence.jdbc.password" value="admin"/>-->
-            <!--<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>-->
-            <!--<property name="eclipselink.ddl-generation" value="create-tables"/>-->
-            <!--<property name="eclipselink.logging.logger" value="DefaultLogger"/>-->
-            <!--<property name="eclipselink.logging.level" value="FINE"/>-->
-        <!--</properties>-->
-
-
-    <!--</persistence-unit>-->
-<!--</persistence>-->

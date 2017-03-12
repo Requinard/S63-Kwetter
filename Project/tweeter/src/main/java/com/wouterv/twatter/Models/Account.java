@@ -2,6 +2,7 @@ package com.wouterv.twatter.Models;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,15 +12,20 @@ import java.util.List;
 @XmlRootElement
 public class Account extends TweeterModel{
 
-    public enum Groups{ADMIN, USER}
+//    public enum Groups{ADMIN, USER}
 
-    @Column(unique = true)
+    @Column(unique = true,nullable = false)
     private String userName;
+    @Column(unique = true,nullable = false)
     private String email;
     private String bio;
     private String firstName;
     private String lastName;
-    private Groups group;
+    @Column(nullable = false)
+    private String password;//TODO : temporary password
+
+    @ManyToMany(mappedBy = "accounts")
+    private List<Type> groups;
 
     @OneToMany
     private List<Tweet> tweets;
@@ -30,13 +36,12 @@ public class Account extends TweeterModel{
     public Account() {
     }
 
-    public Account(String userName, String email, String bio, String firstName, String lastName, Groups group) {
+    public Account(String userName, String email, String bio, String firstName, String lastName) {
         this.userName = userName;
         this.email = email;
         this.bio = bio;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.group = group;
     }
 
     public String getUserName() {
@@ -78,6 +83,12 @@ public class Account extends TweeterModel{
     public void setFollowing(List<Account> following) {
         this.following = following;
     }
+    public void addFollowing(Account tofollow) {
+        if(following == null){//TODO : is this neccesary ?
+            following = new ArrayList<>();
+        }
+        following.add(tofollow);
+    }
 
     public String getEmail() {
         return email;
@@ -95,12 +106,20 @@ public class Account extends TweeterModel{
         this.bio = bio;
     }
 
-    public Groups getGroup() {
-        return group;
+    public String getPassword() {
+        return password;
     }
 
-    public void setGroup(Groups group) {
-        this.group = group;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<Type> getGroups() {
+        return groups;
+    }
+
+    public void setGroups(List<Type> groups) {
+        this.groups = groups;
     }
 
     @Override

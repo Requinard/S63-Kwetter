@@ -1,4 +1,4 @@
-package com.wouterv.twatter.DAOCol;
+package com.wouterv.twatter.DAO_COL;
 
 import com.wouterv.twatter.DAO.DaoFacade;
 import com.wouterv.twatter.DAO.IAccountDAO;
@@ -8,6 +8,8 @@ import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.persistence.EntityManager;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -16,7 +18,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * Created by Wouter Vanmulken on 8-3-2017.
  */
-
 
 @Stateless
 @Default
@@ -44,10 +45,7 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
     }
 
     @Override
-    public Account findById(Object id) {
-        if(!(id instanceof Integer)){
-            return null;
-        }
+    public Account findById(int id) {
         for (Account a : accounts){
             if(a.getId() == (int)id){
                 return a;
@@ -82,6 +80,18 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
         ArrayList acc = new ArrayList();
         for (Account account : accounts) {
             if ((account.getFirstName()+account.getLastName()).contains(name)) {
+                acc.add(account);
+            }
+        }
+        return acc;
+    }
+
+    @Override
+    public List<Account> getFollowing(int Id) {
+        Account user = findById(Id);
+        ArrayList acc = new ArrayList();
+        for (Account account : accounts) {
+            if (account.getFollowing().contains(user)) {
                 acc.add(account);
             }
         }

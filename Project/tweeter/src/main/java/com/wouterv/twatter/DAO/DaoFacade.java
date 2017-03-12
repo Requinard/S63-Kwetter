@@ -28,13 +28,12 @@ public abstract class DaoFacade<T> {
         getEntityManager().remove(getEntityManager().merge(entity));
     }
 
-    public T findById(Object id) {
+    public T findById(int id) {
         return getEntityManager().find(entityClass, id);
     }
-    public List<T> getAll(){
+
+    public List<T> getAll() {
         return getEntityManager().createQuery("Select t from " + entityClass.getSimpleName() + " t").getResultList();
-//        throw new NotImplementedException();
-//        getEntityManager().
     }
 
 }

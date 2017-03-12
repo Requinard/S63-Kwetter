@@ -11,4 +11,5 @@ import java.util.List;
 public interface IAccountDAO extends IKwetterDAO<Account>{
     Account findByUserName(String name);
     List<Account> search(String name);
+    List<Account> getFollowing(int Id);
 }

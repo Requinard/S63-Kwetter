@@ -9,7 +9,7 @@ import java.util.List;
 public interface IKwetterDAO<T> {
     EntityManager getEntityManager();
     List<T> getAll();
-    T findById(Object id);
+    T findById(int id);
     void create(T entity);
     void edit(T entity);
     void remove(T entity);

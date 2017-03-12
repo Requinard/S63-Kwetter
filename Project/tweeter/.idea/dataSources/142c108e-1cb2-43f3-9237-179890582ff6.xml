@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-03-07.23:27:08.375</IntrospectionTimestamp>
-      <IntrospectionStateNumber>620</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-03-11.21:44:20.675</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1334</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -30,217 +30,323 @@
       <ObjectId>12113</ObjectId>
     </schema>
     <sequence id="9" parent="3" name="account_id_seq">
-      <ObjectId>24750</ObjectId>
-      <StateNumber>614</StateNumber>
+      <ObjectId>26417</ObjectId>
+      <StateNumber>1319</StateNumber>
     </sequence>
-    <sequence id="10" parent="3" name="tag_id_seq">
-      <ObjectId>24761</ObjectId>
-      <StateNumber>615</StateNumber>
+    <sequence id="10" parent="3" name="tweet_id_seq">
+      <ObjectId>26432</ObjectId>
+      <StateNumber>1320</StateNumber>
     </sequence>
-    <sequence id="11" parent="3" name="tweet_id_seq">
-      <ObjectId>24769</ObjectId>
-      <StateNumber>616</StateNumber>
-    </sequence>
-    <table id="12" parent="3" name="account">
-      <ObjectId>24752</ObjectId>
-      <StateNumber>614</StateNumber>
+    <table id="11" parent="3" name="account">
+      <ObjectId>26419</ObjectId>
+      <StateNumber>1334</StateNumber>
     </table>
-    <table id="13" parent="3" name="account_account">
-      <ObjectId>24780</ObjectId>
-      <StateNumber>617</StateNumber>
+    <table id="12" parent="3" name="account_account">
+      <ObjectId>26445</ObjectId>
+      <StateNumber>1328</StateNumber>
     </table>
-    <table id="14" parent="3" name="account_tweet">
-      <ObjectId>24788</ObjectId>
-      <StateNumber>618</StateNumber>
+    <table id="13" parent="3" name="account_tweet">
+      <ObjectId>26458</ObjectId>
+      <StateNumber>1332</StateNumber>
     </table>
-    <table id="15" parent="3" name="tag">
-      <ObjectId>24763</ObjectId>
-      <StateNumber>615</StateNumber>
+    <table id="14" parent="3" name="account_type">
+      <ObjectId>26450</ObjectId>
+      <StateNumber>1330</StateNumber>
     </table>
-    <table id="16" parent="3" name="tweet">
-      <ObjectId>24771</ObjectId>
-      <StateNumber>616</StateNumber>
+    <table id="15" parent="3" name="tweet">
+      <ObjectId>26434</ObjectId>
+      <StateNumber>1333</StateNumber>
     </table>
-    <table id="17" parent="3" name="tweet_account">
-      <ObjectId>24796</ObjectId>
-      <StateNumber>619</StateNumber>
+    <table id="16" parent="3" name="tweet_account">
+      <ObjectId>26463</ObjectId>
+      <StateNumber>1334</StateNumber>
     </table>
-    <table id="18" parent="3" name="tweet_tag">
-      <ObjectId>24804</ObjectId>
-      <StateNumber>620</StateNumber>
+    <table id="17" parent="3" name="type">
+      <ObjectId>26440</ObjectId>
+      <StateNumber>1329</StateNumber>
     </table>
-    <column id="19" parent="12" name="id">
+    <column id="18" parent="11" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>614</StateNumber>
+      <StateNumber>1319</StateNumber>
       <DefaultExpression>nextval(&apos;account_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="20" parent="12" name="firstname">
+    <column id="19" parent="11" name="bio">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>614</StateNumber>
+      <StateNumber>1319</StateNumber>
     </column>
-    <column id="21" parent="12" name="lastname">
+    <column id="20" parent="11" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>614</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>1319</StateNumber>
     </column>
-    <index id="22" parent="12" name="account_pkey">
-      <ObjectId>24759</ObjectId>
+    <column id="21" parent="11" name="firstname">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1319</StateNumber>
+    </column>
+    <column id="22" parent="11" name="lastname">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1319</StateNumber>
+    </column>
+    <column id="23" parent="11" name="password">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1319</StateNumber>
+    </column>
+    <column id="24" parent="11" name="username">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1319</StateNumber>
+    </column>
+    <index id="25" parent="11" name="account_pkey">
+      <ObjectId>26426</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="23" parent="12" name="account_pkey">
-      <ObjectId>24760</ObjectId>
+    <index id="26" parent="11" name="account_email_key">
+      <ObjectId>26428</ObjectId>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="27" parent="11" name="account_username_key">
+      <ObjectId>26430</ObjectId>
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="11" name="account_pkey">
+      <ObjectId>26427</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>account_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="24" parent="13" name="account_id">
+    <key id="29" parent="11" name="account_email_key">
+      <ObjectId>26429</ObjectId>
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>account_email_key</UnderlyingIndexName>
+    </key>
+    <key id="30" parent="11" name="account_username_key">
+      <ObjectId>26431</ObjectId>
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>account_username_key</UnderlyingIndexName>
+    </key>
+    <column id="31" parent="12" name="account_id">
       <Position>1</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>617</StateNumber>
+      <StateNumber>1322</StateNumber>
     </column>
-    <column id="25" parent="13" name="following_id">
+    <column id="32" parent="12" name="following_id">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>617</StateNumber>
+      <StateNumber>1322</StateNumber>
     </column>
-    <index id="26" parent="13" name="account_account_pkey">
-      <ObjectId>24786</ObjectId>
+    <index id="33" parent="12" name="account_account_pkey">
+      <ObjectId>26448</ObjectId>
       <ColNames>account_id
 following_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="27" parent="13" name="account_account_pkey">
-      <ObjectId>24787</ObjectId>
+    <key id="34" parent="12" name="account_account_pkey">
+      <ObjectId>26449</ObjectId>
       <ColNames>account_id
 following_id</ColNames>
       <UnderlyingIndexName>account_account_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="28" parent="14" name="account_id">
+    <foreign-key id="35" parent="12" name="fk_account_account_account_id">
+      <ObjectId>26478</ObjectId>
+      <ColNames>account_id</ColNames>
+      <RefTableName>account</RefTableName>
+      <RefKeyName>account_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="36" parent="12" name="fk_account_account_following_id">
+      <ObjectId>26473</ObjectId>
+      <ColNames>following_id</ColNames>
+      <RefTableName>account</RefTableName>
+      <RefKeyName>account_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="37" parent="13" name="account_id">
       <Position>1</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>618</StateNumber>
+      <StateNumber>1324</StateNumber>
     </column>
-    <column id="29" parent="14" name="tweets_id">
+    <column id="38" parent="13" name="tweets_id">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>618</StateNumber>
+      <StateNumber>1324</StateNumber>
     </column>
-    <index id="30" parent="14" name="account_tweet_pkey">
-      <ObjectId>24794</ObjectId>
+    <index id="39" parent="13" name="account_tweet_pkey">
+      <ObjectId>26461</ObjectId>
       <ColNames>account_id
 tweets_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="31" parent="14" name="account_tweet_pkey">
-      <ObjectId>24795</ObjectId>
+    <key id="40" parent="13" name="account_tweet_pkey">
+      <ObjectId>26462</ObjectId>
       <ColNames>account_id
 tweets_id</ColNames>
       <UnderlyingIndexName>account_tweet_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="32" parent="15" name="id">
+    <foreign-key id="41" parent="13" name="fk_account_tweet_account_id">
+      <ObjectId>26498</ObjectId>
+      <ColNames>account_id</ColNames>
+      <RefTableName>account</RefTableName>
+      <RefKeyName>account_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="42" parent="13" name="fk_account_tweet_tweets_id">
+      <ObjectId>26493</ObjectId>
+      <ColNames>tweets_id</ColNames>
+      <RefTableName>tweet</RefTableName>
+      <RefKeyName>tweet_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="43" parent="14" name="username">
       <Position>1</Position>
-      <DataType>integer|0</DataType>
+      <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>615</StateNumber>
-      <DefaultExpression>nextval(&apos;tag_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>1323</StateNumber>
     </column>
-    <index id="33" parent="15" name="tag_pkey">
-      <ObjectId>24767</ObjectId>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="34" parent="15" name="tag_pkey">
-      <ObjectId>24768</ObjectId>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>tag_pkey</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="35" parent="16" name="id">
-      <Position>1</Position>
-      <DataType>integer|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>616</StateNumber>
-      <DefaultExpression>nextval(&apos;tweet_id_seq&apos;::regclass)</DefaultExpression>
-    </column>
-    <column id="36" parent="16" name="content">
+    <column id="44" parent="14" name="groupname">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>616</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>1323</StateNumber>
     </column>
-    <column id="37" parent="16" name="postaccount_id">
+    <index id="45" parent="14" name="account_type_pkey">
+      <ObjectId>26456</ObjectId>
+      <ColNames>username
+groupname</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="14" name="account_type_pkey">
+      <ObjectId>26457</ObjectId>
+      <ColNames>username
+groupname</ColNames>
+      <UnderlyingIndexName>account_type_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="14" name="fk_account_type_username">
+      <ObjectId>26488</ObjectId>
+      <ColNames>username</ColNames>
+      <RefTableName>account</RefTableName>
+      <RefKeyName>account_username_key</RefKeyName>
+      <RefColNames>username</RefColNames>
+    </foreign-key>
+    <foreign-key id="48" parent="14" name="fk_account_type_groupname">
+      <ObjectId>26483</ObjectId>
+      <ColNames>groupname</ColNames>
+      <RefTableName>type</RefTableName>
+      <RefKeyName>type_pkey</RefKeyName>
+      <RefColNames>groupname</RefColNames>
+    </foreign-key>
+    <column id="49" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1320</StateNumber>
+      <DefaultExpression>nextval(&apos;tweet_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="50" parent="15" name="date">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>1320</StateNumber>
+    </column>
+    <column id="51" parent="15" name="content">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>616</StateNumber>
+      <StateNumber>1320</StateNumber>
     </column>
-    <index id="38" parent="16" name="tweet_pkey">
-      <ObjectId>24778</ObjectId>
+    <column id="52" parent="15" name="postaccount_id">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1320</StateNumber>
+    </column>
+    <index id="53" parent="15" name="tweet_pkey">
+      <ObjectId>26438</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="39" parent="16" name="tweet_pkey">
-      <ObjectId>24779</ObjectId>
+    <key id="54" parent="15" name="tweet_pkey">
+      <ObjectId>26439</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>tweet_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="40" parent="17" name="tweet_id">
+    <foreign-key id="55" parent="15" name="fk_tweet_postaccount_id">
+      <ObjectId>26468</ObjectId>
+      <ColNames>postaccount_id</ColNames>
+      <RefTableName>account</RefTableName>
+      <RefKeyName>account_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="56" parent="16" name="tweet_id">
       <Position>1</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>619</StateNumber>
+      <StateNumber>1325</StateNumber>
     </column>
-    <column id="41" parent="17" name="hearted_id">
+    <column id="57" parent="16" name="hearted_id">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>619</StateNumber>
+      <StateNumber>1325</StateNumber>
     </column>
-    <index id="42" parent="17" name="tweet_account_pkey">
-      <ObjectId>24802</ObjectId>
+    <index id="58" parent="16" name="tweet_account_pkey">
+      <ObjectId>26466</ObjectId>
       <ColNames>tweet_id
 hearted_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="43" parent="17" name="tweet_account_pkey">
-      <ObjectId>24803</ObjectId>
+    <key id="59" parent="16" name="tweet_account_pkey">
+      <ObjectId>26467</ObjectId>
       <ColNames>tweet_id
 hearted_id</ColNames>
       <UnderlyingIndexName>tweet_account_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="44" parent="18" name="tweet_id">
+    <foreign-key id="60" parent="16" name="fk_tweet_account_tweet_id">
+      <ObjectId>26503</ObjectId>
+      <ColNames>tweet_id</ColNames>
+      <RefTableName>tweet</RefTableName>
+      <RefKeyName>tweet_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="61" parent="16" name="fk_tweet_account_hearted_id">
+      <ObjectId>26508</ObjectId>
+      <ColNames>hearted_id</ColNames>
+      <RefTableName>account</RefTableName>
+      <RefKeyName>account_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="62" parent="17" name="groupname">
       <Position>1</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>620</StateNumber>
+      <StateNumber>1321</StateNumber>
     </column>
-    <column id="45" parent="18" name="tags_id">
-      <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>620</StateNumber>
-    </column>
-    <index id="46" parent="18" name="tweet_tag_pkey">
-      <ObjectId>24810</ObjectId>
-      <ColNames>tweet_id
-tags_id</ColNames>
+    <index id="63" parent="17" name="type_pkey">
+      <ObjectId>26443</ObjectId>
+      <ColNames>groupname</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="47" parent="18" name="tweet_tag_pkey">
-      <ObjectId>24811</ObjectId>
-      <ColNames>tweet_id
-tags_id</ColNames>
-      <UnderlyingIndexName>tweet_tag_pkey</UnderlyingIndexName>
+    <key id="64" parent="17" name="type_pkey">
+      <ObjectId>26444</ObjectId>
+      <ColNames>groupname</ColNames>
+      <UnderlyingIndexName>type_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
   </database-model>

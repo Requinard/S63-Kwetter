@@ -1,8 +1,7 @@
-package com.wouterv.twatter.DAOCol;
+package com.wouterv.twatter.DAO_COL;
 
 import com.wouterv.twatter.DAO.ITweetDAO;
 import com.wouterv.twatter.Models.Tweet;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
@@ -50,9 +49,8 @@ public class TweetDAOCol implements ITweetDAO{
     }
 
     @Override
-    public Tweet findById(Object id) {
-        if (!(id instanceof Integer)) return null;
-        for (Tweet t :tweets) {
+    public Tweet findById(int id) {
+        for (Tweet t :this.tweets) {
             if(t.getId() == (int)id){
                 return t;
             }
@@ -61,7 +59,35 @@ public class TweetDAOCol implements ITweetDAO{
     }
 
     @Override
-    public List<Tweet> getPersonalTweets() {
-        return tweets; //Todo : maybe a better implementation of this
+    public List<Tweet> getPersonalTweets(int userId) {
+        List<Tweet> tweets = new ArrayList<>();
+        for (Tweet t :this.tweets) {
+            if(t.getPostAccount().getId() == userId){
+                tweets.add(t);
+            }
+        }
+        return tweets;
+    }
+
+    @Override
+    public List<Tweet> getPostedTweets(int id) {
+        List<Tweet> tweets = new ArrayList<>();
+        for (Tweet t :this.tweets) {
+            if(t.getPostAccount().getId() == id){
+                tweets.add(t);
+            }
+        }
+        return tweets;
+    }
+
+    @Override
+    public List<Tweet> search(String content) {
+        List<Tweet> tweets = new ArrayList<>();
+        for (Tweet t :this.tweets) {
+            if(t.getContent().contains(content)){
+                tweets.add(t);
+            }
+        }
+        return tweets;
     }
 }

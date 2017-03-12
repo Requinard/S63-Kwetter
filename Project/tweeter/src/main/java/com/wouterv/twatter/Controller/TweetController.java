@@ -1,5 +1,6 @@
 package com.wouterv.twatter.Controller;
 
+import com.wouterv.twatter.Bool;
 import com.wouterv.twatter.Models.Tweet;
 import com.wouterv.twatter.Service.TweetService;
 
@@ -24,19 +25,46 @@ public class TweetController {
     public List<Tweet> getAllTweets() {
         return service.getAllTweets();
     }
+
     @POST
     @Path("/tweet")
     @Consumes("application/x-www-form-urlencoded")
     @Produces("application/json")
     public Tweet postTweets(@FormParam("content") String content,
                             @FormParam("userId") int userId) {//TODO : remove the userId and use JAAS
-        return service.postTweets(content,userId);
+        return service.postTweets(content, userId);
     }
+
     @GET
     @Path("/tweets")
     @Produces("application/json")
     public List<Tweet> getPersonalTweets() {
         return service.getPersonalTweets();
+    }
+
+    @GET
+    @Path("/search")
+    @Produces("application/json")
+    public List<Tweet> search(@QueryParam("content") String content) {
+        if (content.isEmpty()) {
+            throw new BadRequestException("The parameter 'content' was null.");
+        }
+        return service.search(content);
+    }
+
+    @GET
+    @Path("/delete/{Id}")
+    @Produces("application/json")
+    public Bool delete(@PathParam("Id") int id) {
+        return new Bool(service.delete(id));
+    }
+
+    @GET
+    @Path("/heart/{Id}")
+    @Produces("application/json")
+    public Bool heart(@PathParam("Id") int id, @QueryParam("userId") int userId) {
+        boolean result = service.hearth(id, userId);
+        return new Bool(result);
     }
 }
 
