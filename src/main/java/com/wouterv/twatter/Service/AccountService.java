@@ -21,6 +21,9 @@ public class AccountService {
     @JPA
     IAccountDAO accountDAO;
 
+    public List<Account> getAllAccounts() {
+        return accountDAO.getAll();
+    }
     public Account getAccount(int userId) {
         Account account = accountDAO.findById(userId);
         return account;
@@ -52,6 +55,17 @@ public class AccountService {
         }
         return true;
     }
+    public boolean unFollow(int toUnfollowId, int loggedInId){
+        try {
+            Account toUnfollow = accountDAO.findById(toUnfollowId);
+            Account loggedIn = accountDAO.findById(loggedInId);
+            loggedIn.removeFollowing(toUnfollow);
+            accountDAO.edit(loggedIn);
+        }catch (Exception e){
+            return false;
+        }
+        return true;
+    }
 
     public List<Account> followers(int id) {
         return accountDAO.getFollowing(id);
@@ -71,4 +85,17 @@ public class AccountService {
 //    public boolean login(String username, String password) throws LoginException {//TODO : remove the userId and use JAAS
 //        throw new NotImplementedException();
 //    }
+    public boolean remove(int id){
+        try {
+            Account account = accountDAO.findById(id);
+            accountDAO.remove(account);
+        }catch (Exception e ){
+            System.out.println(e);
+            return false;
+        }
+        return true;
+    }
+    public void setAccountDAO(IAccountDAO accountDAO) {
+        this.accountDAO = accountDAO;
+    }
 }

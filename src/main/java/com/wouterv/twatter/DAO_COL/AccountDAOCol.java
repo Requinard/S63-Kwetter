@@ -24,14 +24,18 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
 
     CopyOnWriteArrayList<Account> accounts = new CopyOnWriteArrayList<>();
-
+    int Id = 0;
     @Override
     public EntityManager getEntityManager() {
         return null;
     }
 
     @Override
-    public void create(Account account) {accounts.add(account);
+    public void create(Account account) {
+        account.setId(Id);
+        accounts.add(account);
+        Id++;
+
     }
 
     @Override
@@ -46,8 +50,8 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
 
     @Override
     public Account findById(int id) {
-        for (Account a : accounts){
-            if(a.getId() == (int)id){
+        for (Account a : accounts) {
+            if (a.getId() == (int) id) {
                 return a;
             }
         }
@@ -56,7 +60,7 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
 
 
     @PostConstruct
-    public void init(){
+    public void init() {
         System.out.println("StudentDaoColl");
     }
 
@@ -68,7 +72,7 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
     @Override
     public Account findByUserName(String name) {
         for (Account account : accounts) {
-            if ((account.getFirstName()+account.getLastName()).contains(name)) {
+            if (account.getUserName() == name) {
                 return account;
             }
         }
@@ -79,7 +83,7 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
     public List<Account> search(String name) {
         ArrayList acc = new ArrayList();
         for (Account account : accounts) {
-            if ((account.getFirstName()+account.getLastName()).contains(name)) {
+            if ((account.getFirstName() + " " + account.getLastName() + " " + account.getUserName()).contains(name)) {
                 acc.add(account);
             }
         }
@@ -96,6 +100,10 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
             }
         }
         return acc;
+    }
+
+    public void setAccounts(CopyOnWriteArrayList<Account> accounts) {
+        this.accounts = accounts;
     }
 }
 

@@ -2,6 +2,7 @@ package com.wouterv.twatter.Models;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -53,6 +54,7 @@ public class Tweet extends TweeterModel {
     }
 
     public List<Account> getHearted() {
+        if(hearted == null){return new ArrayList<>();}
         return hearted;
     }
 
@@ -62,6 +64,7 @@ public class Tweet extends TweeterModel {
 
     //todo : maybe only use the id's of the accounts
     public boolean addHearted(Account account) {
+        if(hearted == null){hearted = new ArrayList<>();}
         if (this.hearted.contains(account)) {
             return false;
         }
@@ -70,6 +73,7 @@ public class Tweet extends TweeterModel {
     }
 
     public boolean removeHearted(Account account) {
+        if(hearted == null){hearted = new ArrayList<>();}
         try {
             this.hearted.remove(account);
         } catch (Exception e) {

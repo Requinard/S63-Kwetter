@@ -32,6 +32,12 @@ public class AccountController {
     public Account getAccountById(@PathParam("userId") int userId) {
         return service.getAccount(userId);
     }
+    @GET
+    @Path("/accounts")
+    @Produces("application/json")
+    public List<Account> getAllAccounts() {
+        return service.getAllAccounts();
+    }
 
     @GET
     @Path("/user/{userName}")
@@ -67,9 +73,16 @@ public class AccountController {
         return service.follow(id,loggedInUser);
     }
     @GET
+    @Path("/unFollow/{Id}")
+    @Produces("application/json")
+    public Boolean unfollow(@PathParam("Id") int id,
+                          @QueryParam("loggedinUser") int loggedInUser) {//TODO : maybe this should be a post
+        return service.unFollow(id,loggedInUser);
+    }
+    @GET
     @Path("/followers/{Id}")
     @Produces("application/json")
-    public Boolean followers(@PathParam("Id") int id) {//TODO : maybe this should be a post
+    public List<Account> followers(@PathParam("Id") int id) {//TODO : maybe this should be a post
         return service.followers(id);
     }
 

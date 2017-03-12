@@ -32,14 +32,14 @@ public class TweetController {
     @Produces("application/json")
     public Tweet postTweets(@FormParam("content") String content,
                             @FormParam("userId") int userId) {//TODO : remove the userId and use JAAS
-        return service.postTweets(content, userId);
+        return service.create(content, userId);
     }
 
     @GET
     @Path("/tweets")
     @Produces("application/json")
-    public List<Tweet> getPersonalTweets() {
-        return service.getPersonalTweets();
+    public List<Tweet> getPersonalTweets(@QueryParam("Id") int Id) {
+        return service.getPersonalTweets(Id);
     }
 
     @GET
@@ -53,10 +53,10 @@ public class TweetController {
     }
 
     @GET
-    @Path("/delete/{Id}")
+    @Path("/remove/{Id}")
     @Produces("application/json")
     public Bool delete(@PathParam("Id") int id) {
-        return new Bool(service.delete(id));
+        return new Bool(service.remove(id));
     }
 
     @GET

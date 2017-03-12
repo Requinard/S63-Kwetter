@@ -77,6 +77,7 @@ public class Account extends TweeterModel{
     }
 
     public List<Account> getFollowing() {
+        if(following == null){return new ArrayList<Account>();}
         return following;
     }
 
@@ -88,6 +89,12 @@ public class Account extends TweeterModel{
             following = new ArrayList<>();
         }
         following.add(tofollow);
+    }
+    public void removeFollowing(Account toUnfollow) {
+        if(following == null){//TODO : is this neccesary ?
+            following = new ArrayList<>();
+        }
+        following.remove(toUnfollow);
     }
 
     public String getEmail() {

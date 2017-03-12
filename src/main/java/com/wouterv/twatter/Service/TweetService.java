@@ -26,8 +26,6 @@ public class TweetService {
     @JPA
     IAccountDAO accountDAO;
 
-    int userId = 1;//TODO : remove hardcoded value
-
     public List<Tweet> getAllTweets() {
         return tweetDAO.getAll();
     }
@@ -36,22 +34,22 @@ public class TweetService {
         return tweetDAO.getPostedTweets(userId);
     }
 
-    public Tweet postTweets(String content, int userId) {//TODO : remove the userId and use JAAS
+    public Tweet create(String content, int userId) {//TODO : remove the userId and use JAAS
         Account account = accountDAO.findById(userId);
         Tweet tweet = new Tweet(content, account);
         tweetDAO.create(tweet);
         return tweet;
     }
 
-    public List<Tweet> getPersonalTweets() {
-        return tweetDAO.getPersonalTweets(userId);
+    public List<Tweet> getPersonalTweets(int Id) {
+        return tweetDAO.getPersonalTweets(Id);
     }
 
     public List<Tweet> search(String content) {
         return tweetDAO.search(content);
     }
 
-    public boolean delete(int id) {
+    public boolean remove(int id) {
         Tweet tweet = tweetDAO.findById(id);
         try {
             tweetDAO.remove(tweet);
@@ -77,5 +75,13 @@ public class TweetService {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public void setTweetDAO(ITweetDAO tweetDAO) {
+        this.tweetDAO = tweetDAO;
+    }
+
+    public void setAccountDAO(IAccountDAO accountDAO) {
+        this.accountDAO = accountDAO;
     }
 }
