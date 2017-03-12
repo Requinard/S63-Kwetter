@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="OData:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="odata.tweeter.war">
-      <element id="artifact" artifact-name="OData:war exploded" />
-    </root>
-  </artifact>
-</component>

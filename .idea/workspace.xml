@@ -1,9 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a5abbee-d472-4e61-87af-adbe4b4094ee" name="Default" comment="" />
-    <ignored path="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/out/" />
-    <ignored path="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/target/" />
+    <list default="true" id="7a5abbee-d472-4e61-87af-adbe4b4094ee" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/02b-JEA-Kwetter-Backend.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JEA-Kwetter-casus.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/User Stories.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/artifacts/OData_war.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/artifacts/OData_war_exploded.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__com_fasterxml_aalto_xml_0_9_10.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_4_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_4_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_4_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__org_abego_treelayout_org_abego_treelayout_core_1_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__org_apache_olingo_odata_commons_api_4_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__org_apache_olingo_odata_commons_core_4_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__org_apache_olingo_odata_server_api_4_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__org_apache_olingo_odata_server_core_4_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/OData.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/src/main/webapp/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/src/main/webapp/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/OData/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/CONTRIBUTING.adoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/LICENSE.code.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/LICENSE.writing.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/README.adoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/.mvn/wrapper/maven-wrapper.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/gradlew" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/gradlew.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/mvnw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/mvnw.cmd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/src/main/java/hello/Application.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/src/main/java/hello/Person.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/src/main/java/hello/PersonRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/complete/src/test/java/hello/ApplicationTests.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/initial/.mvn/wrapper/maven-wrapper.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/initial/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/initial/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/initial/gradlew" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/initial/gradlew.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/initial/mvnw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/initial/mvnw.cmd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/initial/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/initial/src/main/java/hello/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/Spring_Docs/gs-accessing-data-rest-master/test/run.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/artifacts/tweeter__war.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/artifacts/tweeter__war_exploded.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources.local.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.keystream" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.keystream.len" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.len" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.values.at" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata_i" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata_i.len" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/storage.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__org_eclipse_persistence_commonj_sdo_2_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__org_eclipse_persistence_eclipselink_2_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__org_eclipse_persistence_javax_persistence_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_antlr_2_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_asm_2_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_core_2_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_2_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_jpql_2_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_modelgen_processor_2_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/java/Controllers/AccountController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/java/Controllers/ITestDingetje.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/java/Controllers/TestController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/java/Controllers/TestDingetje.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/java/Models/Account.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/java/Models/Tag.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/java/Models/Tweet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/java/Service/AccountService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/java/TwatterApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/resources/META-INF/glassfish-resources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/resources/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/webapp/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/src/main/webapp/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/target/classes/META-INF/glassfish-resources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/target/classes/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/target/generated-sources/annotations/Models/Account_.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/target/generated-sources/annotations/Models/Tag_.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/target/generated-sources/annotations/Models/Tweet_.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/target/tweeter/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/target/tweeter/WEB-INF/classes/META-INF/glassfish-resources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/target/tweeter/WEB-INF/classes/META-INF/persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/target/tweeter/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/target/tweeter/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/resteasy/tweeter_/tweeter_.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/.mvn/wrapper/maven-wrapper.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/.mvn/wrapper/maven-wrapper.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/mvnw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/mvnw.cmd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/src/main/java/com/wouterv/spring/twatter/Application.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/src/main/java/com/wouterv/spring/twatter/Controllers/CustomerController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/src/main/java/com/wouterv/spring/twatter/Models/Customer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/src/main/resources/application.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/spring_boot/demo/src/test/java/com/wouterv/spring/twatter/DemoApplicationTests.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/~$A-Kwetter-casus.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/~$b-JEA-Kwetter-Backend.docx" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/artifacts/tweeter__war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/tweeter__war.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/artifacts/tweeter__war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/tweeter__war_exploded.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.keystream" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.keystream.len" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.len" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata.values.at" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata_i" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata_i.len" afterPath="$PROJECT_DIR$/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/_metadata_/metadata_i.len" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/storage.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/142c108e-1cb2-43f3-9237-179890582ff6/storage.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_4.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_4.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_8_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_8_4.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_8_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_8_4.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_8_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_8_4.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_1_m03.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_1_m03.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_6_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_6_9.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_6_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_6_9.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_5_0_b32.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_5_0_b32.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_5_0_b32.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_5_0_b32.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_5_0_b32.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_5_0_b32.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_glassfish_jersey_bundles_repackaged_jersey_guava_2_26_b02.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_bundles_repackaged_jersey_guava_2_26_b02.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_26_b02.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_26_b02.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_entity_filtering_2_26_b02.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_entity_filtering_2_26_b02.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_glassfish_jersey_media_jersey_media_json_jackson_2_26_b02.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_media_jersey_media_json_jackson_2_26_b02.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_mockito_mockito_core_2_7_14.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_7_14.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__org_objenesis_objenesis_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_5.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/Annotations/JPA.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Annotations/JPA.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/Bool.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Bool.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/Controller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/AccountController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/Controller/TweetController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/TweetController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/DaoFacade.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/DaoFacade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/IAccountDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/IAccountDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/IKwetterDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/IKwetterDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/ITweetDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/ITweetDAO.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_COL/TweetDAOCol.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/TweetDAOCol.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_JPA/TweetDAOJPA.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/TweetDAOJPA.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/Models/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Account.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/Models/Tweet.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Tweet.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/Models/TweeterModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/TweeterModel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/Models/Type.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Type.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/Service/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/AccountService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/Service/TweetService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/java/com/wouterv/twatter/TwatterApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/TwatterApplication.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/resources/META-INF/glassfish-resources.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/glassfish-resources.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/webapp/WEB-INF/sun-web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/sun-web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/webapp/error.html" afterPath="$PROJECT_DIR$/src/main/webapp/error.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/src/test/java/AccountTest.java" afterPath="$PROJECT_DIR$/src/test/java/AccountTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/classes/META-INF/glassfish-resources.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/glassfish-resources.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/tweeter/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/tweeter/META-INF/MANIFEST.MF" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/tweeter/WEB-INF/_glassfish-web.xml" afterPath="$PROJECT_DIR$/target/tweeter/WEB-INF/_glassfish-web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/tweeter/WEB-INF/classes/META-INF/glassfish-resources.xml" afterPath="$PROJECT_DIR$/target/tweeter/WEB-INF/classes/META-INF/glassfish-resources.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/tweeter/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/tweeter/WEB-INF/classes/META-INF/persistence.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/tweeter/WEB-INF/sun-web.xml" afterPath="$PROJECT_DIR$/target/tweeter/WEB-INF/sun-web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/tweeter/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/tweeter/WEB-INF/web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/tweeter/error.html" afterPath="$PROJECT_DIR$/target/tweeter/error.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/tweeter/index.jsp" afterPath="$PROJECT_DIR$/target/tweeter/index.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/target/tweeter/login.html" afterPath="$PROJECT_DIR$/target/tweeter/login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Project/tweeter/tweeter_.iml" afterPath="$PROJECT_DIR$/tweeter_.iml" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +286,188 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AccountTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/AccountTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+              <folding>
+                <element signature="e#613#614#0" expanded="false" />
+                <element signature="e#662#663#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/AccountService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="glassfish-resources.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/glassfish-resources.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IAccountDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/IAccountDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountDAOCol.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#950#951#0" expanded="false" />
+                <element signature="e#990#991#0" expanded="false" />
+                <element signature="e#1046#1047#0" expanded="false" />
+                <element signature="e#1092#1093#0" expanded="false" />
+                <element signature="e#1341#1342#0" expanded="false" />
+                <element signature="e#1393#1394#0" expanded="false" />
+                <element signature="e#1424#1425#0" expanded="false" />
+                <element signature="e#1460#1461#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountDAOJPA.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+              <folding>
+                <element signature="e#943#944#0" expanded="false" />
+                <element signature="e#979#980#0" expanded="false" />
+                <element signature="e#1991#1992#0" expanded="false" />
+                <element signature="e#2016#2017#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweetDAOJPA.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/TweetDAOJPA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="38" column="44" lean-forward="false" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+              <folding>
+                <element signature="e#1021#1022#0" expanded="false" />
+                <element signature="e#1055#1056#0" expanded="false" />
+                <element signature="e#1116#1117#0" expanded="false" />
+                <element signature="e#1141#1142#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweetService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#634#635#0" expanded="false" />
+                <element signature="e#674#675#0" expanded="false" />
+                <element signature="e#725#726#0" expanded="false" />
+                <element signature="e#780#781#0" expanded="false" />
+                <element signature="e#1090#1091#0" expanded="false" />
+                <element signature="e#1147#1148#0" expanded="false" />
+                <element signature="e#1196#1197#0" expanded="false" />
+                <element signature="e#1243#1244#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Account.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+              <folding>
+                <element signature="e#1135#1136#0" expanded="false" />
+                <element signature="e#1166#1167#0" expanded="false" />
+                <element signature="e#1214#1215#0" expanded="false" />
+                <element signature="e#1254#1255#0" expanded="false" />
+                <element signature="e#1290#1291#0" expanded="false" />
+                <element signature="e#1322#1323#0" expanded="false" />
+                <element signature="e#1372#1373#0" expanded="false" />
+                <element signature="e#1414#1415#0" expanded="false" />
+                <element signature="e#1449#1450#0" expanded="false" />
+                <element signature="e#1480#1481#0" expanded="false" />
+                <element signature="e#1528#1529#0" expanded="false" />
+                <element signature="e#1568#1569#0" expanded="false" />
+                <element signature="e#1606#1607#0" expanded="false" />
+                <element signature="e#1635#1636#0" expanded="false" />
+                <element signature="e#1684#1685#0" expanded="false" />
+                <element signature="e#1720#1721#0" expanded="false" />
+                <element signature="e#1763#1764#0" expanded="false" />
+                <element signature="e#1795#1796#0" expanded="false" />
+                <element signature="e#1852#1853#0" expanded="false" />
+                <element signature="e#1894#1895#0" expanded="false" />
+                <element signature="e#2126#2127#0" expanded="false" />
+                <element signature="e#2154#2155#0" expanded="false" />
+                <element signature="e#2196#2197#0" expanded="false" />
+                <element signature="e#2230#2231#0" expanded="false" />
+                <element signature="e#2260#2261#0" expanded="false" />
+                <element signature="e#2286#2287#0" expanded="false" />
+                <element signature="e#2324#2325#0" expanded="false" />
+                <element signature="e#2354#2355#0" expanded="false" />
+                <element signature="e#2389#2390#0" expanded="false" />
+                <element signature="e#2420#2421#0" expanded="false" />
+                <element signature="e#2468#2469#0" expanded="false" />
+                <element signature="e#2508#2509#0" expanded="false" />
+                <element signature="e#2545#2546#0" expanded="false" />
+                <element signature="e#2574#2575#0" expanded="false" />
+                <element signature="e#2622#2623#0" expanded="false" />
+                <element signature="e#2658#2659#0" expanded="false" />
+                <element signature="e#2704#2705#0" expanded="false" />
+                <element signature="e#2763#2764#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/AccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="952">
+              <caret line="72" column="30" lean-forward="false" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#792#793#0" expanded="false" />
+                <element signature="e#841#842#0" expanded="false" />
+                <element signature="e#1275#1276#0" expanded="false" />
+                <element signature="e#1318#1319#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,6 +488,9 @@
       <find>jersey</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -95,57 +499,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/Annotations/JPA.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/Models/Tag.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/DAOCol/IAccountDAO.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/DAO/ITweetDAO.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/DAO/DaoFacade.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/DAOCol/TweetDAOCol.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/DAOJPA/TweetDAOJPA.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/Models/TweeterModel.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/Controllers/TestDingetje.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/Models/Account.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/DAO/IAccountDAO.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/DAOJPA/AccountDAOJPA.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/Service/AccountService.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/Models/Tweet.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/DAOCol/AccountDAOCol.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/DAO/IKwetterDAO.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/Service/TweetService.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/Models/AccountTest.groovy" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/TwatterApplication.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Models/Tweet.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controllers/AccountController.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controller.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/DaoFacade.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/IKwetterDAO.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAOCol/AccountDAOCol.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/ITweetDAO.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAOCol/TweetDAOCol.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAOJPA/TweetDAOJPA.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/JPA_DAO/AccountDAOJPA.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/resources/META-INF/persistence.xml" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Service/TweetService.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Bool.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controller/TweetController.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/pom.xml" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/login.html" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/error.html" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Models/Account.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Models/Type.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/WEB-INF/_glassfish-web.xml" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/WEB-INF/glassfish-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Annotations/JPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/Tag.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAOCol/IAccountDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/ITweetDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/DaoFacade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAOCol/TweetDAOCol.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAOJPA/TweetDAOJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/TweeterModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controllers/TestDingetje.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/Account.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/IAccountDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAOJPA/AccountDAOJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Service/AccountService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/Tweet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAOCol/AccountDAOCol.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/IKwetterDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Service/TweetService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/AccountTest.groovy" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/TwatterApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Tweet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controllers/AccountController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/DaoFacade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/IKwetterDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAOCol/AccountDAOCol.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/ITweetDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAOCol/TweetDAOCol.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAOJPA/TweetDAOJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/JPA_DAO/AccountDAOJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Bool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/TweetController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/error.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Account.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Type.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/_glassfish-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/glassfish-web.xml" />
         <option value="dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.account_type" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/WEB-INF/sun-web.xml" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/index.jsp" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/test/java/AccountTest.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controller/AccountController.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/IAccountDAO.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Service/AccountService.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java" />
-        <option value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_JPA/TweetDAOJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/sun-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/AccountTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/AccountController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/IAccountDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/AccountService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/TweetDAOJPA.java" />
       </list>
     </option>
   </component>
@@ -212,9 +616,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -273,7 +678,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
+              <option name="myItemId" value="JEA6 (Kwetter)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,7 +688,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
+              <option name="myItemId" value="JEA6 (Kwetter)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -305,7 +710,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
+              <option name="myItemId" value="JEA6 (Kwetter)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -327,33 +732,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
+              <option name="myItemId" value="JEA6 (Kwetter)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -379,7 +758,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
+              <option name="myItemId" value="JEA6 (Kwetter)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -396,186 +775,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="twatter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twatter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twatter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twatter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAO_JPA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twatter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAO_COL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twatter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tweeter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twatter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -593,7 +792,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
@@ -743,7 +942,7 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -1337,7 +1536,8 @@
       <workItem from="1489139115874" duration="6270000" />
       <workItem from="1489146950286" duration="10667000" />
       <workItem from="1489187442678" duration="1369000" />
-      <workItem from="1489234113388" duration="19928000" />
+      <workItem from="1489234113388" duration="19735000" />
+      <workItem from="1489277990418" duration="84000" />
     </task>
     <servers />
   </component>
@@ -1356,7 +1556,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163021000" />
+    <option name="totallyTimeSpent" value="162912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1368,7 +1568,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1387,26 +1587,26 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802817" sideWeight="0.3496802" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19474836" sideWeight="0.4737418" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32603937" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16630197" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32166302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16044776" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19474836" sideWeight="0.4737418" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1419,43 +1619,61 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/AccountService.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/AccountService.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java</url>
           <line>69</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java</url>
           <line>79</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java</url>
           <line>41</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controller/AccountController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/AccountService.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/AccountController.java</url>
           <line>32</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Service/TweetService.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java</url>
           <line>65</line>
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controller/TweetController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/TweetController.java</url>
           <line>66</line>
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controller/AccountController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/AccountController.java</url>
           <line>87</line>
           <properties />
           <option name="timeStamp" value="41" />
@@ -1484,110 +1702,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/target/generated-sources/annotations/Models/User_.java" />
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/resources/META-INF/beans.xml" />
-    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.tag">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/School/PTS-Rekenrijden/simulatiesysteem/simulatiesysteem.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.account_tweet">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.tweet">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/Models/AccountTest.groovy" />
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/TwatterApplication.java">
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/Models/User_.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" />
+    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.tag" />
+    <entry file="file://$USER_HOME$/PTS-Rekenrijden/simulatiesysteem/simulatiesysteem.iml" />
+    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.account_tweet" />
+    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.tweet" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/AccountTest.groovy" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/TwatterApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controllers/AccountController.java" />
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controllers/ITestDingetje.java" />
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controllers/TestDingetje.java" />
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controllers/TestController.java" />
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Models/Tag.java" />
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Annotations/JPA.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controllers/AccountController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controllers/ITestDingetje.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controllers/TestDingetje.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controllers/TestController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Tag.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Annotations/JPA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controller.java" />
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_COL/TweetDAOCol.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/TweetDAOCol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="87" column="30" lean-forward="false" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/IKwetterDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/IKwetterDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/ITweetDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/ITweetDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/DaoFacade.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/DaoFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/tweeter_.iml">
+    <entry file="file://$PROJECT_DIR$/tweeter_.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/Test/AccountTest.java" />
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/Test/AccountTest.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="23" />
@@ -1599,35 +1777,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="72" column="69" lean-forward="true" selection-start-line="72" selection-start-column="69" selection-end-line="72" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Bool.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Bool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/error.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/error.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/login.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/resources/META-INF/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
@@ -1635,55 +1809,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Models/TweeterModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/TweeterModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Models/Tweet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Tweet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
           <caret line="75" column="50" lean-forward="false" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.account_group">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Models/Type.java">
+    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.account_group" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Type.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/WEB-INF/_glassfish-web.xml">
-      <provider editor-type-id="com.intellij.javaee.oss.glassfish.editor.GlassfishWebRootProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/_glassfish-web.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
@@ -1691,7 +1840,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/WEB-INF/sun-web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/sun-web.xml">
       <provider editor-type-id="com.intellij.javaee.oss.glassfish.editor.GlassfishWebRootProvider">
         <state />
       </provider>
@@ -1702,46 +1851,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.account_type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.account">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/webapp/index.jsp">
+    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.type" />
+    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.account_type" />
+    <entry file="dbDummy://dbtable:/b5dd26ff/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.account" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -1749,7 +1862,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controller/TweetController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/TweetController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
@@ -1757,82 +1870,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Controller/AccountController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/AccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="72" column="30" lean-forward="true" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding>
+            <element signature="e#613#614#0" expanded="false" />
+            <element signature="e#662#663#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Service/TweetService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="952">
+          <caret line="72" column="30" lean-forward="false" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#792#793#0" expanded="false" />
+            <element signature="e#841#842#0" expanded="false" />
+            <element signature="e#1275#1276#0" expanded="false" />
+            <element signature="e#1318#1319#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO/IAccountDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#634#635#0" expanded="false" />
+            <element signature="e#674#675#0" expanded="false" />
+            <element signature="e#725#726#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#1090#1091#0" expanded="false" />
+            <element signature="e#1147#1148#0" expanded="false" />
+            <element signature="e#1196#1197#0" expanded="false" />
+            <element signature="e#1243#1244#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/IAccountDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding />
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/AccountDAOCol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#950#951#0" expanded="false" />
+            <element signature="e#990#991#0" expanded="false" />
+            <element signature="e#1046#1047#0" expanded="false" />
+            <element signature="e#1092#1093#0" expanded="false" />
+            <element signature="e#1341#1342#0" expanded="false" />
+            <element signature="e#1393#1394#0" expanded="false" />
+            <element signature="e#1424#1425#0" expanded="false" />
+            <element signature="e#1460#1461#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding />
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="e#943#944#0" expanded="false" />
+            <element signature="e#979#980#0" expanded="false" />
+            <element signature="e#1991#1992#0" expanded="false" />
+            <element signature="e#2016#2017#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/DAO_JPA/TweetDAOJPA.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/TweetDAOJPA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
+        <state relative-caret-position="459">
           <caret line="38" column="44" lean-forward="false" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-          <folding />
+          <folding>
+            <element signature="e#1021#1022#0" expanded="false" />
+            <element signature="e#1055#1056#0" expanded="false" />
+            <element signature="e#1116#1117#0" expanded="false" />
+            <element signature="e#1141#1142#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Models/Account.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="391">
           <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="e#1135#1136#0" expanded="false" />
+            <element signature="e#1166#1167#0" expanded="false" />
+            <element signature="e#1214#1215#0" expanded="false" />
+            <element signature="e#1254#1255#0" expanded="false" />
+            <element signature="e#1290#1291#0" expanded="false" />
+            <element signature="e#1322#1323#0" expanded="false" />
+            <element signature="e#1372#1373#0" expanded="false" />
+            <element signature="e#1414#1415#0" expanded="false" />
+            <element signature="e#1449#1450#0" expanded="false" />
+            <element signature="e#1480#1481#0" expanded="false" />
+            <element signature="e#1528#1529#0" expanded="false" />
+            <element signature="e#1568#1569#0" expanded="false" />
+            <element signature="e#1606#1607#0" expanded="false" />
+            <element signature="e#1635#1636#0" expanded="false" />
+            <element signature="e#1684#1685#0" expanded="false" />
+            <element signature="e#1720#1721#0" expanded="false" />
+            <element signature="e#1763#1764#0" expanded="false" />
+            <element signature="e#1795#1796#0" expanded="false" />
+            <element signature="e#1852#1853#0" expanded="false" />
+            <element signature="e#1894#1895#0" expanded="false" />
+            <element signature="e#2126#2127#0" expanded="false" />
+            <element signature="e#2154#2155#0" expanded="false" />
+            <element signature="e#2196#2197#0" expanded="false" />
+            <element signature="e#2230#2231#0" expanded="false" />
+            <element signature="e#2260#2261#0" expanded="false" />
+            <element signature="e#2286#2287#0" expanded="false" />
+            <element signature="e#2324#2325#0" expanded="false" />
+            <element signature="e#2354#2355#0" expanded="false" />
+            <element signature="e#2389#2390#0" expanded="false" />
+            <element signature="e#2420#2421#0" expanded="false" />
+            <element signature="e#2468#2469#0" expanded="false" />
+            <element signature="e#2508#2509#0" expanded="false" />
+            <element signature="e#2545#2546#0" expanded="false" />
+            <element signature="e#2574#2575#0" expanded="false" />
+            <element signature="e#2622#2623#0" expanded="false" />
+            <element signature="e#2658#2659#0" expanded="false" />
+            <element signature="e#2704#2705#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/java/com/wouterv/twatter/Service/AccountService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/AccountService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/main/resources/META-INF/glassfish-resources.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/glassfish-resources.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/School/JEA6 (Kwetter)/Project/tweeter/src/test/java/AccountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
           <folding />
         </state>
       </provider>

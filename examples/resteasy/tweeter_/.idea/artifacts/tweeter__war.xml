@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="tweeter_:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="tweeter.war">
-      <element id="artifact" artifact-name="tweeter_:war exploded" />
-    </root>
-  </artifact>
-</component>
