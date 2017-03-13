@@ -26,6 +26,10 @@ public class TweetService {
     @JPA
     IAccountDAO accountDAO;
 
+    public Tweet findById(int id) {
+        return tweetDAO.findById(id);
+    }
+
     public List<Tweet> getAllTweets() {
         return tweetDAO.getAll();
     }

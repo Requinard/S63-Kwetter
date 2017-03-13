@@ -12,6 +12,9 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.security.auth.login.LoginException;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.security.Principal;
 import java.util.List;
 
@@ -26,85 +29,87 @@ public class AccountController {
     @Inject
     AccountService service;
 
-    @GET
-    @Path("/{userId}")
+    @POST
+    @Path("/register")
+    @Consumes("application/x-www-form-urlencoded")
     @Produces("application/json")
-    public Account getAccountById(@PathParam("userId") int userId) {
-        return service.getAccount(userId);
+    public Response create(@FormParam("username") String username,
+                          @FormParam("email") String email,
+                          @FormParam("bio") String bio,
+                          @FormParam("firstName") String firstName,
+                          @FormParam("lastName") String lastName,
+                          @FormParam("password") String password) throws URISyntaxException {
+        Account account = service.create(username, email, bio, firstName, lastName, password);
+        URI createdURI = new URI("/tweeter/api/accounts/id/"+account.getId());
+        return Response.created(createdURI).entity(account).build();
     }
 
     @GET
     @Path("/accounts")
     @Produces("application/json")
-    public List<Account> getAllAccounts() {
-        return service.getAllAccounts();
+    public Response getAllAccounts() {
+        return Response.ok().entity(service.getAllAccounts()).build();
     }
 
     @GET
-    @Path("/{userName}")
+    @Path("/id/{userId}")
     @Produces("application/json")
-    public Account getAccountByUsername(@PathParam("userName") String userName) {
-        return service.getAccountByUsername(userName);
+    public Response getAccountById(@PathParam("userId") int userId) {
+        return Response.ok().entity(service.getAccount(userId)).build();
+    }
+
+
+    @GET
+    @Path("/username/{userName}")
+    @Produces("application/json")
+    public Response getAccountByUsername(@PathParam("userName") String userName) {
+        return Response.ok().entity(service.getAccountByUsername(userName)).build();
     }
 
     //    @RolesAllowed("admin")//TODO : make the rolesallowed work and keep a user
     @GET
     @Path("/search/{name}")
     @Produces("application/json")
-    public List<Account> search(@PathParam("name") String name) {
-        return service.search(name);
+    public Response search(@PathParam("name") String name) {
+        return Response.ok().entity(service.search(name)).build();
     }
 
-
-    @POST
-    @Path("/register")
-    @Consumes("application/x-www-form-urlencoded")
-    @Produces("application/json")
-    public Account create(@FormParam("username") String username,
-                          @FormParam("email") String email,
-                          @FormParam("bio") String bio,
-                          @FormParam("firstName") String firstName,
-                          @FormParam("lastName") String lastName,
-                          @FormParam("password") String password) {
-        return service.create(username, email, bio, firstName, lastName, password);
-    }
 
     @GET
     @Path("/follow/{Id}")
     @Produces("application/json")
-    public Boolean follow(@PathParam("Id") int id,
-                          @QueryParam("loggedinUser") int loggedInUser) {
-        return service.follow(id, loggedInUser);
+    public Response follow(@PathParam("Id") int id,
+                          @QueryParam("loggedInUser") int loggedInUser) {
+        return Response.ok().entity(new Bool(service.follow(id, loggedInUser))).build();
     }
 
     @GET
     @Path("/unFollow/{Id}")
     @Produces("application/json")
-    public Boolean unfollow(@PathParam("Id") int id,
+    public Response unfollow(@PathParam("Id") int id,
                             @QueryParam("loggedinUser") int loggedInUser) {
-        return service.unFollow(id, loggedInUser);
+        return Response.ok().entity(new Bool(service.unFollow(id, loggedInUser))).build();
     }
 
     @GET
     @Path("/followers/{Id}")//following you
     @Produces("application/json")
-    public List<Account> followers(@PathParam("Id") int id) {
-
-        return service.followers(id);
+    public Response followers(@PathParam("Id") int id) {
+        return Response.ok().entity(service.followers(id)).build();
     }
 
     @GET
     @Path("/role/add/{type}/{Id}")//following you
     @Produces("application/json")
-    public Bool RoleAdd(@PathParam("type") String type, @PathParam("Id") int id) {
-        return new Bool(service.addRole(type, id));
+    public Response RoleAdd(@PathParam("type") String type, @PathParam("Id") int id) {
+        return Response.ok().entity(new Bool(service.addRole(type, id))).build();
     }
 
     @GET
     @Path("/role/remove/{type}/{Id}")//following you
     @Produces("application/json")
-    public Bool RoleRemove(@PathParam("type") String type, @PathParam("Id") int id) {
-        return new Bool(service.removeRole(type, id));
+    public Response RoleRemove(@PathParam("type") String type, @PathParam("Id") int id) {
+        return Response.ok().entity(new Bool(service.removeRole(type, id))).build();
     }
 
 //    @POST

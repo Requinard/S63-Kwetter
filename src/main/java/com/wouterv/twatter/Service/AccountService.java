@@ -52,16 +52,34 @@ public class AccountService {
 
     public Account create(String username, String email, String bio, String firstName, String lastName,String password) {
 
-        MessageDigest digest = null;
+//        MessageDigest digest = null;
+//        try {
+//            digest = MessageDigest.getInstance("SHA-256");
+//        } catch (NoSuchAlgorithmException e) {
+//            e.printStackTrace();
+//        }
+//        byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
+
+        MessageDigest md = null;
         try {
-            digest = MessageDigest.getInstance("SHA-256");
+            md = MessageDigest.getInstance("SHA-256");
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-        byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
+        md.update(password.getBytes());
+
+        byte byteData[] = md.digest();
+
+        //convert the byte to hex format method 1
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < byteData.length; i++) {
+            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+        }
+
 
         Account account = new Account(username, email, bio, firstName, lastName);
-        account.setPassword(hash.toString());//TODO : Make a salted implementation
+//        account.setPassword(hash.toString());//TODO : Make a salted implementation
+        account.setPassword(sb.toString());
         accountDAO.create(account);
         return account;
     }

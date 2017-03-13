@@ -117,7 +117,7 @@ public class Account extends TweeterModel {
     public void setBio(String bio) {
         this.bio = bio;
     }
-
+    @XmlTransient
     public String getPassword() {
         return password;
     }

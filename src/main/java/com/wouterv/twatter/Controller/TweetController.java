@@ -7,6 +7,10 @@ import com.wouterv.twatter.Service.TweetService;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 
 /**
@@ -19,53 +23,67 @@ public class TweetController {
     @Inject
     TweetService service;
 
-    @GET
-    @Path("/all")
-    @Produces("application/json")
-    public List<Tweet> getAllTweets() {
-
-        return service.getAllTweets();
-    }
-
     @POST
     @Path("/create")
     @Consumes("application/x-www-form-urlencoded")
     @Produces("application/json")
-    public Tweet postTweets(@FormParam("content") String content,
-                            @FormParam("userId") int userId) {//TODO : remove the userId and use JAAS
-        return service.create(content, userId);
+    public Response create(@FormParam("content") String content,
+                           @FormParam("userId") int userId) {//TODO : remove the userId and use JAAS
+        Tweet tweet = service.create(content, userId);
+        URI uri = null;
+        try {
+            uri = new URI("/tweets/id/" + tweet.getId());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        return Response.created(uri).entity(tweet).build();
     }
+
+    @GET
+    @Path("/id/{id}")
+    @Produces("application/json")
+    public Response getById(@PathParam("id") int id) {
+        return Response.ok().entity(service.findById(id)).build();
+    }
+
+    @GET
+    @Path("/all")
+    @Produces("application/json")
+    public Response getAllTweets() {
+
+        return Response.ok().entity(service.getAllTweets()).build();
+    }
+
 
     @GET
     @Path("/personal")
     @Produces("application/json")
-    public List<Tweet> getPersonalTweets(@QueryParam("Id") int Id) {
-        return service.getPersonalTweets(Id);
+    public Response getPersonalTweets(@QueryParam("Id") int Id) {
+        return Response.ok().entity(service.getPersonalTweets(Id)).build();
     }
 
     @GET
     @Path("/search")
     @Produces("application/json")
-    public List<Tweet> search(@QueryParam("content") String content) {
+    public Response search(@QueryParam("content") String content) {
         if (content.isEmpty()) {
             throw new BadRequestException("The parameter 'content' was null.");
         }
-        return service.search(content);
+        return Response.ok().entity(service.search(content)).build();
     }
 
     @GET
     @Path("/remove/{Id}")
     @Produces("application/json")
-    public Bool delete(@PathParam("Id") int id) {
-        return new Bool(service.remove(id));
+    public Response delete(@PathParam("Id") int id) {
+        return Response.ok().entity(new Bool(service.remove(id))).build();
     }
 
     @GET
     @Path("/heart/{Id}")
     @Produces("application/json")
-    public Bool heart(@PathParam("Id") int id, @QueryParam("userId") int userId) {
-        boolean result = service.hearth(id, userId);
-        return new Bool(result);
+    public Response heart(@PathParam("Id") int id, @QueryParam("userId") int userId) {
+        return Response.ok().entity(new Bool(service.hearth(id, userId))).build();
     }
 }
 
