@@ -4,6 +4,7 @@
         <jta-data-source>Twatter_JNDI</jta-data-source>
         <class>com.wouterv.twatter.Models.Account</class>
         <class>com.wouterv.twatter.Models.Tweet</class>
+        <class>com.wouterv.twatter.Models.Type</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>

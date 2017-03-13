@@ -7,6 +7,7 @@ import com.wouterv.twatter.Models.Tweet;
 
 import javax.ejb.Stateless;
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,6 +27,12 @@ public class TweetDAOJPA extends DaoFacade<Tweet> implements ITweetDAO {
 
     public TweetDAOJPA() {
         super(Tweet.class);
+    }
+
+    @Override
+    public void create(Tweet entity) {
+        entity.setDate(new Date());
+        super.create(entity);
     }
 
     @Override

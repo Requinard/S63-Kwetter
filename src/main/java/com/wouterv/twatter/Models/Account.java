@@ -2,6 +2,7 @@ package com.wouterv.twatter.Models;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,6 @@ import java.util.List;
 @XmlRootElement
 public class Account extends TweeterModel {
 
-//    public enum Groups{ADMIN, USER}
 
     @Column(unique = true, nullable = false)
     private String userName;
@@ -33,8 +33,7 @@ public class Account extends TweeterModel {
     @OneToMany
     private List<Account> following;
 
-    public Account() {
-    }
+    public Account() {}
 
     public Account(String userName, String email, String bio, String firstName, String lastName) {
         this.userName = userName;
@@ -125,6 +124,7 @@ public class Account extends TweeterModel {
         this.password = password;
     }
 
+    @XmlTransient
     public List<Type> getGroups() {
         return groups;
     }

@@ -9,8 +9,6 @@ import java.util.List;
 /**
  * Created by Wouter Vanmulken on 6-3-2017.
  */
-//@Entity
-//@XmlRootElement
 @Entity
 @XmlRootElement
 public class Tweet extends TweeterModel {

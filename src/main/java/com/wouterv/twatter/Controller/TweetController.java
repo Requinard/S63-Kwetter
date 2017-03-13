@@ -23,6 +23,7 @@ public class TweetController {
     @Path("/allTweets")
     @Produces("application/json")
     public List<Tweet> getAllTweets() {
+
         return service.getAllTweets();
     }
 

@@ -20,7 +20,6 @@ import java.util.List;
  */
 
 @Stateless
-@ManagedBean
 @Path("/accounts")
 public class AccountController {
 
@@ -33,6 +32,7 @@ public class AccountController {
     public Account getAccountById(@PathParam("userId") int userId) {
         return service.getAccount(userId);
     }
+
     @GET
     @Path("/accounts")
     @Produces("application/json")

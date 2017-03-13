@@ -1,6 +1,7 @@
 package com.wouterv.twatter.Models;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import java.util.List;
  * Created by Wouter Vanmulken on 11-3-2017.
  */
 @Entity
+@XmlRootElement
 public class Type implements Serializable {
     @Id
     private String groupName;

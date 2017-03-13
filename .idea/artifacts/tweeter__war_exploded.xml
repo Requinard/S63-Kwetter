@@ -8,29 +8,11 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: postgresql:postgresql:9.1-901-1.jdbc4" />
+          <element id="library" level="project" name="Maven: javax:javaee-web-api:7.0" />
           <element id="library" level="project" name="Maven: org.mockito:mockito-core:2.7.14" />
           <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.6.9" />
           <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy-agent:1.6.9" />
           <element id="library" level="project" name="Maven: org.objenesis:objenesis:2.5" />
-          <element id="library" level="project" name="Maven: org.glassfish.jersey.media:jersey-media-json-jackson:2.26-b02" />
-          <element id="library" level="project" name="Maven: org.glassfish.jersey.core:jersey-common:2.26-b02" />
-          <element id="library" level="project" name="Maven: javax.ws.rs:javax.ws.rs-api:2.1-m03" />
-          <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.2" />
-          <element id="library" level="project" name="Maven: org.glassfish.jersey.bundles.repackaged:jersey-guava:2.26-b02" />
-          <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2-api:2.5.0-b32" />
-          <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2-utils:2.5.0-b32" />
-          <element id="library" level="project" name="Maven: org.glassfish.hk2.external:aopalliance-repackaged:2.5.0-b32" />
-          <element id="library" level="project" name="Maven: org.glassfish.hk2.external:javax.inject:2.5.0-b32" />
-          <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2-locator:2.5.0-b32" />
-          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
-          <element id="library" level="project" name="Maven: org.glassfish.hk2:osgi-resource-locator:1.0.1" />
-          <element id="library" level="project" name="Maven: org.glassfish.jersey.ext:jersey-entity-filtering:2.26-b02" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.8.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.8.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.8.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">
