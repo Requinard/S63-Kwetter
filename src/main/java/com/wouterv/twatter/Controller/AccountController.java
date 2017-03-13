@@ -1,5 +1,6 @@
 package com.wouterv.twatter.Controller;
 
+import com.wouterv.twatter.Bool;
 import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Service.AccountService;
 
@@ -62,28 +63,42 @@ public class AccountController {
                               @FormParam("email") String email,
                               @FormParam("bio") String bio,
                               @FormParam("firstName") String firstName,
-                              @FormParam("lastName") String lastName) {
-        return service.create(username, email, bio, firstName, lastName);
+                              @FormParam("lastName") String lastName,
+                              @FormParam("password") String password) {
+        return service.create(username, email, bio, firstName, lastName,password);
     }
     @GET
     @Path("/follow/{Id}")
     @Produces("application/json")
     public Boolean follow(@PathParam("Id") int id,
-                                @QueryParam("loggedinUser") int loggedInUser) {//TODO : maybe this should be a post
+                                @QueryParam("loggedinUser") int loggedInUser) {
         return service.follow(id,loggedInUser);
     }
     @GET
     @Path("/unFollow/{Id}")
     @Produces("application/json")
     public Boolean unfollow(@PathParam("Id") int id,
-                          @QueryParam("loggedinUser") int loggedInUser) {//TODO : maybe this should be a post
+                          @QueryParam("loggedinUser") int loggedInUser) {
         return service.unFollow(id,loggedInUser);
     }
     @GET
-    @Path("/followers/{Id}")
+    @Path("/followers/{Id}")//following you
     @Produces("application/json")
-    public List<Account> followers(@PathParam("Id") int id) {//TODO : maybe this should be a post
+    public List<Account> followers(@PathParam("Id") int id) {
+
         return service.followers(id);
+    }
+    @GET
+    @Path("/role/add/{type}/{Id}")//following you
+    @Produces("application/json")
+    public Bool RoleAdd(@PathParam("type") String type, @PathParam("Id") int id) {
+        return new Bool(service.addRole(type,id));
+    }
+    @GET
+    @Path("/role/remove/{type}/{Id}")//following you
+    @Produces("application/json")
+    public Bool RoleRemove(@PathParam("type") String type, @PathParam("Id") int id) {
+        return new Bool(service.removeRole(type,id));
     }
 
 //    @POST
@@ -102,7 +117,6 @@ public class AccountController {
         ExternalContext a = fc.getExternalContext();
         Principal p = a.getUserPrincipal();
         return p;
-//        return FacesContext.getCurrentInstance().getExternalContext().getUserPrincipal();
     }
 
 

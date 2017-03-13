@@ -4,6 +4,7 @@ import com.wouterv.twatter.Annotations.JPA;
 import com.wouterv.twatter.DAO.DaoFacade;
 import com.wouterv.twatter.DAO.IAccountDAO;
 import com.wouterv.twatter.Models.Account;
+import com.wouterv.twatter.Models.Type;
 
 import javax.ejb.Stateless;
 import javax.persistence.*;
@@ -51,6 +52,32 @@ public class AccountDAOJPA extends DaoFacade<Account> implements IAccountDAO {
         q.setParameter("id", Id);
         List<Account> userList = q.getResultList();
         return userList;
+    }
+
+    @Override
+    public boolean addRole(Type role, int id) {
+        try {
+            Account account = findById(id);
+            account.addGroup(role);
+            em.persist(account);
+        }catch (Exception e){
+            System.out.println(e);
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean removeRole(Type role, int id) {
+        try {
+            Account account = findById(id);
+            account.removeGroup(role);
+            em.persist(account);
+        }catch (Exception e){
+            System.out.println(e);
+            return false;
+        }
+        return true;
     }
 
     @Override

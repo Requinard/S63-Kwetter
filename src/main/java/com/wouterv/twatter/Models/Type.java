@@ -18,6 +18,9 @@ public class Type implements Serializable {
                 inverseJoinColumns = @JoinColumn(name = "userName",referencedColumnName = "userName"))
     private List<Account> accounts;
 
+    public Type(){}
+    public Type(String name){this.groupName = name;}
+
     public String getGroupName() {
         return groupName;
     }

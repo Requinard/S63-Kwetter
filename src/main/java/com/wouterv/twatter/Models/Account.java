@@ -10,13 +10,13 @@ import java.util.List;
  */
 @Entity
 @XmlRootElement
-public class Account extends TweeterModel{
+public class Account extends TweeterModel {
 
 //    public enum Groups{ADMIN, USER}
 
-    @Column(unique = true,nullable = false)
+    @Column(unique = true, nullable = false)
     private String userName;
-    @Column(unique = true,nullable = false)
+    @Column(unique = true, nullable = false)
     private String email;
     private String bio;
     private String firstName;
@@ -77,21 +77,25 @@ public class Account extends TweeterModel{
     }
 
     public List<Account> getFollowing() {
-        if(following == null){return new ArrayList<Account>();}
+        if (following == null) {
+            return new ArrayList<Account>();
+        }
         return following;
     }
 
     public void setFollowing(List<Account> following) {
         this.following = following;
     }
+
     public void addFollowing(Account tofollow) {
-        if(following == null){//TODO : is this neccesary ?
+        if (following == null) {//TODO : is this neccesary ?
             following = new ArrayList<>();
         }
         following.add(tofollow);
     }
+
     public void removeFollowing(Account toUnfollow) {
-        if(following == null){//TODO : is this neccesary ?
+        if (following == null) {//TODO : is this neccesary ?
             following = new ArrayList<>();
         }
         following.remove(toUnfollow);
@@ -127,6 +131,18 @@ public class Account extends TweeterModel{
 
     public void setGroups(List<Type> groups) {
         this.groups = groups;
+    }
+
+    public void addGroup(Type type) {
+        if (!groups.contains(type)) {
+            groups.add(type);
+        }
+    }
+
+    public void removeGroup(Type type) {
+        if (groups.contains(type)) {
+            groups.remove(type);
+        }
     }
 
     @Override

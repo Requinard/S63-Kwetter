@@ -1,22 +1,19 @@
 package Service;
 
-import com.wouterv.twatter.DAO.IAccountDAO;
-import com.wouterv.twatter.DAO.ITweetDAO;
 import com.wouterv.twatter.DAO_COL.AccountDAOCol;
 import com.wouterv.twatter.DAO_COL.TweetDAOCol;
 import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Models.Tweet;
 import com.wouterv.twatter.Service.AccountService;
 import com.wouterv.twatter.Service.TweetService;
+
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import javax.validation.constraints.AssertTrue;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Created by Wouter Vanmulken on 12-3-2017.
@@ -42,8 +39,8 @@ public class TweetServiceTest {
     public void Before(){
         accountdao.setAccounts(new CopyOnWriteArrayList<>());
         tweetdao.setTweets(new CopyOnWriteArrayList<>());
-        acc1 = accountService.create("username", "email", "bio", "firstname", "lastname");
-        acc2 = accountService.create("username2", "email2", "bio2", "firstname2", "lastname2");
+        acc1 = accountService.create("username", "email", "bio", "firstname", "lastname","pass");
+        acc2 = accountService.create("username2", "email2", "bio2", "firstname2", "lastname2","pass");
     }
     @Test
     public void CreateAndRemoveAndGetAll(){
