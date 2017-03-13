@@ -67,4 +67,8 @@ public class TweetDAOJPA extends DaoFacade<Tweet> implements ITweetDAO {
         List result = q.getResultList();
         return result;
     }
+
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 }

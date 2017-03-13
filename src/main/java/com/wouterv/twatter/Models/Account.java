@@ -11,6 +11,7 @@ import java.util.List;
  */
 @Entity
 @XmlRootElement
+
 public class Account extends TweeterModel {
 
 
@@ -36,6 +37,7 @@ public class Account extends TweeterModel {
     public Account() {}
 
     public Account(String userName, String email, String bio, String firstName, String lastName) {
+
         this.userName = userName;
         this.email = email;
         this.bio = bio;
@@ -124,7 +126,7 @@ public class Account extends TweeterModel {
         this.password = password;
     }
 
-    @XmlTransient
+//    @XmlTransient
     public List<Type> getGroups() {
         return groups;
     }

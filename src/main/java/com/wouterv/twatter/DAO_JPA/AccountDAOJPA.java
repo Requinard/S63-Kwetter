@@ -40,8 +40,9 @@ public class AccountDAOJPA extends DaoFacade<Account> implements IAccountDAO {
     @Override
     public List<Account> search(String name) {
         name = name.replace(" ", "%");
-        Query q = em.createQuery("SELECT a FROM Account a where a.firstName like :name or a.lastName like :name");
-        q.setParameter("name", "%" + name + "%");
+        name = "%" + name + "%";
+        Query q = em.createQuery("SELECT a FROM Account a where a.firstName like :name  or a.userName like :name");
+        q.setParameter("name", name);
         List<Account> userList = q.getResultList();
         return userList;
     }
@@ -83,5 +84,9 @@ public class AccountDAOJPA extends DaoFacade<Account> implements IAccountDAO {
     @Override
     public EntityManager getEntityManager() {
         return em;
+    }
+
+    public void setEm(EntityManager em) {
+        this.em = em;
     }
 }

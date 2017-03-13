@@ -2,6 +2,7 @@ package com.wouterv.twatter.Models;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.List;
 
@@ -16,12 +17,15 @@ public class Type implements Serializable {
 
     @ManyToMany
     @JoinTable(name = "account_type",
-                joinColumns = @JoinColumn(name = "groupName", referencedColumnName = "groupName"),
-                inverseJoinColumns = @JoinColumn(name = "userName",referencedColumnName = "userName"))
+            joinColumns = @JoinColumn(name = "groupName", referencedColumnName = "groupName"),
+            inverseJoinColumns = @JoinColumn(name = "userName", referencedColumnName = "userName"))
     private List<Account> accounts;
 
-    public Type(){}
-    public Type(String name){this.groupName = name;}
+    public Type() {}
+
+    public Type(String name) {
+        this.groupName = name;
+    }
 
     public String getGroupName() {
         return groupName;
@@ -31,6 +35,7 @@ public class Type implements Serializable {
         this.groupName = groupName;
     }
 
+    @XmlTransient
     public List<Account> getAccounts() {
         return accounts;
     }

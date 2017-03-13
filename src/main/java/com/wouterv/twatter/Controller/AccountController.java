@@ -41,12 +41,13 @@ public class AccountController {
     }
 
     @GET
-    @Path("/user/{userName}")
+    @Path("/{userName}")
     @Produces("application/json")
     public Account getAccountByUsername(@PathParam("userName") String userName) {
         return service.getAccountByUsername(userName);
     }
-//    @RolesAllowed("admin")//TODO : make the rolesallowed work and keep a user
+
+    //    @RolesAllowed("admin")//TODO : make the rolesallowed work and keep a user
     @GET
     @Path("/search/{name}")
     @Produces("application/json")
@@ -60,27 +61,30 @@ public class AccountController {
     @Consumes("application/x-www-form-urlencoded")
     @Produces("application/json")
     public Account create(@FormParam("username") String username,
-                              @FormParam("email") String email,
-                              @FormParam("bio") String bio,
-                              @FormParam("firstName") String firstName,
-                              @FormParam("lastName") String lastName,
-                              @FormParam("password") String password) {
-        return service.create(username, email, bio, firstName, lastName,password);
+                          @FormParam("email") String email,
+                          @FormParam("bio") String bio,
+                          @FormParam("firstName") String firstName,
+                          @FormParam("lastName") String lastName,
+                          @FormParam("password") String password) {
+        return service.create(username, email, bio, firstName, lastName, password);
     }
+
     @GET
     @Path("/follow/{Id}")
     @Produces("application/json")
     public Boolean follow(@PathParam("Id") int id,
-                                @QueryParam("loggedinUser") int loggedInUser) {
-        return service.follow(id,loggedInUser);
+                          @QueryParam("loggedinUser") int loggedInUser) {
+        return service.follow(id, loggedInUser);
     }
+
     @GET
     @Path("/unFollow/{Id}")
     @Produces("application/json")
     public Boolean unfollow(@PathParam("Id") int id,
-                          @QueryParam("loggedinUser") int loggedInUser) {
-        return service.unFollow(id,loggedInUser);
+                            @QueryParam("loggedinUser") int loggedInUser) {
+        return service.unFollow(id, loggedInUser);
     }
+
     @GET
     @Path("/followers/{Id}")//following you
     @Produces("application/json")
@@ -88,17 +92,19 @@ public class AccountController {
 
         return service.followers(id);
     }
+
     @GET
     @Path("/role/add/{type}/{Id}")//following you
     @Produces("application/json")
     public Bool RoleAdd(@PathParam("type") String type, @PathParam("Id") int id) {
-        return new Bool(service.addRole(type,id));
+        return new Bool(service.addRole(type, id));
     }
+
     @GET
     @Path("/role/remove/{type}/{Id}")//following you
     @Produces("application/json")
     public Bool RoleRemove(@PathParam("type") String type, @PathParam("Id") int id) {
-        return new Bool(service.removeRole(type,id));
+        return new Bool(service.removeRole(type, id));
     }
 
 //    @POST
@@ -109,15 +115,4 @@ public class AccountController {
 //                            @FormParam("Password") String password) throws LoginException {//TODO : remove the userId and use JAAS
 //        return service.login(username,password);
 //    }
-    @GET
-    @Path("/test")
-    @Produces("application/json")
-    public Principal test() {
-        FacesContext fc = FacesContext.getCurrentInstance();
-        ExternalContext a = fc.getExternalContext();
-        Principal p = a.getUserPrincipal();
-        return p;
-    }
-
-
 }

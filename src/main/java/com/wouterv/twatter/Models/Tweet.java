@@ -13,10 +13,15 @@ import java.util.List;
 @XmlRootElement
 public class Tweet extends TweeterModel {
 
+    @Column(length = 140)
     private String content;
+
+    @Temporal(value = TemporalType.DATE)
+    @Column(nullable = false)
     private Date Date;
 
     @OneToOne
+    @JoinColumn(nullable = false)
     private Account postAccount;
     @OneToMany
     private List<Account> hearted;

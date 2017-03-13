@@ -20,7 +20,7 @@ public class TweetController {
     TweetService service;
 
     @GET
-    @Path("/allTweets")
+    @Path("/all")
     @Produces("application/json")
     public List<Tweet> getAllTweets() {
 
@@ -28,7 +28,7 @@ public class TweetController {
     }
 
     @POST
-    @Path("/tweet")
+    @Path("/create")
     @Consumes("application/x-www-form-urlencoded")
     @Produces("application/json")
     public Tweet postTweets(@FormParam("content") String content,
@@ -37,7 +37,7 @@ public class TweetController {
     }
 
     @GET
-    @Path("/tweets")
+    @Path("/personal")
     @Produces("application/json")
     public List<Tweet> getPersonalTweets(@QueryParam("Id") int Id) {
         return service.getPersonalTweets(Id);

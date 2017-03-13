@@ -13,23 +13,24 @@ import javax.persistence.PersistenceContext;
  */
 @Stateless
 @JPA
-public class TypeDOAJPA implements ITypeDAO{
+public class TypeDOAJPA implements ITypeDAO {
     @PersistenceContext
     EntityManager em;
 
     @Override
     public Type findOrCreate(String name) {
-        Type entity = em.find(Type.class, name);
-        if ( entity != null ) {
+        Type entity;
+        try {
+            entity = em.find(Type.class, name);
             return entity;
-        } else {
-            try {
-                entity = new Type(name);
-                em.persist(entity);
-                return entity;
-            } catch ( Exception e ) {
-                throw new RuntimeException(e);
-            }
+        } catch (Exception e) {
+            entity = new Type(name);
+            em.persist(entity);
+            return entity;
         }
+    }
+
+    public void setEm(EntityManager em) {
+        this.em = em;
     }
 }
