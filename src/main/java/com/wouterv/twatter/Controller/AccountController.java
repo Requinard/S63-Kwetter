@@ -9,6 +9,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.net.URI;
@@ -30,7 +31,6 @@ public class AccountController {
     UriInfo uriInfo;
 
     @POST
-    @Path("/register")
     @Consumes("application/x-www-form-urlencoded")
     @Produces("application/json")
     public Response create(@FormParam("username") String username,
@@ -48,25 +48,32 @@ public class AccountController {
         if(account==null)return Response.serverError().build();
         return Response.created(getCreatedLink(account)).entity(account).build();
     }
-    private URI getCreatedLink(Account entity){
-        return uriInfo.getAbsolutePathBuilder().path(entity.getId() +"").build();
-    }
 
     @GET
-    @Path("/all")
     @Produces("application/json")
-//    public Response getAllAccounts() {
-//        return Response.ok().entity(service.getAllAccounts()).build();
-//    }
-    public List<Account> getAllAccounts() {
-        return service.getAllAccounts();
+    public Response getAllAccounts() {
+        List<Account> accounts;
+        try {
+            accounts = service.getAllAccounts();
+        }catch (Exception e){
+            return Response.serverError().build();
+        }
+        final GenericEntity<List<Account>> entity= new GenericEntity<List<Account>>(accounts){};
+        return Response.ok().entity(entity).build();
     }
 
     @GET
-    @Path("/id/{userId}")
+    @Path("/{userId}")
     @Produces("application/json")
     public Response getAccountById(@PathParam("userId") int userId) {
-        return Response.ok().entity(service.findByID(userId)).build();
+        Account account;
+        try {
+            account= service.findByID(userId);
+        }catch(Exception e){
+            return Response.serverError().build();
+        }
+        if(account==null)return Response.serverError().build();
+        return Response.ok().entity(account).build();
     }
 
 
@@ -74,26 +81,44 @@ public class AccountController {
     @Path("/username/{userName}")
     @Produces("application/json")
     public Response getAccountByUsername(@PathParam("userName") String userName) {
-        return Response.ok().entity(service.findByUsername(userName)).build();
+        Account account;
+        try {
+            account= service.findByUsername(userName);
+        }catch(Exception e){
+            return Response.serverError().build();
+        }
+        if(account==null)return Response.serverError().build();
+        return Response.ok().entity(account).build();
     }
 
     //    @RolesAllowed("admin")//TODO : make the rolesallowed work and keep a user
     @GET
     @Path("/search/{name}")
     @Produces("application/json")
-//    public Response search(@PathParam("name") String name) {
-//        return Response.ok().entity(service.search(name)).build();
-//    }
-    public List<Account> search(@PathParam("name") String name) {
-        return service.search(name);
-    }
+    public Response search(@PathParam("name") String name) {
+        List<Account> accounts;
+        try {
+            accounts= service.search(name);
+        }catch(Exception e){
+            return Response.serverError().build();
+        }
+        if(accounts==null)return Response.serverError().build();
+        final GenericEntity<List<Account>> entity= new GenericEntity<List<Account>>(accounts){};
 
+        return Response.ok().entity(entity).build();
+    }
 
     @GET
     @Path("/follow/{Id}")
     @Produces("application/json")
-    public Response follow(@PathParam("Id") int id,                          @QueryParam("loggedInUser") int loggedInUser) {
-        return Response.ok().entity(new Bool(service.follow(id, loggedInUser))).build();
+    public Response follow(@PathParam("Id") int id,@QueryParam("loggedInUser") int loggedInUser) {
+        boolean success;
+        try {
+            success= service.follow(id,loggedInUser);
+        }catch(Exception e){
+            return Response.serverError().build();
+        }
+        return Response.ok().entity(new Bool(success)).build();
     }
 
     @GET
@@ -101,31 +126,59 @@ public class AccountController {
     @Produces("application/json")
     public Response unfollow(@PathParam("Id") int id,
                             @QueryParam("loggedinUser") int loggedInUser) {
-        return Response.ok().entity(new Bool(service.unFollow(id, loggedInUser))).build();
+        boolean success;
+        try {
+            success= service.unFollow(id,loggedInUser);
+        }catch(Exception e){
+            return Response.serverError().build();
+        }
+        return Response.ok().entity(new Bool(success)).build();
     }
 
     @GET
     @Path("/followers/{Id}")//following you
     @Produces("application/json")
-//    public Response followers(@PathParam("Id") int id) {
-//        return Response.ok().entity(service.followers(id)).build();
-//    }
-    public List<Account> followers(@PathParam("Id") int id) {
-        return service.followers(id);
+    public Response followers(@PathParam("Id") int id) {
+        List<Account> accounts;
+        try {
+            accounts= service.followers(id);
+        }catch(Exception e){
+            return Response.serverError().build();
+        }
+        if(accounts==null)return Response.serverError().build();
+        final GenericEntity<List<Account>> entity= new GenericEntity<List<Account>>(accounts){};
+
+        return Response.ok().entity(entity).build();
     }
 
     @GET
     @Path("/role/add/{type}/{Id}")
     @Produces("application/json")
     public Response RoleAdd(@PathParam("type") String type, @PathParam("Id") int id) {
-        return Response.ok().entity(new Bool(service.addRole(type, id))).build();
+        boolean success;
+        try {
+            success= service.addRole(type, id);
+        }catch(Exception e){
+            return Response.serverError().build();
+        }
+        return Response.ok().entity(new Bool(success)).build();
+
     }
 
     @GET
     @Path("/role/remove/{type}/{Id}")//following you
     @Produces("application/json")
     public Response RoleRemove(@PathParam("type") String type, @PathParam("Id") int id) {
-        return Response.ok().entity(new Bool(service.removeRole(type, id))).build();
+        boolean success;
+        try {
+            success= service.removeRole(type, id);
+        }catch(Exception e){
+            return Response.serverError().build();
+        }
+        return Response.ok().entity(new Bool(success)).build();
+    }
+    private URI getCreatedLink(Account entity){
+        return uriInfo.getAbsolutePathBuilder().path(entity.getId() +"").build();
     }
 
 //    @POST

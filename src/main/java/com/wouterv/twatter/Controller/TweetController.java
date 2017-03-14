@@ -1,16 +1,14 @@
 package com.wouterv.twatter.Controller;
 
 import com.wouterv.twatter.Bool;
+import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Models.Tweet;
 import com.wouterv.twatter.Service.TweetService;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriBuilder;
-import javax.ws.rs.core.UriInfo;
+import javax.ws.rs.core.*;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -29,7 +27,6 @@ public class TweetController {
     UriInfo uriInfo;
 
     @POST
-    @Path("/create")
     @Consumes("application/x-www-form-urlencoded")
     @Produces("application/json")
     public Response create(@FormParam("content") String content,
@@ -37,75 +34,103 @@ public class TweetController {
         Tweet tweet;
         try {
             tweet = service.create(content, userId);
-        }catch (Exception e){
+        } catch (Exception e) {
             return Response.serverError().build();
         }
-        if(tweet==null)return Response.serverError().build();
+        if (tweet == null) return Response.serverError().build();
         return Response.created(getCreatedLink(tweet)).entity(tweet).build();
     }
-    private URI getCreatedLink(Tweet entity){
-        return uriInfo.getAbsolutePathBuilder().path(entity.getId() +"").build();
-    }
+
 
     @GET
-    @Path("/id/{id}")
+    @Path("/{id}")
     @Produces("application/json")
     public Response getById(@PathParam("id") int id) {
-        return Response.ok().entity(service.findById(id)).build();
+        Tweet tweet;
+        try {
+            tweet = service.findById(id);
+        } catch (Exception e) {
+            return Response.serverError().build();
+        }
+        if (tweet == null) return Response.serverError().build();
+        return Response.ok().entity(tweet).build();
     }
-//@GET
-//@Path("/id/{id}")
-//@Produces("application/json")
-//public Tweet getById(@PathParam("id") int id) {
-//    return service.findById(id);
-//}
 
     @GET
     @Path("/all")
     @Produces("application/json")
-//    public Response getAllTweets(){
-//        return Response.ok(service.getAllTweets()).build();
-//    }
-    public List<Tweet> getAllTweets(){
-        return service.getAllTweets();
+    public Response getAllTweets() {
+        List<Tweet> tweets;
+        try {
+            tweets = service.getAllTweets();
+        } catch (Exception e) {
+            return Response.serverError().build();
+        }
+        final GenericEntity<List<Tweet>> entity = new GenericEntity<List<Tweet>>(tweets) {
+        };
+        return Response.ok().entity(entity).build();
     }
-
 
     @GET
-    @Path("/personal")
     @Produces("application/json")
-//    public Response getPersonalTweets(@QueryParam("Id") int Id) {
-//        return Response.ok().entity(service.getPersonalTweets(Id)).build();
-//    }
-    public List<Tweet> getPersonalTweets(@QueryParam("Id") int Id) {
-        return service.getPersonalTweets(Id);
+    public Response getPersonalTweets(@QueryParam("id") int id) {
+        List<Tweet> tweets;
+        try {
+            tweets = service.getPersonalTweets(id);
+        } catch (Exception e) {
+            return Response.serverError().build();
+        }
+        final GenericEntity<List<Tweet>> entity = new GenericEntity<List<Tweet>>(tweets) {
+        };
+        return Response.ok().entity(entity).build();
     }
+
 
     @GET
     @Path("/search")
     @Produces("application/json")
-//    public Response search(@QueryParam("content") String content) {
-//        if (content.isEmpty()) {
-//            throw new BadRequestException("The parameter 'content' was null.");
-//        }
-//        return Response.ok().entity(service.search(content)).build();
-//    }
-    public List<Tweet> search(@QueryParam("content") String content) {
-        return service.search(content);
+    public Response search(@QueryParam("content") String content) {
+        List<Tweet> tweets;
+        try {
+            tweets = service.search(content);
+        } catch (Exception e) {
+            return Response.serverError().build();
+        }
+        final GenericEntity<List<Tweet>> entity = new GenericEntity<List<Tweet>>(tweets) {
+        };
+        return Response.ok().entity(entity).build();
     }
 
     @GET
     @Path("/remove/{Id}")
     @Produces("application/json")
     public Response delete(@PathParam("Id") int id) {
-        return Response.ok().entity(new Bool(service.remove(id))).build();
+        boolean success;
+        try {
+            success = service.remove(id);
+        } catch (Exception e) {
+            return Response.serverError().build();
+        }
+        return Response.ok().entity(new Bool(success)).build();
     }
 
     @GET
     @Path("/heart/{Id}")
     @Produces("application/json")
     public Response heart(@PathParam("Id") int id, @QueryParam("userId") int userId) {
-        return Response.ok().entity(new Bool(service.hearth(id, userId))).build();
+        boolean success;
+        try {
+            success = service.hearth(id, userId);
+        } catch (Exception e) {
+            return Response.serverError().build();
+        }
+        return Response.ok().entity(new Bool(success)).build();
+    }
+
+
+    private URI getCreatedLink(Tweet entity) {
+
+        return uriInfo.getAbsolutePathBuilder().path(entity.getId() + "").build();
     }
 }
 
