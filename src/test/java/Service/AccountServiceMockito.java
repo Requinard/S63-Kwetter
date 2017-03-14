@@ -55,7 +55,4 @@ public class AccountServiceMockito {
         Account found = service.findByUsername(account.getUserName());
         assertThat(found, is(account));
     }
-
-
-
 }

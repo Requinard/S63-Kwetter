@@ -13,6 +13,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.List;
 
 /**
  * Created by Wouter Vanmulken on 9-3-2017.
@@ -52,10 +53,13 @@ public class AccountController {
     }
 
     @GET
-    @Path("/accounts")
+    @Path("/all")
     @Produces("application/json")
-    public Response getAllAccounts() {
-        return Response.ok().entity(service.getAllAccounts()).build();
+//    public Response getAllAccounts() {
+//        return Response.ok().entity(service.getAllAccounts()).build();
+//    }
+    public List<Account> getAllAccounts() {
+        return service.getAllAccounts();
     }
 
     @GET
@@ -77,16 +81,18 @@ public class AccountController {
     @GET
     @Path("/search/{name}")
     @Produces("application/json")
-    public Response search(@PathParam("name") String name) {
-        return Response.ok().entity(service.search(name)).build();
+//    public Response search(@PathParam("name") String name) {
+//        return Response.ok().entity(service.search(name)).build();
+//    }
+    public List<Account> search(@PathParam("name") String name) {
+        return service.search(name);
     }
 
 
     @GET
     @Path("/follow/{Id}")
     @Produces("application/json")
-    public Response follow(@PathParam("Id") int id,
-                          @QueryParam("loggedInUser") int loggedInUser) {
+    public Response follow(@PathParam("Id") int id,                          @QueryParam("loggedInUser") int loggedInUser) {
         return Response.ok().entity(new Bool(service.follow(id, loggedInUser))).build();
     }
 
@@ -101,8 +107,11 @@ public class AccountController {
     @GET
     @Path("/followers/{Id}")//following you
     @Produces("application/json")
-    public Response followers(@PathParam("Id") int id) {
-        return Response.ok().entity(service.followers(id)).build();
+//    public Response followers(@PathParam("Id") int id) {
+//        return Response.ok().entity(service.followers(id)).build();
+//    }
+    public List<Account> followers(@PathParam("Id") int id) {
+        return service.followers(id);
     }
 
     @GET

@@ -8,7 +8,6 @@
     <name>tweeter Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
-
         <dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -23,6 +22,7 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>2.7.14</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -47,6 +47,11 @@
             <artifactId>resteasy-client</artifactId>
             <version>3.0.2.Final</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>RELEASE</version>
         </dependency>
     </dependencies>
     <build>

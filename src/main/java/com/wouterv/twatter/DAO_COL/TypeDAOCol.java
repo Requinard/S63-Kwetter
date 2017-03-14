@@ -3,12 +3,16 @@ package com.wouterv.twatter.DAO_COL;
 import com.wouterv.twatter.DAO.ITypeDAO;
 import com.wouterv.twatter.Models.Type;
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Wouter Vanmulken on 12-3-2017.
  */
+@Stateless
+@Default
 public class TypeDAOCol implements ITypeDAO {
     List<Type> typeList = new ArrayList<>();
     @Override

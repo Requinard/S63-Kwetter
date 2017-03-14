@@ -53,31 +53,45 @@ public class TweetController {
     public Response getById(@PathParam("id") int id) {
         return Response.ok().entity(service.findById(id)).build();
     }
+//@GET
+//@Path("/id/{id}")
+//@Produces("application/json")
+//public Tweet getById(@PathParam("id") int id) {
+//    return service.findById(id);
+//}
 
     @GET
     @Path("/all")
     @Produces("application/json")
-    public Response getAllTweets() {
-
-        return Response.ok().entity(service.getAllTweets()).build();
+//    public Response getAllTweets(){
+//        return Response.ok(service.getAllTweets()).build();
+//    }
+    public List<Tweet> getAllTweets(){
+        return service.getAllTweets();
     }
 
 
     @GET
     @Path("/personal")
     @Produces("application/json")
-    public Response getPersonalTweets(@QueryParam("Id") int Id) {
-        return Response.ok().entity(service.getPersonalTweets(Id)).build();
+//    public Response getPersonalTweets(@QueryParam("Id") int Id) {
+//        return Response.ok().entity(service.getPersonalTweets(Id)).build();
+//    }
+    public List<Tweet> getPersonalTweets(@QueryParam("Id") int Id) {
+        return service.getPersonalTweets(Id);
     }
 
     @GET
     @Path("/search")
     @Produces("application/json")
-    public Response search(@QueryParam("content") String content) {
-        if (content.isEmpty()) {
-            throw new BadRequestException("The parameter 'content' was null.");
-        }
-        return Response.ok().entity(service.search(content)).build();
+//    public Response search(@QueryParam("content") String content) {
+//        if (content.isEmpty()) {
+//            throw new BadRequestException("The parameter 'content' was null.");
+//        }
+//        return Response.ok().entity(service.search(content)).build();
+//    }
+    public List<Tweet> search(@QueryParam("content") String content) {
+        return service.search(content);
     }
 
     @GET

@@ -77,6 +77,11 @@ public class AccountDAOJPATest {
         Assert.assertEquals(1, accs.size());
         accs = accountDao.search("f o o");
         Assert.assertEquals(1, accs.size());
+        tx.begin();
+        accountDao.remove(account1);
+        tx.commit();
+        accs = accountDao.search("f o o");
+        Assert.assertEquals(0, accs.size());
     }
 
     @Test
@@ -87,6 +92,7 @@ public class AccountDAOJPATest {
         tx.commit();
         Account acc = accountDao.findById(account1.getId());
         Assert.assertEquals(1, acc.getFollowing().size());
+        Assert.assertEquals(1, accountDao.getFollowing(account2.getId()).size());
     }
 
     @Test

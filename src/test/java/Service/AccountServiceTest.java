@@ -64,14 +64,4 @@ public class AccountServiceTest {
         Account acc1 = service.create("username", "email", "bio", "firstname", "lastname","pass");
         Assert.assertTrue(service.addRole("admin",acc1.getId()));
     }
-
-//        Account a=mock(Account.class);
-////        when(a.)
-//        //arrange
-//        Iterator i=mock(Iterator.class);
-//        when(i.next()).thenReturn("Hello").thenReturn("World");
-//        //act
-//        String result=i.next()+" "+i.next();
-//        //assert
-//        assertEquals("Hello World", result);
 }

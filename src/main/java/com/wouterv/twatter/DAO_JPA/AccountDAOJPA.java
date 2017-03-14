@@ -28,7 +28,6 @@ public class AccountDAOJPA extends DaoFacade<Account> implements IAccountDAO {
     @Override
     public Account findByUserName(String userName) {
         Query q = em.createNamedQuery("accountdao.findByUserName");
-//        Query q = em.createQuery("SELECT a FROM Account a where a.userName = :userName");
         q.setParameter("userName", userName);
         return (Account) q.getSingleResult();
     }
@@ -37,7 +36,6 @@ public class AccountDAOJPA extends DaoFacade<Account> implements IAccountDAO {
     public List<Account> search(String name) {
         name = name.replace(" ", "%");
         name = "%" + name + "%";
-//        Query q = em.createQuery("SELECT a FROM Account a where a.firstName like :name  or a.userName like :name");
         Query q = em.createNamedQuery("accountdao.search");
         q.setParameter("name", name);
         List<Account> userList = q.getResultList();
@@ -46,7 +44,6 @@ public class AccountDAOJPA extends DaoFacade<Account> implements IAccountDAO {
 
     @Override
     public List<Account> getFollowing(int Id) {
-//        Query q = em.createQuery("SELECT a FROM Account a where :id in (select f.Id from a.following f)");
         Query q = em.createNamedQuery("accountdao.getFollowing");
         q.setParameter("id", Id);
         List<Account> userList = q.getResultList();
