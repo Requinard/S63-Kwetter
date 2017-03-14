@@ -3,14 +3,13 @@ package com.wouterv.twatter.Service;
 import com.wouterv.twatter.Annotations.JPA;
 import com.wouterv.twatter.DAO.IAccountDAO;
 import com.wouterv.twatter.DAO.ITweetDAO;
-//import com.wouterv.twatter.Interceptor.VolgTrendInterceptor;
+import com.wouterv.twatter.Interceptor.VolgTrendInterceptor;
 import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Models.Tweet;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.interceptor.Interceptors;
-import javax.ws.rs.*;
 import java.util.List;
 
 /**
@@ -40,7 +39,7 @@ public class TweetService {
         return tweetDAO.getPostedTweets(userId);
     }
 
-//    @Interceptors(VolgTrendInterceptor.class)
+    @Interceptors(VolgTrendInterceptor.class)
     public Tweet create(String content, int userId) {//TODO : remove the userId and use JAAS
         Account account = accountDAO.findById(userId);
         Tweet tweet = new Tweet(content, account);

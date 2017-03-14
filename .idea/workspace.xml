@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a5abbee-d472-4e61-87af-adbe4b4094ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/Trends.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/VolgTrendInterceptor.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/tweeter__war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/tweeter__war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/TweetController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/TweetController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/TypeDAOCol.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/TypeDAOCol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_JPA/AccountDAOJPA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Tweet.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Tweet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/Trends.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/Trends.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/VolgTrendInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/VolgTrendInterceptor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/DAO/AccountDAOJPATest.java" afterPath="$PROJECT_DIR$/src/test/java/DAO/AccountDAOJPATest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Service/AccountServiceMockito.java" afterPath="$PROJECT_DIR$/src/test/java/Service/AccountServiceMockito.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Service/AccountServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/Service/AccountServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tweeter_.iml" afterPath="$PROJECT_DIR$/tweeter_.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -129,8 +116,8 @@
       <file leaf-file-name="TweetService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+            <state relative-caret-position="214">
+              <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,7 +135,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="461">
@@ -158,11 +145,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="VolgTrendInterceptor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/VolgTrendInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Trends.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/Trends.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TweetController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/TweetController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="265">
+              <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
               <folding>
                 <element signature="e#1544#1545#0" expanded="true" />
                 <element signature="e#1617#1618#0" expanded="true" />
@@ -183,19 +194,6 @@
             <state relative-caret-position="289">
               <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DaoFacade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO/DaoFacade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#691#692#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -279,13 +277,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/VetCool.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Models/Tweet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/Trends.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/VolgTrendInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/DAO_COL/TypeDAOCol.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/TweetController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/AccountController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/VolgTrendInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/Trends.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java" />
       </list>
     </option>
   </component>
@@ -2087,7 +2085,7 @@
       <workItem from="1489496883022" duration="105000" />
       <workItem from="1489498080399" duration="673000" />
       <workItem from="1489504636843" duration="825000" />
-      <workItem from="1489508887688" duration="14714000" />
+      <workItem from="1489508887688" duration="15172000" />
     </task>
     <servers />
   </component>
@@ -2124,7 +2122,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234861000" />
+    <option name="totallyTimeSpent" value="235319000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2573,26 +2571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/Trends.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#569#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/VolgTrendInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#687#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Bool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -2753,16 +2731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/7573b5e0/142c108e-1cb2-43f3-9237-179890582ff6/Tweeter.public.tweet">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -2773,23 +2741,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/TweetController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="e#1544#1545#0" expanded="true" />
-            <element signature="e#1617#1618#0" expanded="true" />
-            <element signature="e#1974#1975#0" expanded="true" />
-            <element signature="e#2019#2020#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
-            <element signature="e#2362#2363#0" expanded="true" />
-            <element signature="e#2777#2778#0" expanded="true" />
-            <element signature="e#2823#2824#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2814,6 +2765,53 @@
         <state relative-caret-position="461">
           <caret line="54" column="21" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="54" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/Trends.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Service/TweetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Controller/TweetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding>
+            <element signature="e#1544#1545#0" expanded="true" />
+            <element signature="e#1617#1618#0" expanded="true" />
+            <element signature="e#1974#1975#0" expanded="true" />
+            <element signature="e#2019#2020#0" expanded="true" />
+            <element signature="e#2310#2311#0" expanded="true" />
+            <element signature="e#2362#2363#0" expanded="true" />
+            <element signature="e#2777#2778#0" expanded="true" />
+            <element signature="e#2823#2824#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wouterv/twatter/Interceptor/VolgTrendInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
