@@ -35,12 +35,12 @@ public class AccountService {
         return accountDAO.getAll();
     }
 
-    public Account getAccount(int userId) {
+    public Account findByID(int userId) {
         Account account = accountDAO.findById(userId);
         return account;
     }
 
-    public Account getAccountByUsername(String userName) {
+    public Account findByUsername(String userName) {
         Account account = accountDAO.findByUserName(userName);
         return account;
     }
@@ -51,15 +51,6 @@ public class AccountService {
     }
 
     public Account create(String username, String email, String bio, String firstName, String lastName,String password) {
-
-//        MessageDigest digest = null;
-//        try {
-//            digest = MessageDigest.getInstance("SHA-256");
-//        } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
-//        }
-//        byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
-
         MessageDigest md = null;
         try {
             md = MessageDigest.getInstance("SHA-256");
@@ -69,16 +60,13 @@ public class AccountService {
         md.update(password.getBytes());
 
         byte byteData[] = md.digest();
-
-        //convert the byte to hex format method 1
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < byteData.length; i++) {
             sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
         }
 
-
+        //TODO : Make a salted implementation
         Account account = new Account(username, email, bio, firstName, lastName);
-//        account.setPassword(hash.toString());//TODO : Make a salted implementation
         account.setPassword(sb.toString());
         accountDAO.create(account);
         return account;

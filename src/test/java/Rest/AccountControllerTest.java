@@ -38,6 +38,7 @@ public class AccountControllerTest {
 
         final Entity<Account> entity = Entity.entity(account, mediaType);
         Account accResult = this.root.request().post(entity, Account.class);
+        this.root.request().get();
         assertThat(accResult, is(account));
 
 

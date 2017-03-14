@@ -36,7 +36,7 @@ public class AccountServiceTest {
     public void CreateAndSearchTest() {
 
         service.create("username", "email", "bio", "firstname", "lastname","pass");
-        account = service.getAccountByUsername("username");
+        account = service.findByUsername("username");
         Assert.assertNotNull(account);
         Assert.assertEquals(0,account.getId());
         List<Account> accountList = service.search("u");

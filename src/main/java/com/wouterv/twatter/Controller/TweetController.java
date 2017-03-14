@@ -7,7 +7,10 @@ import com.wouterv.twatter.Service.TweetService;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
+import javax.ws.rs.core.UriInfo;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -22,6 +25,8 @@ public class TweetController {
 
     @Inject
     TweetService service;
+    @Context
+    UriInfo uriInfo;
 
     @POST
     @Path("/create")
@@ -29,14 +34,17 @@ public class TweetController {
     @Produces("application/json")
     public Response create(@FormParam("content") String content,
                            @FormParam("userId") int userId) {//TODO : remove the userId and use JAAS
-        Tweet tweet = service.create(content, userId);
-        URI uri = null;
+        Tweet tweet;
         try {
-            uri = new URI("/tweets/id/" + tweet.getId());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
+            tweet = service.create(content, userId);
+        }catch (Exception e){
+            return Response.serverError().build();
         }
-        return Response.created(uri).entity(tweet).build();
+        if(tweet==null)return Response.serverError().build();
+        return Response.created(getCreatedLink(tweet)).entity(tweet).build();
+    }
+    private URI getCreatedLink(Tweet entity){
+        return uriInfo.getAbsolutePathBuilder().path(entity.getId() +"").build();
     }
 
     @GET

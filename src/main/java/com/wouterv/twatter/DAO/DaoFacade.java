@@ -1,6 +1,9 @@
 package com.wouterv.twatter.DAO;
 
+import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
+
 import javax.persistence.EntityManager;
+import javax.ws.rs.NotFoundException;
 import java.util.List;
 
 /**
@@ -29,11 +32,16 @@ public abstract class DaoFacade<T> {
     }
 
     public T findById(int id) {
-        return getEntityManager().find(entityClass, id);
+        T entity=null;
+        try {
+            entity = getEntityManager().find(entityClass, id);
+        }catch (NotFoundException e){
+            System.out.println("Could not fin Entity of type "+ entityClass.getName()+ " with ID :"+id);
+        }
+        return entity;
     }
 
     public List<T> getAll() {
         return getEntityManager().createQuery("Select t from " + entityClass.getSimpleName() + " t").getResultList();
     }
-
 }

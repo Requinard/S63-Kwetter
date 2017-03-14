@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.wouterv.twatter</OriginalElement>
+  <nodes>
+    <node x="884.0" y="520.0">com.wouterv.twatter.DAO_JPA.TweetDAOJPA</node>
+    <node x="500.0" y="1811.0">com.wouterv.twatter.Controller.FileUploadController</node>
+    <node x="1007.0" y="814.0">com.wouterv.twatter.Service.AccountService</node>
+    <node x="0.0" y="1517.0">com.wouterv.twatter.Controller.AccountController</node>
+    <node x="1025.8958333333335" y="277.0">com.wouterv.twatter.Annotations.JPA</node>
+    <node x="627.0" y="1080.0">com.wouterv.twatter.Models.Tweet</node>
+    <node x="1161.9069849899538" y="468.4534924949769">com.wouterv.twatter.DAO_COL.TweetDAOCol</node>
+    <node x="1761.3958333333335" y="266.0">com.wouterv.twatter.DAO.ITypeDAO</node>
+    <node x="549.6279399598156" y="224.81396997990782">com.wouterv.twatter.DAO.DaoFacade</node>
+    <node x="1202.1458333333335" y="244.0">com.wouterv.twatter.DAO.ITweetDAO</node>
+    <node x="1610.0" y="564.0">com.wouterv.twatter.DAO_JPA.TypeDOAJPA</node>
+    <node x="583.875" y="0.0">com.wouterv.twatter.DAO.IKwetterDAO</node>
+    <node x="0.0" y="937.0">com.wouterv.twatter.Models.Account</node>
+    <node x="966.0" y="1517.0">com.wouterv.twatter.Controller.TweetController</node>
+    <node x="282.0" y="1811.0">com.wouterv.twatter.Bool</node>
+    <node x="732.0" y="1811.0">com.wouterv.twatter.TwatterApplication</node>
+    <node x="0.0" y="432.0">com.wouterv.twatter.DAO_COL.AccountDAOCol</node>
+    <node x="0.0" y="1811.0">com.wouterv.twatter.Models.Type</node>
+    <node x="46.5" y="222.0">com.wouterv.twatter.DAO.IAccountDAO</node>
+    <node x="1852.46875" y="575.0">com.wouterv.twatter.DAO_COL.TypeDAOCol</node>
+    <node x="587.0" y="1517.0">com.wouterv.twatter.Service.TweetService</node>
+    <node x="515.0" y="509.0">com.wouterv.twatter.DAO_JPA.AccountDAOJPA</node>
+    <node x="486.5" y="814.0">com.wouterv.twatter.Models.TweeterModel</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.wouterv.twatter.Models.Tweet" target="com.wouterv.twatter.Models.TweeterModel">
+      <point x="0.0" y="-124.5" />
+      <point x="794.5" y="912.0" />
+      <point x="580.25" y="912.0" />
+      <point x="31.25" y="36.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.Models.Account" target="com.wouterv.twatter.Models.TweeterModel">
+      <point x="0.0" y="-267.5" />
+      <point x="303.5" y="912.0" />
+      <point x="517.75" y="912.0" />
+      <point x="-31.25" y="36.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_COL.TypeDAOCol" target="com.wouterv.twatter.DAO.ITypeDAO">
+      <point x="0.0" y="-25.5" />
+      <point x="1946.96875" y="412.0" />
+      <point x="1903.1458333333335" y="412.0" />
+      <point x="47.25" y="25.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO.IAccountDAO" target="com.wouterv.twatter.DAO.IKwetterDAO">
+      <point x="0.0" y="-69.5" />
+      <point x="201.0" y="186.0" />
+      <point x="667.625" y="186.0" />
+      <point x="-83.75" y="80.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_JPA.TypeDOAJPA" target="com.wouterv.twatter.DAO.ITypeDAO">
+      <point x="52.25" y="-36.5" />
+      <point x="1766.75" y="412.0" />
+      <point x="1808.6458333333335" y="412.0" />
+      <point x="-47.25" y="25.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_JPA.AccountDAOJPA" target="com.wouterv.twatter.DAO.DaoFacade">
+      <point x="0.0" y="-91.5" />
+      <point x="0.0" y="80.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_COL.AccountDAOCol" target="com.wouterv.twatter.DAO.DaoFacade">
+      <point x="123.75" y="-168.5" />
+      <point x="371.25" y="412.0" />
+      <point x="577.8333333333333" y="412.0" />
+      <point x="-111.66666666666667" y="80.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_JPA.TweetDAOJPA" target="com.wouterv.twatter.Annotations.JPA">
+      <point x="-1.4210854715202004E-14" y="-80.5" />
+      <point x="1009.5" y="412.0" />
+      <point x="1051.3958333333335" y="412.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_JPA.AccountDAOJPA" target="com.wouterv.twatter.Annotations.JPA">
+      <point x="116.33333333333333" y="-91.5" />
+      <point x="805.8333333333333" y="402.0" />
+      <point x="1034.3958333333335" y="402.0" />
+      <point x="-17.0" y="14.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_JPA.AccountDAOJPA" target="com.wouterv.twatter.DAO.IAccountDAO">
+      <point x="-116.33333333333331" y="-91.5" />
+      <point x="573.1666666666667" y="402.0" />
+      <point x="278.25" y="402.0" />
+      <point x="77.25" y="69.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_JPA.TypeDOAJPA" target="com.wouterv.twatter.Annotations.JPA">
+      <point x="-52.25" y="-36.5" />
+      <point x="1662.25" y="402.0" />
+      <point x="1068.3958333333335" y="402.0" />
+      <point x="17.0" y="14.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO.ITweetDAO" target="com.wouterv.twatter.DAO.IKwetterDAO">
+      <point x="0.0" y="-47.5" />
+      <point x="1343.6458333333335" y="186.0" />
+      <point x="835.125" y="186.0" />
+      <point x="83.75" y="80.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_COL.AccountDAOCol" target="com.wouterv.twatter.DAO.IAccountDAO">
+      <point x="-123.75" y="-168.5" />
+      <point x="-77.25" y="69.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_COL.TweetDAOCol" target="com.wouterv.twatter.DAO.ITweetDAO">
+      <point x="0.0" y="-135.5" />
+      <point x="1379.4069849899538" y="412.0" />
+      <point x="1414.3958333333335" y="412.0" />
+      <point x="70.75" y="47.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_JPA.TweetDAOJPA" target="com.wouterv.twatter.DAO.DaoFacade">
+      <point x="-83.66666666666669" y="-80.5" />
+      <point x="925.8333333333333" y="392.0" />
+      <point x="801.1666666666667" y="392.0" />
+      <point x="111.66666666666669" y="80.5" />
+    </edge>
+    <edge source="com.wouterv.twatter.DAO_JPA.TweetDAOJPA" target="com.wouterv.twatter.DAO.ITweetDAO">
+      <point x="83.66666666666667" y="-80.5" />
+      <point x="1093.1666666666667" y="412.0" />
+      <point x="1272.8958333333335" y="412.0" />
+      <point x="-70.75" y="47.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8686858316221764" x="662.1175983926253" y="1489.506441318993" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

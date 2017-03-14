@@ -13,10 +13,7 @@ import java.util.List;
 /**
  * Created by Wouter Vanmulken on 8-3-2017.
  */
-@NamedQueries({
-        @NamedQuery(name = "tweetdao.getPersonalTweets", query = "select t from  Tweet t, Account a  where a.Id = :id and (t.postAccount.Id in (select b.Id from a.following b) or t.postAccount.Id = :id ) order by t.Date desc "),
-        @NamedQuery(name = "tweetdao.getPostedTweets", query = "select t from  Tweet t where t.postAccount.Id = :id order by t.Date desc"),
-        @NamedQuery(name = "tweetdao.search", query = "select t from  Tweet t where t.content like :content order by t.Date desc")})
+
 @Stateless
 @JPA
 public class TweetDAOJPA extends DaoFacade<Tweet> implements ITweetDAO {
@@ -42,9 +39,10 @@ public class TweetDAOJPA extends DaoFacade<Tweet> implements ITweetDAO {
 
     @Override
     public List<Tweet> getPersonalTweets(int userId) {
-        Query q = getEntityManager().createQuery(
-                "select t from  Tweet t, Account a  " +
-                        "where a.Id = :id and (t.postAccount.Id in (select b.Id from a.following b) or t.postAccount.Id = :id ) order by t.Date desc ");
+//        Query q = getEntityManager().createQuery(
+//                "select t from  Tweet t, Account a  " +
+//                        "where a.Id = :id and (t.postAccount.Id in (select b.Id from a.following b) or t.postAccount.Id = :id ) order by t.Date desc ");
+        Query q = getEntityManager().createNamedQuery("tweetdao.getPersonalTweets");
         q.setParameter("id", userId);
         List result = q.getResultList();
         return result;
@@ -52,8 +50,9 @@ public class TweetDAOJPA extends DaoFacade<Tweet> implements ITweetDAO {
 
     @Override
     public List<Tweet> getPostedTweets(int userId) {
-        Query q = getEntityManager().createQuery(
-                "select t from  Tweet t where t.postAccount.Id = :id order by t.Date desc");
+//        Query q = getEntityManager().createQuery(
+//                "select t from  Tweet t where t.postAccount.Id = :id order by t.Date desc");
+        Query q = getEntityManager().createNamedQuery("tweetdao.getPostedTweets");
         q.setParameter("id", userId);
         List result = q.getResultList();
         return result;
@@ -61,8 +60,9 @@ public class TweetDAOJPA extends DaoFacade<Tweet> implements ITweetDAO {
 
     @Override
     public List<Tweet> search(String content) {
-        Query q = getEntityManager().createQuery(
-                "select t from  Tweet t where t.content like :content order by t.Date desc");
+//        Query q = getEntityManager().createQuery(
+//                "select t from  Tweet t where t.content like :content order by t.Date desc");
+        Query q = getEntityManager().createNamedQuery("tweetdao.search");
         q.setParameter("content", "%" + content + "%");
         List result = q.getResultList();
         return result;

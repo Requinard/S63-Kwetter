@@ -2,21 +2,17 @@ package com.wouterv.twatter.Controller;
 
 import com.wouterv.twatter.Bool;
 import com.wouterv.twatter.Models.Account;
+import com.wouterv.twatter.Models.Tweet;
 import com.wouterv.twatter.Service.AccountService;
 
-import javax.annotation.ManagedBean;
-import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
-import javax.faces.context.ExternalContext;
-import javax.faces.context.FacesContext;
 import javax.inject.Inject;
-import javax.security.auth.login.LoginException;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.security.Principal;
-import java.util.List;
 
 /**
  * Created by Wouter Vanmulken on 9-3-2017.
@@ -29,6 +25,9 @@ public class AccountController {
     @Inject
     AccountService service;
 
+    @Context
+    UriInfo uriInfo;
+
     @POST
     @Path("/register")
     @Consumes("application/x-www-form-urlencoded")
@@ -39,9 +38,17 @@ public class AccountController {
                           @FormParam("firstName") String firstName,
                           @FormParam("lastName") String lastName,
                           @FormParam("password") String password) throws URISyntaxException {
-        Account account = service.create(username, email, bio, firstName, lastName, password);
-        URI createdURI = new URI("/tweeter/api/accounts/id/"+account.getId());
-        return Response.created(createdURI).entity(account).build();
+        Account account;
+        try {
+            account = service.create(username, email, bio, firstName, lastName, password);
+        }catch(Exception e){
+            return Response.serverError().build();
+        }
+        if(account==null)return Response.serverError().build();
+        return Response.created(getCreatedLink(account)).entity(account).build();
+    }
+    private URI getCreatedLink(Account entity){
+        return uriInfo.getAbsolutePathBuilder().path(entity.getId() +"").build();
     }
 
     @GET
@@ -55,7 +62,7 @@ public class AccountController {
     @Path("/id/{userId}")
     @Produces("application/json")
     public Response getAccountById(@PathParam("userId") int userId) {
-        return Response.ok().entity(service.getAccount(userId)).build();
+        return Response.ok().entity(service.findByID(userId)).build();
     }
 
 
@@ -63,7 +70,7 @@ public class AccountController {
     @Path("/username/{userName}")
     @Produces("application/json")
     public Response getAccountByUsername(@PathParam("userName") String userName) {
-        return Response.ok().entity(service.getAccountByUsername(userName)).build();
+        return Response.ok().entity(service.findByUsername(userName)).build();
     }
 
     //    @RolesAllowed("admin")//TODO : make the rolesallowed work and keep a user
@@ -99,7 +106,7 @@ public class AccountController {
     }
 
     @GET
-    @Path("/role/add/{type}/{Id}")//following you
+    @Path("/role/add/{type}/{Id}")
     @Produces("application/json")
     public Response RoleAdd(@PathParam("type") String type, @PathParam("Id") int id) {
         return Response.ok().entity(new Bool(service.addRole(type, id))).build();

@@ -11,7 +11,11 @@ import java.util.List;
  */
 @Entity
 @XmlRootElement
-
+@NamedQueries(value ={
+        @NamedQuery(name = "accountdao.findByUserName", query = "SELECT a FROM Account a where a.userName = :userName"),
+        @NamedQuery(name = "accountdao.search", query = "SELECT a FROM Account a where a.userName like :name or a.firstName like :name or a.lastName like :name"),
+        @NamedQuery(name = "accountdao.getFollowing", query = "SELECT a FROM Account a where :id in (select f.Id from a.following f)")}
+)
 public class Account extends TweeterModel {
 
 
