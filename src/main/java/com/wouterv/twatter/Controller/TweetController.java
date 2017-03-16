@@ -127,6 +127,21 @@ public class TweetController {
         return Response.ok().entity(new Bool(success)).build();
     }
 
+    @POST
+    @Consumes("application/x-www-form-urlencoded")
+    @Produces("application/json")
+    @Path("/edit")
+    public Response edit(@QueryParam("id") int id,
+                         @FormParam("content") String content) {
+        Tweet tweet;
+        try {
+            tweet = service.edit(id, content);
+        } catch (Exception e) {
+            return Response.serverError().build();
+        }
+        return Response.ok().entity(tweet).build();
+    }
+
 
     private URI getCreatedLink(Tweet entity) {
 

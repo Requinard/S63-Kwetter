@@ -19,8 +19,7 @@ public abstract class DaoFacade<T> {
 
     protected abstract EntityManager getEntityManager();
 
-    public void create(T entity) {
-        getEntityManager().persist(entity);
+    public void create(T entity) {  getEntityManager().persist(entity);
     }
 
     public void edit(T entity) {
@@ -36,7 +35,7 @@ public abstract class DaoFacade<T> {
         try {
             entity = getEntityManager().find(entityClass, id);
         }catch (NotFoundException e){
-            System.out.println("Could not fin Entity of type "+ entityClass.getName()+ " with ID :"+id);
+            System.out.println("Could not find Entity of type "+ entityClass.getName()+ " with ID :"+id);
         }
         return entity;
     }

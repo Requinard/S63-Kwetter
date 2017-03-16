@@ -43,7 +43,7 @@ public class TweetDAOCol implements ITweetDAO{
         for (int i =0;i<tweets.size();i++) {
             if(tweets.get(i).getId() == entity.getId()){
                 tweets.set(i,entity);
-                continue;
+                break;
             }
         }
     }

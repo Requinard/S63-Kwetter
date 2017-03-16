@@ -5,7 +5,6 @@ import com.wouterv.twatter.DAO.IAccountDAO;
 import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Models.Type;
 
-import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.persistence.EntityManager;
@@ -56,13 +55,6 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
         }
         return null;
     }
-
-
-    @PostConstruct
-    public void init() {
-        System.out.println("StudentDaoColl");
-    }
-
 
     public AccountDAOCol() {
         super(Account.class);
@@ -130,7 +122,7 @@ public class AccountDAOCol extends DaoFacade<Account> implements IAccountDAO {
         for (int i=0;i<accounts.size();i++){
             if(accounts.get(i).getId() == entity.getId()){
                 accounts.set(i,entity);
-                continue;
+                break;
             }
         }
     }

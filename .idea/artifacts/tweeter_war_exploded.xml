@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="tweeter_:war exploded">
+  <artifact type="exploded-war" name="tweeter:war exploded">
     <output-path>$PROJECT_DIR$/target/tweeter</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="tweeter_" />
+          <element id="module-output" name="tweeter" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: postgresql:postgresql:9.1-901-1.jdbc4" />
@@ -33,7 +33,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/tweeter/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="tweeter_/web/Web" />
+      <element id="javaee-facet-resources" facet="tweeter/web/Web" />
     </root>
   </artifact>
 </component>

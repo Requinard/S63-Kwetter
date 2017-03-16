@@ -6,6 +6,7 @@ import com.wouterv.twatter.DAO.IAccountDAO;
 import com.wouterv.twatter.DAO.ITypeDAO;
 import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Models.Type;
+import jdk.nashorn.internal.runtime.ECMAException;
 
 import javax.ejb.Stateless;
 import javax.faces.context.FacesContext;
@@ -51,23 +52,9 @@ public class AccountService {
     }
 
     public Account create(String username, String email, String bio, String firstName, String lastName,String password) {
-        MessageDigest md = null;
-        try {
-            md = MessageDigest.getInstance("SHA-256");
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        md.update(password.getBytes());
-
-        byte byteData[] = md.digest();
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < byteData.length; i++) {
-            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
-        }
-
         //TODO : Make a salted implementation
         Account account = new Account(username, email, bio, firstName, lastName);
-        account.setPassword(sb.toString());
+        account.setPassword(hashPassword(password));
         accountDAO.create(account);
         return account;
     }
@@ -152,5 +139,50 @@ public class AccountService {
             return false;
         }
         return true;
+    }
+    public boolean edit(int id,String username,String email,String bio,String firstName,String  lastName){
+        try {
+            Account account = accountDAO.findById(id);
+            account.setUserName(username);
+            account.setEmail(email);
+            account.setBio(bio);
+            account.setFirstName(firstName);
+            account.setLastName(lastName);
+            accountDAO.edit(account);
+            return true;
+        }catch (Exception e ){
+            return false;
+        }
+    }
+    public boolean editPassword(int id,String currentPass, String newPass){
+        Account account;
+        try {
+            account = findByID(id);
+            if(account.getPassword()!=hashPassword(currentPass)) {
+                return false;
+            }
+            account.setPassword(hashPassword(newPass));
+            accountDAO.edit(account);
+            return true;
+        }catch (Exception e ){
+            return false;
+        }
+    }
+
+    public String hashPassword(String password){
+        MessageDigest md = null;
+        try {
+            md = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        md.update(password.getBytes());
+
+        byte byteData[] = md.digest();
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < byteData.length; i++) {
+            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+        }
+        return sb.toString();
     }
 }

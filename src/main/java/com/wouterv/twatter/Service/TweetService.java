@@ -47,6 +47,14 @@ public class TweetService {
         return tweet;
     }
 
+    @Interceptors(VolgTrendInterceptor.class)
+    public Tweet edit(int id, String content) {//TODO : remove the userId and use JAAS
+        Tweet tweet = findById(id);
+        tweet.setContent(content);
+        tweetDAO.edit(tweet);
+        return tweet;
+    }
+
     public List<Tweet> getPersonalTweets(int Id) {
         return tweetDAO.getPersonalTweets(Id);
     }

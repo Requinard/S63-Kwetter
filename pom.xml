@@ -55,7 +55,7 @@
         </dependency>
     </dependencies>
     <build>
-        <defaultGoal>compile</defaultGoal>
+        <defaultGoal>compile test-compile</defaultGoal>
         <finalName>tweeter</finalName>
         <plugins>
             <plugin>
