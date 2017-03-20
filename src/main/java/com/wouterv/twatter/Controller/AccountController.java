@@ -5,6 +5,8 @@ import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Models.Tweet;
 import com.wouterv.twatter.Service.AccountService;
 
+import javax.annotation.security.DeclareRoles;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -21,6 +23,7 @@ import java.util.List;
  */
 
 @Stateless
+@DeclareRoles({"regular_role", "admin_role"})
 @Path("/accounts")
 public class AccountController {
 
@@ -50,6 +53,7 @@ public class AccountController {
     }
 
     @GET
+    @RolesAllowed({"admin_role"})
     @Produces("application/json")
     public Response getAllAccounts() {
         List<Account> accounts;
