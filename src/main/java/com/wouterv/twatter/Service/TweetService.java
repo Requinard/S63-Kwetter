@@ -43,7 +43,10 @@ public class TweetService {
     public Tweet create(String content, int userId) {//TODO : remove the userId and use JAAS
         Account account = accountDAO.findById(userId);
         Tweet tweet = new Tweet(content, account);
+        List<Tweet> tweets = account.getTweets();
+        account.setTweets(tweets);
         tweetDAO.create(tweet);
+        accountDAO.edit(account);
         return tweet;
     }
 

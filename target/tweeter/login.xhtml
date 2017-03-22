@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:ui="http://java.sun.com/jsf/facelets">
+<body>
+<ui:composition template="/template/common/commonLayout.xhtml">
+    <ui:define name="content">
+
+        <!--<form action="j_security_check" method="post">-->
+            <!--<p>-->
+                <!--<strong>Username</strong>-->
+                <!--<input type="text" name="j_username" size="25"/>-->
+            <!--</p>-->
+            <!--<p>-->
+                <!--<strong>Password</strong>-->
+                <!--<input type="password" size="15" name="j_password"/>-->
+            <!--</p>-->
+            <!--<p>-->
+                <!--<input type="submit" value="Submit"/>-->
+                <!--<input type="reset" value="Reset"/>-->
+            <!--</p>-->
+        <!--</form>-->
+
+
+        <form class="form-signin center" action="j_security_check" method="post">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <h:outputLabel for="j_username" value="Email address" title="email"/>
+            <h:inputText type="email" id="j_username" class="form-control" placeholder="Email address" required="true" autfocus="true"/>
+            <h:outputLabel for="j_password" value="Password"/>
+            <h:inputSecret id="j_password" class="form-control" placeholder="Password" required="true"/>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me</input>
+                </label>
+            </div>
+            <h:button class="btn btn-lg btn-primary btn-block" type="submit" value="Sign in"/>
+        </form>
+
+
+
+
+
+
+
+
+
+    </ui:define>
+</ui:composition>
+</body>
+</html>

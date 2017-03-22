@@ -24,8 +24,7 @@ public class Tweet extends TweeterModel {
     @Column(nullable = false)
     private Date Date;
 
-    @ManyToOne
-    @JoinColumn(nullable = false)
+    @ManyToOne(optional = false, cascade = CascadeType.ALL)
     private Account postAccount;
 
     @OneToMany

@@ -32,7 +32,7 @@ public class Account extends TweeterModel {
     @ManyToMany(mappedBy = "accounts")
     private List<Type> groups;
 
-    @OneToMany
+    @OneToMany(mappedBy = "postAccount", cascade = CascadeType.ALL)
     private List<Tweet> tweets;
 
     @OneToMany

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:head>
+        <h:outputScript name="js/jquery-3.2.0.min.js" />
+        <h:outputScript name="js/bootstrap.min.js" />
+		<h:outputStylesheet name="bootstrap.min.css" library="css" />
+		<h:outputStylesheet name="bootstrap-grid.min.css" library="css" />
+		<h:outputStylesheet name="bootstrap-reboot.min.css" library="css" />
+		<h:outputStylesheet name="common-style.css" library="css" />
+
+	</h:head>
+    <h:body>
+
+	<div id="page" class="container">
+		<div class="nav navbar navbar-toggleable-md navbar-light bg-faded">
+            <!--<button class="navbar-toggler navbar-toggler-right" type="button" >-->
+                <!--<span class="navbar-toggler-icon"></span>-->
+            <!--</button>-->
+            <a class="navbar-brand" href="">Home</a>
+            <a class="navbar-text float-right">#{ request.userPrincipal.name}</a>
+        </div>
+
+	    
+	    <div id="content">
+            <br/>
+		   	<ui:insert name="content">
+		   		<ui:include src="/template/common/commonContent.xhtml" />
+		   	</ui:insert>
+            <br/>
+	    </div>
+		    
+	    <div id="footer">
+	    	<ui:insert name="footer" >
+	    		<ui:include src="/template/common/commonFooter.xhtml" />
+	    	</ui:insert>
+    	</div>
+    	
+    </div>
+    
+    </h:body>
+
+</html>
