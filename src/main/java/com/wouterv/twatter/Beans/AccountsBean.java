@@ -29,11 +29,7 @@ public class AccountsBean implements Serializable{
         return accountService.getAllAccounts();
     }
     public void removeUser(){
-        HttpServletRequest request = (HttpServletRequest)FacesContext.getCurrentInstance().getExternalContext().getRequest();
-        HttpSession existingSession = request.getSession(false);
-        if (existingSession != null && existingSession.getAttribute("loginToken") != null){
-            existingSession.invalidate();
-        }
+        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
     }
 
 }
