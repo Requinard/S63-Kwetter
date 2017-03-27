@@ -20,7 +20,7 @@ public class Tweet extends TweeterModel {
     @Column(length = 140)
     private String content;
 
-    @Temporal(value = TemporalType.DATE)
+    @Temporal(value = TemporalType.TIMESTAMP)
     @Column(nullable = false)
     private Date Date;
 

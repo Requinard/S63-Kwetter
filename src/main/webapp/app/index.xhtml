@@ -7,23 +7,31 @@
 </head>
 <body>
 <ui:composition template="/template/common/commonLayout.xhtml">
+
+    <ui:param name="currentUser" value="#{accountsBean.loggedIn}" />
     <ui:define name="content">
-        username: #{ request.userPrincipal.name}
-        <div id="Tweets" class="container">
-            <c:forEach var="tweet" items="#{tweetsBean.all}">
-                <div id="tweet#{tweet.id}" class="card">
-                    <!--<img class="card-img-top" src="http://dickbutt.nl/dickbutt.png" alt="Card image cap"/>-->
-                    <div class="card-block">
-                        <h4 class="card-title">#{tweet.postAccount.userName}</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">#{tweet.date}</h6>
-                        <p class="card-text">#{tweet.content}</p>
-                        <a href="" class="card-link">heart</a>
+        <h:form>
+            <h6>username: #{request.userPrincipal.name}</h6>
+            <h6>username: #{currentUser.userName}</h6>
+            <h6>username: #{accountsBean.loggedIn.userName}</h6>
+            <h6>loggedIn: #{accountsBean.loggedIn}</h6>
+            <h6>tweets: #{tweetsBean.getPersonal()}</h6>
+            <div id="Tweets" class="container">
+                <c:forEach var="tweet" items="#{tweetsBean.all}">
+                    <div id="tweet#{tweet.id}" class="card">
+                        <!--<img class="card-img-top" src="http://dickbutt.nl/dickbutt.png" alt="Card image cap"/>-->
+                        <div class="card-block">
+                            <h4 class="card-title">#{tweet.postAccount.userName}</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">#{tweet.date}</h6>
+                            <p class="card-text">#{tweet.content}</p>
+                            <!--<a class="card-link">heart</a>-->
+                            <h:commandButton value="Heart" action="#{tweetsBean.Heart(tweet.id)}"/>
+                        </div>
                     </div>
-                </div>
-            </c:forEach>
-        </div>
+                </c:forEach>
+            </div>
 
-
+        </h:form>
     </ui:define>
 </ui:composition>
 

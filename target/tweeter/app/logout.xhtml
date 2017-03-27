@@ -8,9 +8,10 @@
 <body>
 <ui:composition template="/template/common/commonLayout.xhtml">
     <ui:define name="content">
-
-#{FacesContext.getCurrentInstance().getExternalContext().invalidateSession()}
-
+        #{accountsBean.removeUser()}
+        <h:form>
+            <h:commandButton action="/app/index.xhtml?faces-redirect=true" value="index" />
+        </h:form>
     </ui:define>
 </ui:composition>
 </body>

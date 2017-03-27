@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="tweetImport"
+     xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="
+  http://xmlns.jcp.org/xml/ns/javaee
+  http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+    <properties>
+        <property name="input_file" value="tweets.json" />
+    </properties>
+    <step id="main">
+        <chunk checkpoint-policy="item" retry-limit="1" item-count="20" >
+            <reader ref="TweetReader"></reader>
+            <processor ref="TweetProcessor"></processor>
+            <writer ref="TweetWriter"></writer>
+        </chunk>
+    </step>
+</job>

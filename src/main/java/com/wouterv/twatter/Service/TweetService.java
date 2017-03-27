@@ -3,11 +3,15 @@ package com.wouterv.twatter.Service;
 import com.wouterv.twatter.Annotations.JPA;
 import com.wouterv.twatter.DAO.IAccountDAO;
 import com.wouterv.twatter.DAO.ITweetDAO;
+import com.wouterv.twatter.Event.LogEvent;
 import com.wouterv.twatter.Interceptor.VolgTrendInterceptor;
 import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Models.Tweet;
 
 import javax.ejb.Stateless;
+import javax.enterprise.event.Event;
+import javax.enterprise.event.Observes;
+import javax.enterprise.inject.Any;
 import javax.inject.Inject;
 import javax.interceptor.Interceptors;
 import java.util.List;
@@ -26,6 +30,10 @@ public class TweetService {
     @Inject
     @JPA
     IAccountDAO accountDAO;
+
+    @Inject
+    @Any
+    Event<LogEvent> logEvent;
 
     public Tweet findById(int id) {
         return tweetDAO.findById(id);
@@ -47,6 +55,7 @@ public class TweetService {
         account.setTweets(tweets);
         tweetDAO.create(tweet);
         accountDAO.edit(account);
+        logEvent.fire(new LogEvent());
         return tweet;
     }
 
@@ -101,4 +110,6 @@ public class TweetService {
     public void setAccountDAO(IAccountDAO accountDAO) {
         this.accountDAO = accountDAO;
     }
+
+    public void  logCreateKwetter(@Observes LogEvent event){event.printLine("Created a tweeter");}
 }

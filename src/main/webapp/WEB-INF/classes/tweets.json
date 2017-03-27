@@ -1,0 +1,17 @@
+{"Tweets":[
+  {"Content":"foo","UserId":1, "Date":"01-01-2017 10:00"},
+  {"Content":"bar","UserId":1, "Date":"02-01-2017 10:00"},
+  {"Content":"Hello world","UserId":1, "Date":"03-01-2017 10:00"},
+  {"Content":"Oh my god jea is so difficult","UserId":1, "Date":"04-01-2017 10:00"},
+  {"Content":"Why u no spring","UserId":1, "Date":"05-01-2017 10:00"},
+  {"Content":"Oracle why didn't you make proper standard implementations :'(","UserId":1, "Date":"01-01-2017 10:00"},
+  {"Content":"Can't wait for asp.net core","UserId":1, "Date":"01-01-2017 10:00"},
+  {"Content":"check out /r/programmerhumor that shit is legit","UserId":1, "Date":"01-01-2017 10:00"},
+  {"Content":"Things that are interesting","UserId":1, "Date":"01-01-2017 10:00"},
+  {"Content":"I Love dogs","UserId":1, "Date":"01-01-2017 10:00"},
+  {"Content":"I <3 cats","UserId":1, "Date":"01-01-2017 10:00"},
+  {"Content":"A big pupper can be a small doggo","UserId":1, "Date":"01-01-2017 10:00"},
+  {"Content":"memes are life","UserId":1, "Date":"01-01-2017 10:00"},
+  {"Content":"React or Angular ?","UserId":1, "Date":"01-01-2017 10:00"},
+  {"Content":"Easy or hard","UserId":1, "Date":"01-01-2017 10:00"}
+]}
