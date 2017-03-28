@@ -6,6 +6,7 @@
     <welcome-file-list>
         <welcome-file>login.html</welcome-file>
     </welcome-file-list>
+
     <login-config>
         <auth-method>FORM</auth-method>
         <realm-name>Twatter_Realm</realm-name>
@@ -13,7 +14,9 @@
             <form-login-page>/login.html</form-login-page>
             <form-error-page>/error.html</form-error-page>
         </form-login-config>
+
     </login-config>
+
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>Secure Pages</web-resource-name>
@@ -23,6 +26,7 @@
             <web-resource-name>app</web-resource-name>
             <url-pattern>/app/*</url-pattern>
         </web-resource-collection>
+
         <auth-constraint>
             <role-name>regular_role</role-name>
             <role-name>admin_role</role-name>
@@ -34,5 +38,6 @@
     <security-role>
         <role-name>admin_role</role-name>
     </security-role>
+
 </web-app>
 

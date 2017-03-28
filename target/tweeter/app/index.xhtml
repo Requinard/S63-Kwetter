@@ -1,49 +1,62 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://openfaces.org/"
+      xmlns:p="http://primefaces.org/ui">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Accounts</title>
 </head>
-<body>
-<ui:composition template="/template/common/commonLayout.xhtml">
+<h:body>
+    <ui:composition template="/template/common/commonLayout.xhtml">
+        <ui:param name="currentUser" value="#{accountsBean.loggedIn}"/>
+        <ui:define name="content">
+            <h:form>
+                <h:inputTextarea id="Content" styleClass="form-control"/>
+                <h:commandButton id="createBtn" value="Post" action="#{tweetsBean.create()}" styleClass="Button"/>
+            </h:form>
+            <h:form>
+                <div id="Tweets" class="container">
+                    <c:forEach var="tweet" items="#{tweetsBean.all}">
 
-    <ui:param name="currentUser" value="#{accountsBean.loggedIn}" />
-    <ui:define name="content">
-        <h:form>
-            <h6>username: #{request.userPrincipal.name}</h6>
-            <h6>username: #{currentUser.userName}</h6>
-            <h6>username: #{accountsBean.loggedIn.userName}</h6>
-            <h6>loggedIn: #{accountsBean.loggedIn}</h6>
-            <h6>tweets: #{tweetsBean.getPersonal()}</h6>
-            <div id="Tweets" class="container">
-                <c:forEach var="tweet" items="#{tweetsBean.all}">
-                    <div id="tweet#{tweet.id}" class="card">
-                        <!--<img class="card-img-top" src="http://dickbutt.nl/dickbutt.png" alt="Card image cap"/>-->
-                        <div class="card-block">
-                            <h4 class="card-title">#{tweet.postAccount.userName}</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">#{tweet.date}</h6>
-                            <p class="card-text">#{tweet.content}</p>
-                            <!--<a class="card-link">heart</a>-->
-                            <h:commandButton value="Heart" action="#{tweetsBean.Heart(tweet.id)}"/>
+                        <div id="tweet#{tweet.id}" class="card">
+                            <!--<img class="card-img-top" src="http://dickbutt.nl/dickbutt.png" alt="Card image cap"/>-->
+                            <div class="card-block">
+                                <h4 class="card-title">#{tweet.postAccount.userName}</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">#{tweet.date}</h6>
+                                <p class="card-text">#{tweet.content}</p>
+
+                                <c:choose>
+                                    <c:when test="#{tweetsBean.hasHearted(tweet,currentUser)}">
+                                        <!--<h:commandButton value="UnHeart" action="#{tweetsBean.Heart(tweet.id,currentUser)}" styleClass="fa fa-heart" />-->
+
+                                        <p:commandButton value="Ajax-Submit"  update="tweet" actionListener="#{tweetsBean.Heart(tweet,currentUser)}"/>
+                                        <!--<p:commandButton value="Non-Ajax Submit" id="nonAjax" actionListener="#{buttonView.buttonAction}" ajax="false" />-->
+                                    </c:when>
+                                    <c:otherwise>
+                                        <h:commandButton value="Heart" action="#{tweetsBean.Heart(tweet,currentUser)}">
+                                        </h:commandButton>
+                                    </c:otherwise>
+                                </c:choose>
+                            </div>
                         </div>
-                    </div>
-                </c:forEach>
-            </div>
 
-        </h:form>
-    </ui:define>
-</ui:composition>
+                    </c:forEach>
+                </div>
 
-<!--
-Search
-Your tweets
-Timeline
-Mentions
-Trends
-Following and followers
-Logout
--->
+            </h:form>
+        </ui:define>
+    </ui:composition>
 
-</body>
+    <!--
+    Search
+    Your tweets
+    Timeline
+    Mentions
+    Trends
+    Following and followers
+    Logout
+    -->
+
+</h:body>
 </html>

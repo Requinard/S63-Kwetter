@@ -9,27 +9,32 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 /**
  * Created by Wouter Vanmulken on 21-3-2017.
  */
 @Named
 @SessionScoped
-public class AccountsBean implements Serializable{
+public class AccountsBean implements Serializable {
     @Inject
     AccountService accountService;
+    Account loggedIn = null;
 
-    public Account getLoggedIn(){
-        return accountService.findByUsername(FacesContext.getCurrentInstance().getExternalContext().getUserPrincipal().getName());
-
+    public Account getLoggedIn() {
+        if (loggedIn != null){
+            return loggedIn;
+        }
+        loggedIn = accountService.findByUsername(FacesContext.getCurrentInstance().getExternalContext().getUserPrincipal().getName());
+        return loggedIn;
     }
-    public List<Account> getAll(){
+
+    public List<Account> getAll() {
         return accountService.getAllAccounts();
     }
-    public void removeUser(){
+
+    public void removeUser() {
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
     }
+
 
 }
