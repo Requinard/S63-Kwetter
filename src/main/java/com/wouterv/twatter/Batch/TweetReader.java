@@ -9,8 +9,6 @@ import javax.batch.runtime.context.JobContext;
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.json.Json;
-import javax.json.stream.JsonParser;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -51,87 +49,20 @@ public class TweetReader implements ItemReader {
         InputStream iStream = classLoader.getResourceAsStream(fileName);
 
         JSONParser jsonParser = new JSONParser();
-//        try {
         JSONObject obj = (JSONObject) jsonParser.parse(new BufferedReader(new InputStreamReader(iStream, "UTF-8")));
-//
-//            JSONObject jsonObject = (JSONObject) obj;
-//            System.out.println(jsonObject);
-//
-//            String name = (String) jsonObject.get("name");
-//            System.out.println(name);
-//
-//            long age = (Long) jsonObject.get("age");
-//            System.out.println(age);
 
-        // loop array
         array = (JSONArray) obj.get("Tweets");
         iterator = array.iterator();
-//        } catch (Exception e){
-//        }
 
-
-//        parser = Json.createParser(iStream);
-//
-//        start = false;
-//        for (long i = 0; i < this.checkpoint.getCount(); ++i) {
-//            JsonParser.Event event = parser.next();
-//            if (event == JsonParser.Event.START_ARRAY) {
-//                start = true;
-//            }
-//        }
     }
 
     @Override
     public void close() throws Exception {
-//        parser.close();
 
     }
 
     @Override
     public Object readItem() throws Exception {
-//        boolean itemFound = false;
-//        InputTweet item = new InputTweet();
-//
-//        System.out.println("Read Item");
-//
-//
-//        while (!itemFound && parser.hasNext()) {
-//            JsonParser.Event event = parser.next();
-//            checkpoint.eventHappened();
-//
-//            switch (event) {
-//                case START_ARRAY:
-//                    start = true;
-//                    break;
-//                case VALUE_STRING:
-//                    if (start == true) {
-//                        System.out.println("aaaa : "+parser.getString());
-//
-//                        if (item.Content == null) {
-//                            System.out.println("aaaa-content : "+parser.getString());
-//                            item.Content = parser.getString();
-//                        }
-//                        else if (item.Date == null) {
-//                            System.out.println("aaaa-date : "+parser.getString());
-//                            DateFormat format = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
-//                            item.Date = format.parse(parser.getString());
-//                        }
-//                    }
-//                    break;
-//                case VALUE_NUMBER:
-//                    if(start== true){
-//                         if (item.UserId == -1) {
-//                             System.out.println("aaaa-id : "+parser.getString());
-//                            item.UserId = parser.getInt();
-//                            itemFound = true;
-//                        }
-//                    }
-//                    break;
-//                case END_ARRAY:
-//                    item = null;
-//                    break;
-//            }
-//        }
         InputTweet inputTweet = new InputTweet();
 
         if (iterator.hasNext()) {

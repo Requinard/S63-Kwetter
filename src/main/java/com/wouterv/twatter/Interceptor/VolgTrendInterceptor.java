@@ -13,7 +13,7 @@ import java.util.Objects;
 @Trends
 public class VolgTrendInterceptor  {
     @AroundInvoke
-    public Object log(InvocationContext context) throws Exception {
+    public Object replaceTrend(InvocationContext context) throws Exception {
         Object[] objects = context.getParameters();
         objects[0]=((String)objects[0]).replace("vet","hard").replace("cool","smooth");
         context.setParameters(objects);

@@ -6,12 +6,14 @@ import com.wouterv.twatter.Service.AccountService;
 import com.wouterv.twatter.Service.TweetService;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import javax.annotation.ManagedBean;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Wouter Vanmulken on 21-3-2017.
@@ -25,8 +27,12 @@ public class TweetsBean implements Serializable{
     AccountService accountService;
 
 
-    public Tweet create(){
-        throw  new NotImplementedException();
+    public String create(Account currentUser){
+        Map<String,String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+        String newContent = params.get("newContent");
+
+        service.create(newContent,currentUser.getId());
+        return "/app/index";
     }
     public List<Tweet> getAll() {
         return service.getAllTweets();

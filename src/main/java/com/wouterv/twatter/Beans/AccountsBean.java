@@ -35,6 +35,4 @@ public class AccountsBean implements Serializable {
     public void removeUser() {
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
     }
-
-
 }

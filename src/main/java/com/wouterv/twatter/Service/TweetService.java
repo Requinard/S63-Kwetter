@@ -111,5 +111,5 @@ public class TweetService {
         this.accountDAO = accountDAO;
     }
 
-    public void  logCreateKwetter(@Observes LogEvent event){event.printLine("Created a tweeter");}
+    public void  logCreateKwetter(@Observes LogEvent event){event.printLine("Created a tweet");}
 }
