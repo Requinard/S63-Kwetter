@@ -25,10 +25,12 @@
                             <c:when test="#{selectedUser.userName == currentUser.userName}">
                             </c:when>
                             <c:when test="#{accountsBean.isFollowing(selectedUser)}">
+
                                 <h:commandButton value="Unfollow" action="#{accountsBean.follow(selectedUser)}"
                                                  styleClass="btn btn-danger float-right"/>
                             </c:when>
                             <c:otherwise>
+                                <!--<h:commandButton value="Follow" type="submit" action="#{accountsBean.follow(selectedUser)}" />-->
                                 <h:commandButton value="Follow" action="#{accountsBean.follow(selectedUser)}"
                                                  styleClass="btn btn-primary float-right"/>
                             </c:otherwise>
@@ -61,6 +63,23 @@
                             </ul>
                         </c:otherwise>
                     </c:choose>
+
+                    <h1>Tweets</h1>
+                    <c:choose>
+                        <c:when test="${empty selectedUser.tweets}">
+                            No posted tweets
+                        </c:when>
+                        <c:otherwise>
+                            <ul>
+                                <c:forEach var="tweet" items="#{selectedUser.tweets}">
+                                    <li>#{tweet.content}</li>
+                                </c:forEach>
+                            </ul>
+
+                        </c:otherwise>
+                    </c:choose>
+
+
                     <h1>Following</h1>
                     <c:choose>
                         <c:when test="${empty selectedUser.following}">
