@@ -14,9 +14,14 @@
 
             <div>
                 <h:form id="searchF">
-                    <h:inputText id="searchContent" styleClass="form-control"/>
-                    <h:commandButton id="searchBtn" styleClass="btn" value="Search"
-                                     action="#{tweetsBean.create(currentUser)}"/>
+
+                    <h:inputText id="searchContent" styleClass="form-control" />
+                    <!--<h:commandButton id="searchBtn" styleClass="btn" value="Search"-->
+                                     <!--action="#{accountsBean.search(searchContent)}"/>-->
+                    <!--<h:link outcome="accounts.xhtml?query=#{account.userName}">-->
+                        <!--#{account.userName}-->
+                    <!--</h:link>-->
+                    <h:commandButton value="search" action="#{accountsBean.searchRedirect}" styleClass="btn btn-primary"/>
                 </h:form>
             </div>
             <div>
@@ -40,22 +45,21 @@
 
                             <!--todo : implement the heart with ajax-->
                             <div>
-                                <c:choose>
-                                    <c:when test="#{tweetsBean.hasHearted(tweet,currentUser)}">
-                                        <h:commandButton id="btn#{tweet.id}" value="UnHeart"
-                                                         action="#{tweetsBean.Heart(tweet,currentUser)}"
-                                                         styleClass="btn glyphicon glyphicon-heart">
-                                            <!--<f:ajax event="click" execute="Heart" render="tweet#{tweet.id}"/>-->
-                                        </h:commandButton>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <h:commandButton id="btn#{tweet.id}" value="Heart"
-                                        action="#{tweetsBean.Heart(tweet,currentUser)}"
-                                        styleClass="btn glyphicon glyphicon-heart-empty">
-                                        <!--<f:ajax event="click" execute="Heart" render="tweet#{tweet.id}"/>-->
-                                        </h:commandButton>
-                                    </c:otherwise>
-                                </c:choose>
+                                <h:form>
+                                    <c:choose>
+                                        <c:when test="#{tweetsBean.hasHearted(tweet,currentUser)}">
+                                            <h:commandButton value="Unheart" type="submit"
+                                                             action="#{tweetsBean.Heart(tweet,currentUser)}"
+                                                             styleClass="btn glyphicon glyphicon-heart-empty"/>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <h:commandButton value="Heart" type="submit"
+                                                             action="#{tweetsBean.Heart(tweet,currentUser)}"
+                                                             styleClass="btn glyphicon glyphicon-heart"
+                                            />
+                                        </c:otherwise>
+                                    </c:choose>
+                                </h:form>
                             </div>
                         </div>
                     </div>

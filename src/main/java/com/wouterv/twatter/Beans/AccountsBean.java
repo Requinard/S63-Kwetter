@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Wouter Vanmulken on 21-3-2017.
@@ -66,5 +67,13 @@ public class AccountsBean implements Serializable {
             getLoggedIn();
         }
         return loggedIn.getFollowing().contains(toFollow) || loggedIn.getUserName() == toFollow.getUserName();
+    }
+    public List<Account> search(String searchQuery){
+        return accountService.search(searchQuery);
+    }
+    public String searchRedirect(){
+        Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+        String query = params.get("searchF:searchContent");
+        return "accounts.xhtml?query="+query;
     }
 }
