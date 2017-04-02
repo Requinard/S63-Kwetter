@@ -12,18 +12,15 @@
         <ui:param name="currentUser" value="#{accountsBean.loggedIn}"/>
         <ui:define name="content">
             <div>
-                <h:form>
-                    <h:inputTextarea id="Content" styleClass="form-control">
-                        <f:param name="newContent"></f:param>
-                    </h:inputTextarea>
-
-                    <h:commandButton id="createBtn" value="Post" action="#{tweetsBean.create()}"
-                                     styleClass="Button float-right"/>
+                <h:form id="createF">
+                    <h:inputTextarea id="Content" styleClass="form-control"/>
+                    <h:commandButton id="createBtn" styleClass="btn" value="Post"
+                                     action="#{tweetsBean.create(currentUser)}"/>
                 </h:form>
             </div>
             <!--<h:form>-->
             <div id="Tweets" class="container">
-                <c:forEach var="tweet" items="#{tweetsBean.all}">
+                <c:forEach var="tweet" items="#{tweetsBean.getPersonal(currentUser)}">
 
                     <div id="tweet#{tweet.id}" class="card">
                         <!--<img class="card-img-top" src="http://dickbutt.nl/dickbutt.png" alt="Card image cap"/>-->
@@ -32,42 +29,19 @@
                             <h6 class="card-subtitle mb-2 text-muted">#{tweet.date}</h6>
                             <p class="card-text">#{tweet.content}</p>
 
-                            <h:commandButton id="btn#{tweet.id}" value="Show Message" action="#{tweetsBean.Heart(tweet,currentUser)}">
-                                <f:ajax event="click" execute="Heart" render="tweet#{tweet.id}"/>
-                            </h:commandButton>
-
-                            <!--<c:choose>-->
-                            <!--<c:when test="#{tweetsBean.hasHearted(tweet,currentUser)}">-->
-
-                            <!--<h:commandButton value="btn">-->
-                            <!--<f:ajax event="click" execute="#{tweetsBean.Heart(tweet,currentUser)}" render="tweet#{tweet.id}"/>-->
-                            <!--</h:commandButton>-->
-
-
-                            <!--<h:commandButton value="#{studentBean.filter}" id="filter">-->
-                            <!--<f:ajax event="keyup" execute="filter" render="studenten"/>-->
-                            <!--</h:commandButton>-->
-
-
-                            <!--<h:commandButton value="Click me !">-->
-                            <!--<f:ajax event="click" execute="#{tweetsBean.Heart(tweet,currentUser)}" render="tweet#{tweet.id}" />-->
-                            <!--</h:commandButton>-->
-
-                            <!--<p:commandButton value="UnHeart" ajax="#{tweetsBean.Heart(tweet,currentUser)}"-->
-                            <!--update="tweet#{tweet.id}" />-->
-
-                            <!--<p:commandButton id="counter" value="UnHearth">-->
-                            <!--<p:ajax event="click" update="out" listener="#{tweetsBean.Heart(tweet,currentUser)}" />-->
-                            <!--</p:commandButton>-->
-
-                            <!--</c:when>-->
-                            <!--<c:otherwise>-->
-                            <!--<h:commandButton value="Heart" action="#{tweetsBean.Heart(tweet,currentUser)}">-->
-                            <!--</h:commandButton>-->
-                            <!--<p:commandButton value="Heart"  ajax="#{tweetsBean.Heart(tweet,currentUser)}"-->
-                            <!--update="tweet#{tweet.id}" />-->
-                            <!--</c:otherwise>-->
-                            <!--</c:choose>-->
+                            <!--todo : implement the heart with ajax-->
+                            <div>
+                                <h:commandButton id="btn#{tweet.id}" value="Heart"
+                                                 action="#{tweetsBean.Heart(tweet,currentUser)}"
+                                                 styleClass="btn glyphicon glyphicon-heart-empty">
+                                    <f:ajax event="click" execute="Heart" render="tweet#{tweet.id}"/>
+                                </h:commandButton>
+                                <h:commandButton id="btn#{tweet.id}" value="UnHeart"
+                                                 action="#{tweetsBean.Heart(tweet,currentUser)}"
+                                                 styleClass="btn glyphicon glyphicon-heart">
+                                    <f:ajax event="click" execute="Heart" render="tweet#{tweet.id}"/>
+                                </h:commandButton>
+                            </div>
                         </div>
                     </div>
 

@@ -51,7 +51,7 @@ public class AccountService {
         return accounts;
     }
 
-    public Account create(String username, String email, String bio, String firstName, String lastName,String password) {
+    public Account create(String username, String email, String bio, String firstName, String lastName, String password) {
         //TODO : Make a salted implementation
         Account account = new Account(username, email, bio, firstName, lastName);
         account.setPassword(hashPassword(password));
@@ -59,6 +59,21 @@ public class AccountService {
         return account;
     }
 
+
+    public boolean followToggle(Account tofollow, Account loggedIn) {
+        try {
+            if (loggedIn.getFollowing().contains(tofollow)){
+                loggedIn.removeFollowing(tofollow);
+            }else {
+                loggedIn.addFollowing(tofollow);
+            }
+            accountDAO.edit(loggedIn);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+
+    }
     public boolean follow(int toFollowId, int loggedInId) {
         try {
             Account toFollow = accountDAO.findById(toFollowId);
@@ -86,21 +101,7 @@ public class AccountService {
     public List<Account> followers(int id) {
         return accountDAO.getFollowing(id);
     }
-//Todo : make custom login or use oath or something
-//    public boolean login(String username, String password) {
-//        try{
-//            LoginContext lc =new LoginContext("Test", new TextCallbackHandler());
-//            lc.login();
-//        }catch (Exception e){
-//
-//        }
-//
-//        String a = FacesContext.getCurrentInstance().getExternalContext().getUserPrincipal().getName();
-//    }
 
-    //    public boolean login(String username, String password) throws LoginException {//TODO : remove the userId and use JAAS
-//        throw new NotImplementedException();
-//    }
     public boolean remove(int id) {
         try {
             Account account = accountDAO.findById(id);
@@ -130,6 +131,7 @@ public class AccountService {
         }
         return true;
     }
+
     public boolean removeRole(String role, int id) {
         try {
             Type type = typeDAO.findOrCreate(role);
@@ -140,7 +142,8 @@ public class AccountService {
         }
         return true;
     }
-    public boolean edit(int id,String username,String email,String bio,String firstName,String  lastName){
+
+    public boolean edit(int id, String username, String email, String bio, String firstName, String lastName) {
         try {
             Account account = accountDAO.findById(id);
             account.setUserName(username);
@@ -150,26 +153,27 @@ public class AccountService {
             account.setLastName(lastName);
             accountDAO.edit(account);
             return true;
-        }catch (Exception e ){
+        } catch (Exception e) {
             return false;
         }
     }
-    public boolean editPassword(int id,String currentPass, String newPass){
+
+    public boolean editPassword(int id, String currentPass, String newPass) {
         Account account;
         try {
             account = findByID(id);
-            if(account.getPassword()!=hashPassword(currentPass)) {
+            if (account.getPassword() != hashPassword(currentPass)) {
                 return false;
             }
             account.setPassword(hashPassword(newPass));
             accountDAO.edit(account);
             return true;
-        }catch (Exception e ){
+        } catch (Exception e) {
             return false;
         }
     }
 
-    public String hashPassword(String password){
+    public String hashPassword(String password) {
         MessageDigest md = null;
         try {
             md = MessageDigest.getInstance("SHA-256");

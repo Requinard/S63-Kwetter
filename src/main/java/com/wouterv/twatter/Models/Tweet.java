@@ -12,7 +12,10 @@ import java.util.List;
 @Entity
 @XmlRootElement
 @NamedQueries({
-        @NamedQuery(name = "tweetdao.getPersonalTweets", query = "select t from  Tweet t, Account a  where a.Id = :id and (t.postAccount.Id in (select b.Id from a.following b) or t.postAccount.Id = :id ) order by t.Date desc "),
+        @NamedQuery(name = "tweetdao.getPersonalTweets",
+                query = "select t from  Tweet t, Account a  where a.Id = :id " +
+                "and (t.postAccount.Id in (select b.Id from a.following b) or t.postAccount.Id = :id ) " +
+                "order by t.Date desc"),
         @NamedQuery(name = "tweetdao.getPostedTweets", query = "select t from  Tweet t where t.postAccount.Id = :id order by t.Date desc"),
         @NamedQuery(name = "tweetdao.search", query = "select t from  Tweet t where t.content like :content order by t.Date desc")})
 public class Tweet extends TweeterModel {
