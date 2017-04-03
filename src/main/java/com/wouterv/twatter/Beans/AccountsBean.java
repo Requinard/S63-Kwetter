@@ -54,15 +54,16 @@ public class AccountsBean implements Serializable {
         return accountService.followers(selectedAccount.getId());
     }
 
-    public String Follow(Account toFollow) {
-        try {
+    public Account Follow(Account toFollow) {
+//        try {
             accountService.followToggle(toFollow, loggedIn);
-        } catch (Exception e) {
-            System.out.println("Could not follow or unfollow user:" + toFollow.getUserName() + " for loggedIn user :" + loggedIn.getUserName());
+//        } catch (Exception e) {
+//            System.out.println("Could not follow or unfollow user:" + toFollow.getUserName() + " for loggedIn user :" + loggedIn.getUserName());
 //            return false;
-        }
+//        }
 //        return true;
-        return "/app/userprofile?user=" + toFollow.getUserName();
+//        return "/app/userprofile?user=" + toFollow.getUserName();
+        return toFollow;
     }
 
     public boolean isFollowing(Account toFollow) {

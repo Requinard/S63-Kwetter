@@ -18,25 +18,25 @@
 
     <div id="page" class="container">
         <div class="nav navbar navbar-toggleable-md navbar-light bg-faded">
-            <a class="navbar-brand" href="index.xhtml">Home</a>
-            <a class="navbar-text navbar-right">#{ request.userPrincipal.name}</a>
-            <h:form id="searchF" styleClass="navbar-form navbar-right">
-                <div class="form-group">
-                    <h:inputText id="searchContent" styleClass="form-control" binding="#{searchContent}"/>
-                </div>
-                <h:commandButton value="search" action="#{accountsBean.searchRedirect}" styleClass="btn btn-primary"/>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="index.xhtml">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-text">#{ request.userPrincipal.name}</a>
+                </li>
 
-                <!--<div class="form-group">-->
-                <!--<h:inputText id="searchContent" styleClass="form-control" binding="#{searchContent}"/>-->
-                <!--</div>-->
-                <!--&lt;!&ndash;<h:link hreflang="accounts.xhtml?query=#{searchContent}" styleClass="btn btn-primary">search</h:link>&ndash;&gt;-->
-                <!--&lt;!&ndash;<a href="accounts.xhtml?query=#{searchContent}">search</a>&ndash;&gt;-->
-                <!--&lt;!&ndash;<h:commandButton value="search"  styleClass="btn btn-primary"/>&ndash;&gt;-->
-                <!--<h:commandLink action="app/accounts.xhtml?query=#{searchContent}" value="search"/>-->
-
-            </h:form>
-
-            <a href="logout.xhtml" class="navbar-nav navbar-toggler-right pull-right">logout</a>
+                <li class="nav-item">
+                <h:form id="searchF" styleClass="form-inline my-2 my-lg-0 navbar-toggler-right">
+                    <h:inputText id="searchContent" styleClass="form-control mr-sm-2" binding="#{searchContent}"/>
+                    <h:commandButton value="search" action="#{accountsBean.searchRedirect}"
+                                     styleClass="btn btn-outline-success my-2 my-sm-0"/>
+                </h:form>
+                </li>
+                <li class="nav-item">
+                    <a href="logout.xhtml" class="nav-link">logout</a>
+                </li>
+            </ul>
         </div>
 
 
