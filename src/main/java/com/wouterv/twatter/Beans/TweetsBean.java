@@ -40,8 +40,9 @@ public class TweetsBean implements Serializable {
         return service.getPersonalTweets(currentUser.getId());
     }
 
-    public void Heart(Tweet tweet, Account account) {
+    public Tweet Heart(Tweet tweet, Account account) {
         service.hearth(tweet.getId(), account.getId());
+        return tweet;
     }
 
     public boolean hasHearted(Tweet tweet, Account loggedIn) {

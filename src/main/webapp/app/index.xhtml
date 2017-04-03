@@ -32,18 +32,23 @@
 
                             <!--todo : implement the heart with ajax-->
                             <div>
-                                <h:form>
-                                    <c:choose>
+                                <h:form id="tweet_heart_#{tweet.id}">
+                                    <c:choose >
                                         <c:when test="#{tweetsBean.hasHearted(tweet,currentUser)}">
-                                            <h:commandButton value="Unheart" type="submit"
+                                            <h:commandButton value="UnHeart" type="submit"
                                                              action="#{tweetsBean.Heart(tweet,currentUser)}"
-                                                             styleClass="btn glyphicon glyphicon-heart-empty"/>
+                                                             styleClass="btn glyphicon glyphicon-heart"
+                                                             id="heart#{tweet.id}">
+                                                <f:ajax execute="heart#{tweet.id}" render="tweet_heart_#{tweet.id}" />
+                                            </h:commandButton>
                                         </c:when>
                                         <c:otherwise>
                                             <h:commandButton value="Heart" type="submit"
                                                              action="#{tweetsBean.Heart(tweet,currentUser)}"
                                                              styleClass="btn glyphicon glyphicon-heart"
-                                            />
+                                                             id="heart#{tweet.id}">
+                                                <f:ajax execute="heart#{tweet.id}" render="tweet_heart_#{tweet.id}" />
+                                            </h:commandButton>
                                         </c:otherwise>
                                     </c:choose>
                                 </h:form>

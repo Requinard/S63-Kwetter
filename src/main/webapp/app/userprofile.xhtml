@@ -22,8 +22,7 @@
 
                     <h:form >
                         <c:choose>
-                            <c:when test="#{selectedUser.userName == currentUser.userName}">
-                            </c:when>
+                            <c:when test="#{selectedUser.userName == currentUser.userName}"/>
                             <c:when test="#{accountsBean.isFollowing(selectedUser)}">
                                 <h:commandButton id="unfollowBtn" value="Unfollow"  type="submit" action="#{accountsBean.Follow(selectedUser)}"
                                                  styleClass="btn btn-danger float-right"/>
