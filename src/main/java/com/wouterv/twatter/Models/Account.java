@@ -13,7 +13,8 @@ import java.util.List;
 @XmlRootElement
 @NamedQueries(value ={
         @NamedQuery(name = "accountdao.findByUserName", query = "SELECT a FROM Account a where a.userName = :userName"),
-        @NamedQuery(name = "accountdao.search", query = "SELECT a FROM Account a where a.userName like :name or a.firstName like :name or a.lastName like :name"),
+//        @NamedQuery(name = "accountdao.search", query = "SELECT a FROM Account a where a.userName like :name or a.firstName like :name or a.lastName like :name"),
+        @NamedQuery(name = "accountdao.search", query = "SELECT a FROM Account a where a.userName like :name "),
         @NamedQuery(name = "accountdao.getFollowing", query = "SELECT a FROM Account a where :id in (select f.Id from a.following f)")}
 )
 public class Account extends TweeterModel {
@@ -37,6 +38,13 @@ public class Account extends TweeterModel {
 
     @OneToMany
     private List<Account> following;
+
+    @ManyToMany
+//    @JoinTable(name="ACC_MENTION",
+//            joinColumns=@JoinColumn(name="ACCOUNT_ID"),
+//            inverseJoinColumns=@JoinColumn(name="MENTION_ID"))
+    private List<Tweet> mentions;
+
 
     public Account() {}
 
@@ -149,6 +157,14 @@ public class Account extends TweeterModel {
         if (groups.contains(type)) {
             groups.remove(type);
         }
+    }
+
+    public List<Tweet> getMentions() {
+        return mentions;
+    }
+
+    public void setMentions(List<Tweet> mentions) {
+        this.mentions = mentions;
     }
 
     @Override

@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Created by Wouter Vanmulken on 6-3-2017.
@@ -14,8 +15,8 @@ import java.util.List;
 @NamedQueries({
         @NamedQuery(name = "tweetdao.getPersonalTweets",
                 query = "select t from  Tweet t, Account a  where a.Id = :id " +
-                "and (t.postAccount.Id in (select b.Id from a.following b) or t.postAccount.Id = :id ) " +
-                "order by t.Date desc"),
+                        "and (t.postAccount.Id in (select b.Id from a.following b) or t.postAccount.Id = :id ) " +
+                        "order by t.Date desc"),
         @NamedQuery(name = "tweetdao.getPostedTweets", query = "select t from  Tweet t where t.postAccount.Id = :id order by t.Date desc"),
         @NamedQuery(name = "tweetdao.search", query = "select t from  Tweet t where t.content like :content order by t.Date desc")})
 public class Tweet extends TweeterModel {
@@ -33,6 +34,13 @@ public class Tweet extends TweeterModel {
     @OneToMany
     private List<Account> hearted;
 
+    @ManyToMany(mappedBy = "tweets")
+    private List<Hashtag> hashtags;
+
+    @ManyToMany(mappedBy = "mentions")
+    private List<Account> mentions;
+
+
     public Tweet() {
     }
 
@@ -49,7 +57,9 @@ public class Tweet extends TweeterModel {
         this.content = content;
     }
 
-    public java.util.Date getDate() {return Date;}
+    public java.util.Date getDate() {
+        return Date;
+    }
 
     public void setDate(java.util.Date date) {
         Date = date;
@@ -64,7 +74,9 @@ public class Tweet extends TweeterModel {
     }
 
     public List<Account> getHearted() {
-        if(hearted == null){return new ArrayList<>();}
+        if (hearted == null) {
+            return new ArrayList<>();
+        }
         return hearted;
     }
 
@@ -74,7 +86,9 @@ public class Tweet extends TweeterModel {
 
     //todo : maybe only use the id's of the accounts
     public boolean addHearted(Account account) {
-        if(hearted == null){hearted = new ArrayList<>();}
+        if (hearted == null) {
+            hearted = new ArrayList<>();
+        }
         if (this.hearted.contains(account)) {
             return false;
         }
@@ -83,7 +97,9 @@ public class Tweet extends TweeterModel {
     }
 
     public boolean removeHearted(Account account) {
-        if(hearted == null){hearted = new ArrayList<>();}
+        if (hearted == null) {
+            hearted = new ArrayList<>();
+        }
         try {
             this.hearted.remove(account);
         } catch (Exception e) {
@@ -92,4 +108,38 @@ public class Tweet extends TweeterModel {
         return true;
     }
 
+    public List<Hashtag> getHashtags() {
+        return hashtags;
+    }
+
+    public boolean addHashtag(Hashtag hashtag) {
+        if(hashtags == null){hashtags = new ArrayList<>();}
+        return hashtags.add(hashtag);
+    }
+
+    public boolean removeHashtag(Hashtag hashtag) {
+        if(hashtags == null){hashtags = new ArrayList<>();}
+        return hashtags.remove(hashtag);
+    }
+
+    public void setHashtags(List<Hashtag> hashtags) {
+        this.hashtags = hashtags;
+    }
+
+    public List<Account> getMentions() {
+        return mentions;
+    }
+
+    public boolean addMention(Account account) {
+        if(mentions == null){mentions = new ArrayList<>();}
+        return mentions.add(account);
+    }
+
+    public boolean removeMention(Account account) {
+        return mentions.remove(account);
+    }
+
+    public void setMentions(List<Account> mentions) {
+        this.mentions = mentions;
+    }
 }

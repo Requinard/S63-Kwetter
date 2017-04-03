@@ -2,10 +2,12 @@ package com.wouterv.twatter.Service;
 
 import com.wouterv.twatter.Annotations.JPA;
 import com.wouterv.twatter.DAO.IAccountDAO;
+import com.wouterv.twatter.DAO.IHashtagDAO;
 import com.wouterv.twatter.DAO.ITweetDAO;
 import com.wouterv.twatter.Event.LogEvent;
 import com.wouterv.twatter.Interceptor.VolgTrendInterceptor;
 import com.wouterv.twatter.Models.Account;
+import com.wouterv.twatter.Models.Hashtag;
 import com.wouterv.twatter.Models.Tweet;
 
 import javax.ejb.Stateless;
@@ -15,6 +17,8 @@ import javax.enterprise.inject.Any;
 import javax.inject.Inject;
 import javax.interceptor.Interceptors;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Wouter Vanmulken on 8-3-2017.
@@ -30,6 +34,10 @@ public class TweetService {
     @Inject
     @JPA
     IAccountDAO accountDAO;
+
+    @Inject
+    @JPA
+    IHashtagDAO hashtagDAO;
 
     @Inject
     @Any
@@ -51,8 +59,21 @@ public class TweetService {
     public Tweet create(String content, int userId) {//TODO : remove the userId and use JAAS
         Account account = accountDAO.findById(userId);
         Tweet tweet = new Tweet(content, account);
-        List<Tweet> tweets = account.getTweets();
-        account.setTweets(tweets);
+
+        Pattern hashtagPatern = Pattern.compile("\\#\\w+");
+        Matcher hm = hashtagPatern.matcher(content);
+        while (hm.find()) {
+            Hashtag hashtag = hashtagDAO.findOrCreate(hm.group());
+            tweet.addHashtag(hashtag);
+//            hashtag.addTweets(tweet);
+        }
+        Pattern mentionsPattern = Pattern.compile("\\@\\w+");
+        Matcher mm = mentionsPattern.matcher(content);
+        while (mm.find()) {
+            String username = mm.group().substring(1);
+            Account mentionAccount = accountDAO.findByUserName(username);
+            tweet.addMention(mentionAccount);
+        }
         tweetDAO.create(tweet);
         accountDAO.edit(account);
         logEvent.fire(new LogEvent());

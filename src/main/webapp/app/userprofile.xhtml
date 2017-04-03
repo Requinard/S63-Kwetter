@@ -20,18 +20,18 @@
                 </c:when>
                 <c:otherwise>
 
-                    <h:form>
+                    <h:form >
                         <c:choose>
                             <c:when test="#{selectedUser.userName == currentUser.userName}">
                             </c:when>
                             <c:when test="#{accountsBean.isFollowing(selectedUser)}">
-
-                                <h:commandButton value="Unfollow" action="#{accountsBean.follow(selectedUser)}"
+                                <h:commandButton id="unfollowBtn" value="Unfollow"  type="submit" action="#{accountsBean.Follow(selectedUser)}"
                                                  styleClass="btn btn-danger float-right"/>
                             </c:when>
                             <c:otherwise>
-                                <!--<h:commandButton value="Follow" type="submit" action="#{accountsBean.follow(selectedUser)}" />-->
-                                <h:commandButton value="Follow" action="#{accountsBean.follow(selectedUser)}"
+                                <!--<h:commandButton id="followBtn" value="Follow" action="#{accountsBean.follow(selectedUser)}" type="submit"-->
+                                                 <!--styleClass="btn btn-primary float-right"/>-->
+                                <h:commandButton id="followBtn" value="Follow" action="#{accountsBean.Follow(selectedUser)}"
                                                  styleClass="btn btn-primary float-right"/>
                             </c:otherwise>
                         </c:choose>

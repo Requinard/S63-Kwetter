@@ -11,35 +11,22 @@
     <ui:composition template="/template/common/commonLayout.xhtml">
         <ui:param name="currentUser" value="#{accountsBean.loggedIn}"/>
         <ui:define name="content">
-
-            <div>
-                <h:form id="searchF">
-
-                    <h:inputText id="searchContent" styleClass="form-control" />
-                    <!--<h:commandButton id="searchBtn" styleClass="btn" value="Search"-->
-                                     <!--action="#{accountsBean.search(searchContent)}"/>-->
-                    <!--<h:link outcome="accounts.xhtml?query=#{account.userName}">-->
-                        <!--#{account.userName}-->
-                    <!--</h:link>-->
-                    <h:commandButton value="search" action="#{accountsBean.searchRedirect}" styleClass="btn btn-primary"/>
-                </h:form>
-            </div>
             <div>
                 <h:form id="createF">
-                    <h:inputTextarea id="Content" styleClass="form-control"/>
-                    <h:commandButton id="createBtn" styleClass="btn" value="Post"
+                    <h:inputTextarea id="Content" styleClass="form-control" maxlength="140" />
+                    <br/>
+                    <h:commandButton id="createBtn" styleClass="btn btn-primary float-right" value="Post"
                                      action="#{tweetsBean.create(currentUser)}"/>
+                    <br/>
                 </h:form>
             </div>
-            <!--<h:form>-->
+            <br/>
             <div id="Tweets" class="container">
-                <!--<c:forEach var="tweet" items="#{tweetsBean.getPersonal(currentUser)}">-->
                 <c:forEach var="tweet" items="#{tweetsBean.getPersonal(currentUser)}">
-
-                    <div id="tweet#{tweet.id}" class="card">
+                    <div id="tweet#{tweet.id}" class="card" style="margin: 16px">
                         <!--<img class="card-img-top" src="http://dickbutt.nl/dickbutt.png" alt="Card image cap"/>-->
                         <div class="card-block">
-                            <h4 class="card-title">#{tweet.postAccount.userName}</h4>
+                            <h4 class="card-title" ><a href="userprofile.xhtml?user=#{tweet.postAccount.userName}">#{tweet.postAccount.userName}</a></h4>
                             <h6 class="card-subtitle mb-2 text-muted">#{tweet.date}</h6>
                             <p class="card-text">#{tweet.content}</p>
 
@@ -63,11 +50,8 @@
                             </div>
                         </div>
                     </div>
-
                 </c:forEach>
             </div>
-
-            <!--</h:form>-->
         </ui:define>
     </ui:composition>
 

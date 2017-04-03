@@ -4,9 +4,7 @@ import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Models.Tweet;
 import com.wouterv.twatter.Service.AccountService;
 import com.wouterv.twatter.Service.TweetService;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import javax.annotation.ManagedBean;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;

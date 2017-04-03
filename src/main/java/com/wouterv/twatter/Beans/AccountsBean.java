@@ -7,6 +7,9 @@ import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
@@ -51,7 +54,7 @@ public class AccountsBean implements Serializable {
         return accountService.followers(selectedAccount.getId());
     }
 
-    public String follow(Account toFollow) {
+    public String Follow(Account toFollow) {
         try {
             accountService.followToggle(toFollow, loggedIn);
         } catch (Exception e) {
@@ -71,9 +74,15 @@ public class AccountsBean implements Serializable {
     public List<Account> search(String searchQuery){
         return accountService.search(searchQuery);
     }
-    public String searchRedirect(){
+    public void searchRedirect(){
         Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         String query = params.get("searchF:searchContent");
-        return "accounts.xhtml?query="+query;
+
+        HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext().getResponse();
+        try {
+            response.sendRedirect("accounts.xhtml?query="+query);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

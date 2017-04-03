@@ -28,13 +28,13 @@ public class AccountDAOJPA extends DaoFacade<Account> implements IAccountDAO {
     @Override
     public Account findByUserName(String userName) {
         Account account;
-//        try {
-        Query q = em.createNamedQuery("accountdao.findByUserName");
-        q.setParameter("userName", userName);
-        account = (Account) q.getSingleResult();
-//        }catch (Exception e){
-//            return null;
-//        }
+        try {
+            Query q = em.createNamedQuery("accountdao.findByUserName");
+            q.setParameter("userName", userName);
+            account = (Account) q.getSingleResult();
+        } catch (Exception e) {
+            return null;
+        }
         return account;
 
     }

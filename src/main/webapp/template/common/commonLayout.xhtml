@@ -1,49 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"   
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets">
-	<h:head>
-        <h:outputScript name="js/jquery-3.2.0.min.js" />
-        <h:outputScript name="js/bootstrap.min.js" />
-		<h:outputStylesheet name="bootstrap.min.css" library="css" />
-		<h:outputStylesheet name="bootstrap-grid.min.css" library="css" />
-		<h:outputStylesheet name="bootstrap-reboot.min.css" library="css" />
-		<h:outputStylesheet name="common-style.css" library="css" />
-		<h:outputStylesheet name="font-awesome.min.css" library="css" />
+<h:head>
+    <h:outputScript name="js/jquery-3.2.0.min.js"/>
+    <h:outputScript name="js/bootstrap.min.js"/>
+    <h:outputStylesheet name="bootstrap.min.css" library="css"/>
+    <h:outputStylesheet name="bootstrap-grid.min.css" library="css"/>
+    <h:outputStylesheet name="bootstrap-reboot.min.css" library="css"/>
+    <h:outputStylesheet name="common-style.css" library="css"/>
+    <h:outputStylesheet name="font-awesome.min.css" library="css"/>
 
-	</h:head>
-    <h:body>
+</h:head>
+<h:body>
 
-	<div id="page" class="container">
-		<div class="nav navbar navbar-toggleable-md navbar-light bg-faded">
-            <!--<button class="navbar-toggler navbar-toggler-right" type="button" >-->
-                <!--<span class="navbar-toggler-icon"></span>-->
-            <!--</button>-->
-			<!--<h:commandLink outcome="app/index.xhtml" value="aaaaaa" />-->
-            <a class="navbar-brand" href="app/index.xhtml">Home</a>
-            <a class="navbar-text pull-right">#{ request.userPrincipal.name}</a>
-            <a href="app/logout.xhtml" class="navbar-nav navbar-toggler-right pull-right">logout</a>
+    <div id="page" class="container">
+        <div class="nav navbar navbar-toggleable-md navbar-light bg-faded">
+            <a class="navbar-brand" href="index.xhtml">Home</a>
+            <a class="navbar-text navbar-right">#{ request.userPrincipal.name}</a>
+            <h:form id="searchF" styleClass="navbar-form navbar-right">
+                <div class="form-group">
+                    <h:inputText id="searchContent" styleClass="form-control" binding="#{searchContent}"/>
+                </div>
+                <h:commandButton value="search" action="#{accountsBean.searchRedirect}" styleClass="btn btn-primary"/>
+
+                <!--<div class="form-group">-->
+                <!--<h:inputText id="searchContent" styleClass="form-control" binding="#{searchContent}"/>-->
+                <!--</div>-->
+                <!--&lt;!&ndash;<h:link hreflang="accounts.xhtml?query=#{searchContent}" styleClass="btn btn-primary">search</h:link>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="accounts.xhtml?query=#{searchContent}">search</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;<h:commandButton value="search"  styleClass="btn btn-primary"/>&ndash;&gt;-->
+                <!--<h:commandLink action="app/accounts.xhtml?query=#{searchContent}" value="search"/>-->
+
+            </h:form>
+
+            <a href="logout.xhtml" class="navbar-nav navbar-toggler-right pull-right">logout</a>
         </div>
 
-	    
-	    <div id="content">
+
+        <div id="content">
             <br/>
-		   	<ui:insert name="content">
-		   		<ui:include src="/template/common/commonContent.xhtml" />
-		   	</ui:insert>
+            <ui:insert name="content">
+                <ui:include src="/template/common/commonContent.xhtml"/>
+            </ui:insert>
             <br/>
-	    </div>
-		    
-	    <div id="footer">
-	    	<ui:insert name="footer" >
-	    		<ui:include src="/template/common/commonFooter.xhtml" />
-	    	</ui:insert>
-    	</div>
-    	
+        </div>
+
+        <div id="footer">
+            <ui:insert name="footer">
+                <ui:include src="/template/common/commonFooter.xhtml"/>
+            </ui:insert>
+        </div>
+
     </div>
-    
-    </h:body>
+
+</h:body>
 
 </html>
