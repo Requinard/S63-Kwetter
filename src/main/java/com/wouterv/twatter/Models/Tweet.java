@@ -1,7 +1,11 @@
 package com.wouterv.twatter.Models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -28,16 +32,31 @@ public class Tweet extends TweeterModel {
     @Column(nullable = false)
     private Date Date;
 
-    @ManyToOne(optional = false, cascade = CascadeType.ALL)
+
+
+
+//    @ManyToOne(optional = false)
+    @ManyToOne
+    @JsonBackReference(value = "tweets")
+//    @JsonBackReference
     private Account postAccount;
 
+
+
+
+
+
+
     @OneToMany
+    @JsonBackReference
     private List<Account> hearted;
 
     @ManyToMany(mappedBy = "tweets")
+    @JsonManagedReference
     private List<Hashtag> hashtags;
 
     @ManyToMany(mappedBy = "mentions")
+    @JsonBackReference
     private List<Account> mentions;
 
 
@@ -65,6 +84,7 @@ public class Tweet extends TweeterModel {
         Date = date;
     }
 
+//    @XmlTransient
     public Account getPostAccount() {
         return postAccount;
     }
@@ -126,6 +146,7 @@ public class Tweet extends TweeterModel {
         this.hashtags = hashtags;
     }
 
+//    @XmlTransient
     public List<Account> getMentions() {
         return mentions;
     }

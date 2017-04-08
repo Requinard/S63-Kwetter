@@ -23,10 +23,10 @@
     </login-config>
 
     <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>Secure Pages</web-resource-name>
-            <url-pattern>/api/*</url-pattern>
-        </web-resource-collection>
+        <!--<web-resource-collection>-->
+            <!--<web-resource-name>Secure Pages</web-resource-name>-->
+            <!--<url-pattern>/api/*</url-pattern>-->
+        <!--</web-resource-collection>-->
         <web-resource-collection>
             <web-resource-name>app</web-resource-name>
             <url-pattern>/app/*</url-pattern>

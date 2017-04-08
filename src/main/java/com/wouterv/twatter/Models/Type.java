@@ -1,5 +1,7 @@
 package com.wouterv.twatter.Models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -19,6 +21,7 @@ public class Type implements Serializable {
     @JoinTable(name = "account_type",
             joinColumns = @JoinColumn(name = "groupName", referencedColumnName = "groupName"),
             inverseJoinColumns = @JoinColumn(name = "userName", referencedColumnName = "userName"))
+    @JsonBackReference
     private List<Account> accounts;
 
     public Type() {}

@@ -23,7 +23,7 @@ import java.util.List;
  */
 
 @Stateless
-@DeclareRoles({"regular_role", "admin_role"})
+//@DeclareRoles({"regular_role", "admin_role"})
 @Path("/accounts")
 public class AccountController {
 
@@ -53,7 +53,7 @@ public class AccountController {
     }
 
     @GET
-    @RolesAllowed({"admin_role"})
+//    @RolesAllowed({"admin_role"})
     @Produces("application/json")
     public Response getAllAccounts() {
         List<Account> accounts;

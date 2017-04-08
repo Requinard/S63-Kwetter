@@ -1,0 +1,125 @@
+<p>
+  profile works!
+</p>
+
+<h1>{{account | json}}</h1>
+<h1>userId_angular : {{userId}}</h1>
+<h1>{{account.userName}}</h1>
+<h1>{{account.Id}}</h1>
+<h1>{{account.firstName}}</h1>
+<!--&lt;!&ndash;<div v-if="loggedIn ==-1">&ndash;&gt;-->
+  <!--&lt;!&ndash;No user could be found.&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div v-else="">&ndash;&gt;-->
+  <!--&lt;!&ndash;&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<c:choose>&ndash;&gt;-->
+  <!--&lt;!&ndash;<c:when test="${selectedUser==null}">&ndash;&gt;-->
+  <!--&lt;!&ndash;</c:when>&ndash;&gt;-->
+  <!--&lt;!&ndash;<c:otherwise>&ndash;&gt;-->
+<!--<span>{{}}</span>-->
+<!--<span ngIf="{{}}"></span>-->
+
+
+    <!--<form id="followF">-->
+      <!--&lt;!&ndash;checks if the currently logged in is the same as the gotten variable&ndash;&gt;-->
+      <!--<span ngIf="loggedIn == loggedIn"></span>-->
+      <!--&lt;!&ndash;checks if the user is the same as the gotten user&ndash;&gt;-->
+      <!--<span ngIf="loggedIn == selectedUser.Id">-->
+        <!--<when test="#{accountsBean.isFollowing(selectedUser)}">-->
+          <!--<commandButton id="unfollowBtn"-->
+                           <!--value="Unfollow"-->
+                           <!--type="submit"-->
+                           <!--action="#{accountsBean.Follow(selectedUser)}"-->
+                           <!--styleClass="btn btn-danger float-right">-->
+            <!--<ajax execute="unfollowBtn" render="followF"/>-->
+          <!--</commandButton>-->
+        <!--</when>-->
+        <!--<otherwise>-->
+          <!--<commandButton value="Follow" type="submit"-->
+                           <!--action="#{accountsBean.Follow(selectedUser)}"-->
+                           <!--styleClass="btn btn-primary float-right"-->
+                           <!--id="followBtn"-->
+          <!--&gt;-->
+            <!--<ajax execute="followBtn" render="followF"/>-->
+          <!--</commandButton>-->
+
+        <!--</otherwise>-->
+      <!--</choose>-->
+
+    <!--<h1>#{selectedUser.userName}</h1>-->
+    <!--<br/>-->
+    <!--<h5>Bio</h5>-->
+    <!--<p>#{selectedUser.bio}</p>-->
+    <!--<h5>Email</h5>-->
+    <!--<p>#{selectedUser.email}</p>-->
+    <!--<h5>First name</h5>-->
+    <!--<p>#{selectedUser.firstName}</p>-->
+    <!--<h5>Last name</h5>-->
+    <!--<p>#{selectedUser.lastName}</p>-->
+    <!--<br/>-->
+
+    <!--<h3>Groups</h3>-->
+    <!--<choose>-->
+      <!--<when test="${empty selectedUser.groups}">-->
+        <!--No Groups could be found.-->
+      <!--</when>-->
+      <!--<otherwise>-->
+
+        <!--<ul>-->
+          <!--<forEach var="group" items="#{selectedUser.groups}">-->
+            <!--<li>#{group.groupName}</li>-->
+          <!--</forEach>-->
+        <!--</ul>-->
+      <!--</otherwise>-->
+    <!--</choose>-->
+
+    <!--<h1>Tweets</h1>-->
+    <!--<choose>-->
+      <!--<when test="${empty selectedUser.tweets}">-->
+        <!--No posted tweets-->
+      <!--</when>-->
+      <!--<otherwise>-->
+        <!--<ul>-->
+          <!--<forEach var="tweet" items="#{selectedUser.tweets}">-->
+            <!--<li>#{tweet.content}</li>-->
+          <!--</forEach>-->
+        <!--</ul>-->
+
+      <!--</otherwise>-->
+    <!--</choose>-->
+
+
+    <!--<h1>Following</h1>-->
+    <!--<choose>-->
+      <!--<when test="${empty selectedUser.following}">-->
+        <!--The user currently follows 0 people.-->
+      <!--</when>-->
+      <!--<otherwise>-->
+        <!--<ul>-->
+          <!--<forEach var="followingUser" items="#{selectedUser.following}">-->
+            <!--<li>#{group}</li>-->
+          <!--</forEach>-->
+        <!--</ul>-->
+
+      <!--</otherwise>-->
+    <!--</choose>-->
+    <!--<h1>Followers</h1>-->
+    <!--<choose>-->
+      <!--<when test="${empty accountsBean.getFollowing(selectedUser)}">-->
+        <!--No one is currently following this user.-->
+      <!--</when>-->
+      <!--<otherwise>-->
+        <!--<ul>-->
+          <!--<forEach var="followingUser" items="#{accountsBean.getFollowing(selectedUser)}">-->
+            <!--<li>#{followingUser.userName}</li>-->
+          <!--</forEach>-->
+        <!--</ul>-->
+
+      <!--</otherwise>-->
+    <!--</choose>-->
+  <!--</c:otherwise>-->
+<!--</c:choose>-->
+<!--</ui:define>-->
+<!--</ui:composition>-->

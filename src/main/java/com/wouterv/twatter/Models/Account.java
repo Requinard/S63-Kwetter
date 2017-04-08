@@ -1,5 +1,8 @@
 package com.wouterv.twatter.Models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -31,15 +34,33 @@ public class Account extends TweeterModel {
     private String password;//TODO : temporary password
 
     @ManyToMany(mappedBy = "accounts")
+    @JsonManagedReference
     private List<Type> groups;
 
-    @OneToMany(mappedBy = "postAccount", cascade = CascadeType.ALL)
+
+
+
+
+
+//    @OneToMany(mappedBy = "postAccount", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "postAccount")
+//    @JsonManagedReference
+//    @JsonManagedReference(value = "postAccount")
     private List<Tweet> tweets;
 
+
+
+
+
+
+
+
     @OneToMany
+    @JsonManagedReference
     private List<Account> following;
 
     @ManyToMany
+    @JsonManagedReference
 //    @JoinTable(name="ACC_MENTION",
 //            joinColumns=@JoinColumn(name="ACCOUNT_ID"),
 //            inverseJoinColumns=@JoinColumn(name="MENTION_ID"))
@@ -80,7 +101,8 @@ public class Account extends TweeterModel {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
+    @XmlTransient
+//    @JsonManagedReference()
     public List<Tweet> getTweets() {
         return tweets;
     }
@@ -88,7 +110,7 @@ public class Account extends TweeterModel {
     public void setTweets(List<Tweet> tweets) {
         this.tweets = tweets;
     }
-
+//    @XmlTransient
     public List<Account> getFollowing() {
         if (following == null) {
             return new ArrayList<Account>();
@@ -158,7 +180,7 @@ public class Account extends TweeterModel {
             groups.remove(type);
         }
     }
-
+//    @XmlTransient
     public List<Tweet> getMentions() {
         return mentions;
     }
@@ -166,6 +188,7 @@ public class Account extends TweeterModel {
     public void setMentions(List<Tweet> mentions) {
         this.mentions = mentions;
     }
+
 
     @Override
     public String toString() {

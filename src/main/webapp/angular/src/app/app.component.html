@@ -1,0 +1,41 @@
+
+<!--<h1>-->
+  <!--{{title}}-->
+<!--</h1>-->
+<!--<h2>{{userVar}}</h2>-->
+
+
+
+
+
+
+<div id="header" class="nav navbar navbar-toggleable-md navbar-light bg-faded">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="navbar-brand" href="index.xhtml">Home</a>
+    </li>
+    <!--<li class="nav-item">-->
+    <!--<a class="navbar-text">#{ request.userPrincipal.name}</a>-->
+    <!--</li>-->
+
+    <li class="nav-item">
+      <form id="searchF" styleClass="form-inline my-2 my-lg-0 navbar-toggler-right">
+        <input id="searchContent" styleClass="form-control mr-sm-2"/>
+        <button styleClass="btn btn-outline-success my-2 my-sm-0" >Search</button>
+      </form>
+    </li>
+    <li class="nav-item">
+      <a href="logout.xhtml" class="nav-link">logout</a>
+    </li>
+  </ul>
+</div>
+<div id="page" class="container">
+
+  <router-outlet>
+  </router-outlet>
+
+
+</div>
+<div id="footer">
+
+</div>

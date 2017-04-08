@@ -1,9 +1,12 @@
 package com.wouterv.twatter.Models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +21,7 @@ public class Hashtag extends TweeterModel{
     private String name;
 
     @ManyToMany
+    @JsonBackReference
     private List<Tweet> tweets;
 
     public Hashtag() {}
@@ -33,6 +37,7 @@ public class Hashtag extends TweeterModel{
         this.name = name;
     }
 
+    @XmlTransient
     public List<Tweet> getTweets() {
         return tweets;
     }
