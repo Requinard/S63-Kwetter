@@ -3,15 +3,18 @@ import {ModuleWithProviders} from '@angular/core';
 import {SearchComponent} from "./search/search.component";
 import {AppComponent} from "./app.component";
 import {ProfileComponent} from "./profile/profile.component";
+import {HomeComponent} from "./home/home.component";
+
+// component: AppComponent,
 
 const appRoutes: Routes = [
   {
-    component: AppComponent,
+    component: HomeComponent,
     path: '',
   },
   {
     component: SearchComponent,
-    path: 'search'
+    path: 'search/:query'
   },
   {
     component: ProfileComponent,

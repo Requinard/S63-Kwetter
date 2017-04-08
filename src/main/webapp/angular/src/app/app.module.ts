@@ -10,12 +10,14 @@ import {routing} from "./app.routing";
 import {TweetService} from "./tweet.service";
 import {SearchService} from "./search.service";
 import {AccountService} from "./account.service";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    SearchComponent
+    SearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

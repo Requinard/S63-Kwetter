@@ -9,18 +9,8 @@ import {TweetService} from "./tweet.service";
 
 
 export class AppComponent {
-  loggedIn=1;
-  title = 'app works!';
-  userVar = 'userVar works';
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
+  searchVar:string;
 
   constructor(private tweetService:TweetService) {
   }
-}
-class Hero {
-  id: number;
-  name: string;
 }

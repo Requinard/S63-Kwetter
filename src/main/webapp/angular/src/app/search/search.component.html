@@ -1,4 +1,33 @@
-<p>
-  search works!
-  {{searchVar}}
-</p>
+<div *ngFor="let account of accounts">
+
+
+  <div *ngIf="accounts.length == 0">
+    Could not find any accounts.
+  </div>
+  <div *ngIf="accounts.length != 0">
+    <form>
+      <table class="table">
+        <tr>
+          <th>Username</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>bio</th>
+          <th>email</th>
+        </tr>
+
+          <tr *ngFor="let account of accounts">
+            <td>
+              <a href="/profile/{{account.userName}}">{{account.userName}}</a>
+            </td>
+
+            <td>{{account.firstName}}</td>
+            <td>{{account.lastName}}</td>
+            <td>{{account.bio}}</td>
+            <td>{{account.email}}</td>
+          </tr>
+      </table>
+    </form>
+  </div>
+
+
+</div>

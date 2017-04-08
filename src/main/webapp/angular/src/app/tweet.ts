@@ -1,7 +1,7 @@
 import {Account} from "./account";
 import {HashTag} from "./hash-tag";
 export class Tweet {
-  constructor(public Id:number,
+  constructor(public id:number,
               public content: string,
               public username: string,
               public Date:string,

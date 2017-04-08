@@ -1,0 +1,41 @@
+<div>
+  <form class="container form-group ">
+  <textarea id="Content"
+            name="Content"
+            class="form-control"
+            maxlength="140"
+            style="height: 150px"
+            [(ngModel)]="postContent"></textarea>
+    <button class="btn btn-primary " style="width: 100%;padding: 16px" (click)="post()">Post</button>
+  </form>
+</div>
+<div id="Tweets" class="container">
+  <div *ngFor="let tweet of tweets">
+    <div id="tweet{{tweet.id}}" class="card" style="margin: 16px">
+      <div class="card-block">
+        <h4 class="card-title">
+          <a href="profile/{{tweet.postAccount.userName}}">
+            {{tweet.postAccount.userName}}
+          </a>
+        </h4>
+        <h6 class="card-subtitle mb-2 text-muted">{{tweet.Date}}</h6>
+        <p class="card-text">{{tweet.content}}</p>
+
+        <div>
+          <form *ngIf="">
+            <button styleClass="btn glyphicon glyphicon-heart"
+                    id="unheart{{tweet.id}}"
+                    (click)="toggleHeart(tweet.Id)">Heart
+            </button>
+          </form>
+
+          <form *ngIf="">
+            <button styleClass="btn glyphicon glyphicon-heart"
+                    id="heart{{tweet.id}}"
+                    (click)="toggleHeart(tweet.Id)">UnHeart</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
