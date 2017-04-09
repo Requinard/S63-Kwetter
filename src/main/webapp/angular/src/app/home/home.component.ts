@@ -57,7 +57,6 @@ export class HomeComponent implements OnInit {
   public post() {
     this.tweetService.postTweet(this.account.id, this.postContent)
       .subscribe(tweet => {
-        // this.tweets.push(tweet);
         this.tweets.splice(0,0,tweet);
       });
   }

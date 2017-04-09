@@ -32,20 +32,11 @@ public class Tweet extends TweeterModel {
     @Column(nullable = false)
     private Date Date;
 
-
-
-
 //    @ManyToOne(optional = false)
     @ManyToOne
     @JsonBackReference(value = "tweets")
 //    @JsonBackReference
     private Account postAccount;
-
-
-
-
-
-
 
     @OneToMany
     @JsonBackReference

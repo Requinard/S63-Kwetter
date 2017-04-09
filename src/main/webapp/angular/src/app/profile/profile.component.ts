@@ -24,7 +24,10 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.route.params.map(params => params['username'])
-      .subscribe(username => this.getByUsername(username));
+      .subscribe(username => {
+        this.userId = username;
+        this.getByUsername(username);
+        })
   }
 
   private getByUsername(username: string) {
@@ -52,15 +55,26 @@ export class ProfileComponent implements OnInit, OnDestroy {
     if (this.followers == null) {
       return false;
     }
-    this.followers.forEach((value, index, array) => {
-      if (value.id == this.loggedIn) {
+    for (let i = 0; i < this.followers.length; i++) {
+      let account = this.followers[i]
+      if (account.id == this.loggedIn) {
         return true;
       }
-    });
+    }
     return false;
   }
 
   public follow() {
+    if(this.isFollowing()){
+      console.log('isFollowing');
+      let index = this.followers.findIndex(x => x.id == this.loggedIn);
+      this.followers.splice(index, 1);
+    }else{
+      console.log('!isFollowing');
+      //TODO : get the loggedInUserName
+      let account:Account = <Account>{id : this.loggedIn,userName:this.userId};
+      this.followers.push(account);
+    }
     this.accountService.follow(this.loggedIn, this.account.id);
   }
 

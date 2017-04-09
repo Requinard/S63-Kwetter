@@ -80,6 +80,7 @@ public class AccountController {
         if (account == null) return Response.noContent().build();
         return Response.ok().entity(account).build();
     }
+
     @GET
     @Path("/tweets/{userId}")
     @Produces("application/json")
@@ -90,8 +91,9 @@ public class AccountController {
         } catch (Exception e) {
             return Response.serverError().build();
         }
-        if (account == null|| account.getTweets()==null) return Response.noContent().build();
-        final GenericEntity<List<Tweet>> entity = new GenericEntity<List<Tweet>>(account.getTweets()) {};
+        if (account == null || account.getTweets() == null) return Response.noContent().build();
+        final GenericEntity<List<Tweet>> entity = new GenericEntity<List<Tweet>>(account.getTweets()) {
+        };
         return Response.ok().entity(entity).build();
     }
 
@@ -128,27 +130,39 @@ public class AccountController {
         return Response.ok().entity(entity).build();
     }
 
+    //    @GET
+//    @Path("/follow/{Id}")
+//    @Produces("application/json")
+//    public Response follow(@PathParam("Id") int id, @QueryParam("loggedInUser") int loggedInUser) {
+//        boolean success;
+//        try {
+//            success = service.follow(id, loggedInUser);
+//        } catch (Exception e) {
+//            return Response.serverError().build();
+//        }
+//        return Response.ok().entity(new Bool(success)).build();
+//    }
+//
+//    @GET
+//    @Path("/unFollow/{Id}")
+//    @Produces("application/json")
+//    public Response unfollow(@PathParam("Id") int id,
+//                             @QueryParam("loggedinUser") int loggedInUser) {
+//        boolean success;
+//        try {
+//            success = service.unFollow(id, loggedInUser);
+//        } catch (Exception e) {
+//            return Response.serverError().build();
+//        }
+//        return Response.ok().entity(new Bool(success)).build();
+//    }
     @GET
     @Path("/follow/{Id}")
     @Produces("application/json")
-    public Response follow(@PathParam("Id") int id, @QueryParam("loggedInUser") int loggedInUser) {
+    public Response followToggle(@PathParam("Id") int id, @QueryParam("loggedInUser") int loggedInUser) {
         boolean success;
         try {
-            success = service.follow(id, loggedInUser);
-        } catch (Exception e) {
-            return Response.serverError().build();
-        }
-        return Response.ok().entity(new Bool(success)).build();
-    }
-
-    @GET
-    @Path("/unFollow/{Id}")
-    @Produces("application/json")
-    public Response unfollow(@PathParam("Id") int id,
-                             @QueryParam("loggedinUser") int loggedInUser) {
-        boolean success;
-        try {
-            success = service.unFollow(id, loggedInUser);
+            success = service.followToggle(id, loggedInUser);
         } catch (Exception e) {
             return Response.serverError().build();
         }

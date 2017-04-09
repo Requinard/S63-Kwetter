@@ -58,7 +58,11 @@ public class AccountService {
         accountDAO.create(account);
         return account;
     }
-
+    public boolean followToggle(int toFollowId, int loggedInId) {
+        Account toFollow = accountDAO.findById(toFollowId);
+        Account loggedIn = accountDAO.findById(loggedInId);
+        return followToggle(toFollow,loggedIn);
+    }
 
     public boolean followToggle(Account tofollow, Account loggedIn) {
         try {

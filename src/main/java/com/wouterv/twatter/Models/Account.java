@@ -37,23 +37,11 @@ public class Account extends TweeterModel {
     @JsonManagedReference
     private List<Type> groups;
 
-
-
-
-
-
 //    @OneToMany(mappedBy = "postAccount", cascade = CascadeType.ALL)
     @OneToMany(mappedBy = "postAccount")
 //    @JsonManagedReference
 //    @JsonManagedReference(value = "postAccount")
     private List<Tweet> tweets;
-
-
-
-
-
-
-
 
     @OneToMany
     @JsonManagedReference
