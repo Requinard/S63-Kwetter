@@ -18,14 +18,19 @@ export class TweetService {
       .map(response => response.json());
   }
 
-  postTweet(userId: number, content: string) {
+  postTweet(userId: number, content: string) :Observable<Tweet>{
     let data = new URLSearchParams();
     data.append('content', content);
     data.append('userId', userId+"");
-    this.http.post(`${API_URL}/tweets`,data);
+    return this.http.post(`${API_URL}/tweets`,data).map(response => response.json());
   }
 
   toggleHeart(tweetId: number,userId:number) {
-    this.http.get(`${API_URL}/heart/${tweetId}?userId=${userId}`);
+    this.http.get(`${API_URL}/tweets/heart/${tweetId}?userId=${userId}`)
+      .subscribe();
+  }
+  getTweetsByUserId(id: number) :Observable<Tweet[]>{
+    return this.http.get(`${API_URL}/accounts/tweets/${id}`)
+      .map(response => response.json());
   }
 }

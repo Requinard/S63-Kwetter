@@ -18,22 +18,24 @@
             {{tweet.postAccount.userName}}
           </a>
         </h4>
-        <h6 class="card-subtitle mb-2 text-muted">{{tweet.Date}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">{{tweet.date}}</h6>
         <p class="card-text">{{tweet.content}}</p>
-
         <div>
-          <form *ngIf="">
-            <button styleClass="btn glyphicon glyphicon-heart"
-                    id="unheart{{tweet.id}}"
-                    (click)="toggleHeart(tweet.Id)">Heart
+          <div *ngIf="hasHearted(tweet)">
+            <button class="btn"
+                    id="unheart{{tweet}}"
+                    (click)="toggleHeart(tweet)">
+              <span class="glyphicon glyphicons-heart" aria-hidden="true"></span>UnHeart
             </button>
-          </form>
+          </div>
 
-          <form *ngIf="">
-            <button styleClass="btn glyphicon glyphicon-heart"
-                    id="heart{{tweet.id}}"
-                    (click)="toggleHeart(tweet.Id)">UnHeart</button>
-          </form>
+          <div *ngIf="hasHearted(tweet)==false">
+            <button class="btn glyphicon glyphicon-heart"
+                    id="heart{{tweet}}"
+                    (click)="toggleHeart(tweet)">
+              Heart
+            </button>
+          </div>
         </div>
       </div>
     </div>

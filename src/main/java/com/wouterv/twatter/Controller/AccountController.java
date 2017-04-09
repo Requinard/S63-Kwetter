@@ -80,6 +80,20 @@ public class AccountController {
         if (account == null) return Response.noContent().build();
         return Response.ok().entity(account).build();
     }
+    @GET
+    @Path("/tweets/{userId}")
+    @Produces("application/json")
+    public Response getTweetsByAccountId(@PathParam("userId") int userId) {
+        Account account;
+        try {
+            account = service.findByID(userId);
+        } catch (Exception e) {
+            return Response.serverError().build();
+        }
+        if (account == null|| account.getTweets()==null) return Response.noContent().build();
+        final GenericEntity<List<Tweet>> entity = new GenericEntity<List<Tweet>>(account.getTweets()) {};
+        return Response.ok().entity(entity).build();
+    }
 
 
     @GET
@@ -224,14 +238,4 @@ public class AccountController {
     private URI getCreatedLink(Account entity) {
         return uriInfo.getAbsolutePathBuilder().path(entity.getId() + "").build();
     }
-
-
-//    @POST
-//    @Path("/login")
-//    @Consumes("application/x-www-form-urlencoded")
-//    @Produces("application/json")
-//    public boolean Login(@FormParam("Username") String username,
-//                            @FormParam("Password") String password) throws LoginException {//TODO : remove the userId and use JAAS
-//        return service.login(username,password);
-//    }
 }

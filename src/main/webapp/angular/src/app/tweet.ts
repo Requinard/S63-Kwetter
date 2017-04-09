@@ -4,7 +4,7 @@ export class Tweet {
   constructor(public id:number,
               public content: string,
               public username: string,
-              public Date:string,
+              public date:Date,
               public postAccount:Account,
               public hearted:Account[],
               public hashtags:HashTag[],
