@@ -10,6 +10,7 @@ import {TweetService} from "./tweet.service";
 
 export class AppComponent {
   searchVar:string;
+  test:string;
 
   constructor(private tweetService:TweetService) {
   }

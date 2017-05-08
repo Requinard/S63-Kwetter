@@ -1,23 +1,16 @@
 package com.wouterv.twatter.Service;
 
-import com.sun.security.auth.callback.TextCallbackHandler;
-import com.wouterv.twatter.Annotations.JPA;
-import com.wouterv.twatter.DAO.IAccountDAO;
-import com.wouterv.twatter.DAO.ITypeDAO;
+import com.wouterv.twatter.Utils.JPA;
+import com.wouterv.twatter.DAO.DAO.IAccountDAO;
+import com.wouterv.twatter.DAO.DAO.ITypeDAO;
 import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Models.Type;
-import jdk.nashorn.internal.runtime.ECMAException;
 
 import javax.ejb.Stateless;
-import javax.faces.context.FacesContext;
 import javax.inject.Inject;
-import javax.security.auth.login.LoginContext;
-import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
-
-import static java.awt.SystemColor.text;
 
 /**
  * Created by Wouter Vanmulken on 6-3-2017.

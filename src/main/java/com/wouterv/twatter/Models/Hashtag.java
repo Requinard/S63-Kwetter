@@ -2,9 +2,7 @@ package com.wouterv.twatter.Models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
@@ -16,15 +14,19 @@ import java.util.List;
  */
 @Entity
 @XmlRootElement
-public class Hashtag extends TweeterModel{
+public class Hashtag {
+    @Id
     @Column(unique = true)
     private String name;
 
-    @ManyToMany
-    @JsonBackReference
+    //    @ManyToMany
+//    @OneToMany(mappedBy = "Hashtag")
+//    @JsonBackReference
     private List<Tweet> tweets;
 
-    public Hashtag() {}
+    public Hashtag() {
+    }
+
     public Hashtag(String name) {
         this.name = name;
     }
@@ -41,10 +43,14 @@ public class Hashtag extends TweeterModel{
     public List<Tweet> getTweets() {
         return tweets;
     }
+
     public boolean addTweets(Tweet t) {
-        if(tweets == null){tweets = new ArrayList<>();}
+        if (tweets == null) {
+            tweets = new ArrayList<>();
+        }
         return tweets.add(t);
     }
+
     public boolean removeTweets(Tweet t) {
         return tweets.remove(t);
     }

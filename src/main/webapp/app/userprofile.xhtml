@@ -13,16 +13,16 @@
 <h:body>
 
     <ui:composition template="/template/common/commonLayout.xhtml">
-        <ui:param name="selectedUser" value="#{accountsBean.getByUserName(param['user'])}"/>
-        <ui:param name="currentUser" value="#{accountsBean.loggedIn}"/>
+
 
         <ui:define name="content">
+            <ui:param name="selectedUser" value="#{accountsBean.getByUserName(param['user'])}"/>
+            <ui:param name="currentUser" value="#{accountsBean.loggedIn}"/>
             <c:choose>
                 <c:when test="${selectedUser==null}">
                     No user could be found.
                 </c:when>
                 <c:otherwise>
-
                     <h:form id="followF">
                         <c:choose>
                             <c:when test="#{selectedUser.userName == currentUser.userName}"/>
@@ -30,26 +30,27 @@
                                 <h:commandButton id="unfollowBtn"
                                                  value="Unfollow"
                                                  type="submit"
-                                                 action="#{accountsBean.Follow(selectedUser)}"
+                                                 action="#{accountsBean.follow(selectedUser)}"
                                                  styleClass="btn btn-danger float-right">
                                     <f:ajax execute="unfollowBtn" render="followF"/>
                                 </h:commandButton>
                             </c:when>
                             <c:otherwise>
-                                <!--<h:commandButton id="followBtn"-->
-                                <!--value="Follow"-->
-                                <!--type="submit"-->
-                                <!--action="#{accountsBean.Follow(selectedUser)}"-->
-                                <!--styleClass="btn btn-primary float-right">-->
-                                <!--<f:ajax execute="followBtn" render="follow#{tweet.id}"/>-->
+                                <!--<h:commandButton value="Follow" type="submit"-->
+                                                 <!--action="#{accountsBean.follow(selectedUser)}"-->
+                                                 <!--styleClass="btn btn-primary float-right"-->
+                                                 <!--id="followBtn"-->
+                                <!--&gt;-->
+                                    <!--<f:ajax execute="followBtn" render="followF"/>-->
                                 <!--</h:commandButton>-->
+
                                 <h:commandButton value="Follow" type="submit"
-                                                 action="#{accountsBean.Follow(selectedUser)}"
-                                                 styleClass="btn btn-primary float-right"
-                                                 id="followBtn"
-                                >
-                                    <f:ajax execute="followBtn" render="followF"/>
+                                                 action="#{accountsBean.follow(selectedUser)}"
+                                                 styleClass="btn glyphicon glyphicon-heart"
+                                                 id="followBtn">
+                                    <f:ajax execute="followBtn" render="followF" />
                                 </h:commandButton>
+
 
                             </c:otherwise>
                         </c:choose>

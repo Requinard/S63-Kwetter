@@ -23,11 +23,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.route.params.map(params => params['username'])
-      .subscribe(username => {
-        this.userId = username;
-        this.getByUsername(username);
-        })
+    xed
   }
 
   private getByUsername(username: string) {

@@ -8,8 +8,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.wouterv.twatter.DAO_COL.AccountDAOCol;
-import com.wouterv.twatter.DAO_COL.TypeDAOCol;
+import com.wouterv.twatter.DAO.DAO_COL.AccountDAOCol;
+import com.wouterv.twatter.DAO.DAO_COL.TypeDAOCol;
 import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Service.AccountService;
 

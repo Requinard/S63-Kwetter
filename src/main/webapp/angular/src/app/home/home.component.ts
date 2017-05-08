@@ -3,7 +3,6 @@ import {Tweet} from "../tweet";
 import {Account} from "../account";
 import {TweetService} from "../tweet.service";
 import {AccountService} from "../account.service";
-import {forEach} from "@angular/router/src/utils/collection";
 
 @Component({
   selector: 'app-home',
@@ -21,6 +20,7 @@ export class HomeComponent implements OnInit {
     this.userName = "wouterv";
     this.loggedIn = 1;
   }
+
 
   ngOnInit() {
     this.getCurrentAccount();

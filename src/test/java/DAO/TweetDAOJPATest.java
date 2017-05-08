@@ -5,12 +5,11 @@ package DAO;
  */
 
 import Util.DatabaseCleaner;
-import com.wouterv.twatter.DAO_JPA.AccountDAOJPA;
-import com.wouterv.twatter.DAO_JPA.TweetDAOJPA;
-import com.wouterv.twatter.DAO_JPA.TypeDOAJPA;
+import com.wouterv.twatter.DAO.DAO_JPA.AccountDAOJPA;
+import com.wouterv.twatter.DAO.DAO_JPA.TweetDAOJPA;
+import com.wouterv.twatter.DAO.DAO_JPA.TypeDOAJPA;
 import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Models.Tweet;
-import com.wouterv.twatter.Models.Type;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

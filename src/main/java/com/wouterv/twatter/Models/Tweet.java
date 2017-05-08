@@ -2,14 +2,17 @@ package com.wouterv.twatter.Models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.wouterv.twatter.EndPoints.Controller.TweetController;
+import org.glassfish.jersey.linking.InjectLink;
 
 import javax.persistence.*;
+//import javax.ws.rs.core.Link;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.regex.Pattern;
 
 /**
  * Created by Wouter Vanmulken on 6-3-2017.
@@ -24,6 +27,12 @@ import java.util.regex.Pattern;
         @NamedQuery(name = "tweetdao.getPostedTweets", query = "select t from  Tweet t where t.postAccount.Id = :id order by t.Date desc"),
         @NamedQuery(name = "tweetdao.search", query = "select t from  Tweet t where t.content like :content order by t.Date desc")})
 public class Tweet extends TweeterModel {
+
+//    @XmlJavaTypeAdapter(Link.JaxbAdapter.class)
+//    private Link self;
+
+    @InjectLink(resource = TweetController.class)
+    URI link;
 
     @Column(length = 140)
     private String content;
@@ -42,9 +51,9 @@ public class Tweet extends TweeterModel {
     @JsonBackReference
     private List<Account> hearted;
 
-    @ManyToMany(mappedBy = "tweets")
-    @JsonManagedReference
-    private List<Hashtag> hashtags;
+//    @ManyToOne
+//    @JsonManagedReference
+//    private List<Hashtag> hashtags;
 
     @ManyToMany(mappedBy = "mentions")
     @JsonBackReference
@@ -119,23 +128,23 @@ public class Tweet extends TweeterModel {
         return true;
     }
 
-    public List<Hashtag> getHashtags() {
-        return hashtags;
-    }
-
-    public boolean addHashtag(Hashtag hashtag) {
-        if(hashtags == null){hashtags = new ArrayList<>();}
-        return hashtags.add(hashtag);
-    }
-
-    public boolean removeHashtag(Hashtag hashtag) {
-        if(hashtags == null){hashtags = new ArrayList<>();}
-        return hashtags.remove(hashtag);
-    }
-
-    public void setHashtags(List<Hashtag> hashtags) {
-        this.hashtags = hashtags;
-    }
+//    public List<Hashtag> getHashtags() {
+//        return hashtags;
+//    }
+//
+//    public boolean addHashtag(Hashtag hashtag) {
+//        if(hashtags == null){hashtags = new ArrayList<>();}
+//        return hashtags.add(hashtag);
+//    }
+//
+//    public boolean removeHashtag(Hashtag hashtag) {
+//        if(hashtags == null){hashtags = new ArrayList<>();}
+//        return hashtags.remove(hashtag);
+//    }
+//
+//    public void setHashtags(List<Hashtag> hashtags) {
+//        this.hashtags = hashtags;
+//    }
 
 //    @XmlTransient
     public List<Account> getMentions() {
@@ -153,5 +162,13 @@ public class Tweet extends TweeterModel {
 
     public void setMentions(List<Account> mentions) {
         this.mentions = mentions;
+    }
+
+    public URI getLink() {
+        return link;
+    }
+
+    public void setLink(URI link) {
+        this.link = link;
     }
 }

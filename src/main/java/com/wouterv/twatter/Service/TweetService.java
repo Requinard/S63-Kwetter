@@ -1,9 +1,9 @@
 package com.wouterv.twatter.Service;
 
-import com.wouterv.twatter.Annotations.JPA;
-import com.wouterv.twatter.DAO.IAccountDAO;
-import com.wouterv.twatter.DAO.IHashtagDAO;
-import com.wouterv.twatter.DAO.ITweetDAO;
+import com.wouterv.twatter.Utils.JPA;
+import com.wouterv.twatter.DAO.DAO.IAccountDAO;
+import com.wouterv.twatter.DAO.DAO.IHashtagDAO;
+import com.wouterv.twatter.DAO.DAO.ITweetDAO;
 import com.wouterv.twatter.Event.LogEvent;
 import com.wouterv.twatter.Interceptor.VolgTrendInterceptor;
 import com.wouterv.twatter.Models.Account;
@@ -57,15 +57,16 @@ public class TweetService {
 
     @Interceptors(VolgTrendInterceptor.class)
     public Tweet create(String content, int userId) {//TODO : remove the userId and use JAAS
+
         Account account = accountDAO.findById(userId);
         Tweet tweet = new Tweet(content, account);
 
-        Pattern hashtagPatern = Pattern.compile("\\#\\w+");
-        Matcher hm = hashtagPatern.matcher(content);
+        Pattern hashtagPattern = Pattern.compile("\\#\\w+");
+        Matcher hm = hashtagPattern.matcher(content);
         while (hm.find()) {
             Hashtag hashtag = hashtagDAO.findOrCreate(hm.group());
-            tweet.addHashtag(hashtag);
-//            hashtag.addTweets(tweet);
+//            tweet.addHashtag(hashtag);
+            hashtag.addTweets(tweet);
         }
         Pattern mentionsPattern = Pattern.compile("\\@\\w+");
         Matcher mm = mentionsPattern.matcher(content);

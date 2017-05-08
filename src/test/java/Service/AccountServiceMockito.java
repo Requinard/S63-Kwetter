@@ -1,10 +1,9 @@
 package Service;
 
-import com.wouterv.twatter.DAO_COL.AccountDAOCol;
+import com.wouterv.twatter.DAO.DAO_COL.AccountDAOCol;
 import com.wouterv.twatter.Models.Account;
 import com.wouterv.twatter.Service.AccountService;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import org.junit.runner.RunWith;
@@ -14,7 +13,6 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.*;
 
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 /**
